@@ -6,6 +6,12 @@
 
 - Rodrigo Vallejos
 
+- Lucas Pausin
+
+- Fernando Torrez
+
+- Matias Sette
+
 ## RETROSPECTIVAS:
 
 ### [Retrospectiva SPRINT 1]
