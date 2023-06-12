@@ -1,7 +1,7 @@
 {
-  "name": "c21-grupo6-proyectointegrador",
+  "name": "c21-grupo6-artesphera",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto Integrador",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
