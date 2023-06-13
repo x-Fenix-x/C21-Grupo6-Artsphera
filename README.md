@@ -12,8 +12,4 @@
 
 - Matias Sette
 
-## RETROSPECTIVAS:
-
-### [Retrospectiva SPRINT 1]
-
 ## TRELLO: https://trello.com/b/SbEzd56P/c21-grupo-6
