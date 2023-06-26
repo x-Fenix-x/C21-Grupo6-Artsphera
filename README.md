@@ -8,9 +8,9 @@
 
 - Rodrigo Vallejos
 
-- Lucas Pausin
+- Lucas Pausin, 23 años, La matanza, Buenos aires
 
-- Fernando Torrez
+- Fernando Torrez, 27 años, soy de La Matanza, Provincia de Buenos Aires, La carrera me gusto y me pareció muy interesante para dedicarme a trabajar de FullStack.
 
 - Matias Sette
 
