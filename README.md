@@ -6,7 +6,7 @@
 
 ## Integrantes:
 
-- Rodrigo Vallejos
+- Rodrigo Vallejos, amante de la informática y la literatura e interesado en aprender Desarrollo Web.
 
 - Lucas Pausin, 23 años, La matanza, Buenos aires
 
