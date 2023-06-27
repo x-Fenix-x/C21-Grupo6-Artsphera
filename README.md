@@ -12,7 +12,7 @@
 
 - Fernando Torrez, 27 años, soy de La Matanza, Provincia de Buenos Aires, La carrera me gusto y me pareció muy interesante para dedicarme a trabajar de FullStack.
 
-- Matias Sette
+- Matias Sette, 32 años, Buenos aires, me apasiona la programación. Adoro a mi hija a Anna y a la bebe que viene en camino. Me gusta tocar piano cuando tengo un tiempo libre.
 
 ## Sitios de Referencias:
 
