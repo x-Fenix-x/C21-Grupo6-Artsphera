@@ -1,0 +1,24 @@
+{
+  "name": "c21-grupo6-artesphera",
+  "version": "1.0.0",
+  "description": "- Desarrollar un e-commerce basado en la venta de artes. El cliente final son aquellas personas apasionadas por el arte en general, interesadas en adquirir obras de arte originales creadas por artistas independientes y productos relacionados como escultura, fotografia o ilustraciones.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-Fenix-x/C21-Grupo6-Artesphera.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/issues"
+  },
+  "homepage": "https://github.com/x-Fenix-x/C21-Grupo6-Artesphera#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
