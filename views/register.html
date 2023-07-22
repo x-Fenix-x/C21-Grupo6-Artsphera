@@ -1,14 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Register | Artesphera</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/fb3c77f239.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register | Artesphera</title>
+		<link rel="icon" href="/img/Logo 3.png" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/948b015395.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<main>
+			<header class="headerContent">
+				<div class="firstHeader">
+					<div class="headerMenu">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+					<img src="./img/Logo 3.png" alt="" />
+					<div class="leftHeader">
+						<img src="./img/LogoExpanded.png" alt="" />
+						<a href="#">Disciplinas</a>
+						<div class="leftNav">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<input type="text" placeholder="Que deseas encontrar?" />
+						</div>
+					</div>
+					<div class="rightHeader">
+						<div class="headerSearch">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</div>
+						<i class="fa-solid fa-cart-shopping"></i>
+						<i class="fa-sharp fa-solid fa-user"></i>
+					</div>
+				</div>
+				<div class="subHeader">
+					<p>
+						Hacemos envíos a todo el país. Política de devolución de 15 días.
+						Envío gratuito en pedidos superiores a $ 10000.
+					</p>
+				</div>
+			</header>
+			<section class="mainContent">
+				<article class="firstArticle">
+					<div class="loginTop">
+						<h1>Crea una cuenta</h1>
+						<p>Hey, Ingresa tus datos para crear la cuenta</p>
+					</div>
+					<form action="/login" class="form">
+						<input
+							type="text"
+							id="usernameOrEmail"
+							name="usernameOrEmail"
+							placeholder="Correo electrónico"
+						/>
+
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Contraseña"
+						/>
+						<!-- <div class="formOptions">
+							<label for="rememberMe" class="formRemember">
+								<input type="checkbox" id="rememberMe" name="rememberMe" />
+								Recuérdame
+							</label>
+							<a href="#">¿Olvidaste la Contraseña?</a>
+						</div> -->
+						<button type="submit">Registrarse</button>
+					</form>
+					<p>O puedes crearla también con:</p>
+					<div class="loginLinks">
+						<a href="#" class="loginGoogle">
+							<i class="fa-brands fa-google"></i>
+							<p>Google</p>
+						</a>
+						<a href="#" class="loginApple">
+							<i class="fa-brands fa-apple"></i>
+							<p>Apple ID</p>
+						</a>
+						<a href="#" class="loginFacebook">
+							<i class="fa-brands fa-facebook"></i>
+							<p>Facebook</p>
+						</a>
+					</div>
+					<div class="loginNoAcc">
+						<p>¿Ya tienes una cuenta?</p>
+						<a href="/login">Entra ahora</a>
+					</div>
+				</article>
+				<footer class="secondArticle">
+					<div class="informationStore">
+						<div class="subInformation">
+							<h2>Informacion de la tienda</h2>
+							<a href="#">Avenida siempre viva 742</a>
+							<a href="#">ventas@artsphera.com</a>
+							<a href="#">0800-000-0000</a>
+						</div>
+						<div class="subInformation">
+							<h2>Productos</h2>
+							<a href="#">Nuevos productos</a>
+							<a href="#">Más vendidos</a>
+							<a href="#">Ofertas especiales</a>
+						</div>
+						<div class="subInformation">
+							<h2>Empresa</h2>
+							<a href="#">Contacta con nosotros</a>
+							<a href="#">Terminos y condiciones</a>
+							<a href="#">Sobre nosotros</a>
+						</div>
+						<div class="subInformation">
+							<h2>Tu cuenta</h2>
+							<a href="#">Información personal</a>
+							<a href="#">Pedidos</a>
+							<a href="#">Cupones de descuento</a>
+						</div>
+					</div>
+					<div class="footerContent">
+						<div class="navStore">
+							<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+							<a href="#"><i class="fa-brands fa-twitter"></i></a>
+							<a href="#"><i class="fa-brands fa-instagram"></i></a>
+							<a href="#"><i class="fa-brands fa-youtube"></i></a>
+						</div>
+						<div class="copyrightStore">
+							<i class="fa-regular fa-copyright"></i>
+							<p>2023 - Artsphera. Todos los derechos reservados.</p>
+						</div>
+						<img src="/img/class-payments.png" alt="" width="250x" />
+					</div>
+				</footer>
+			</section>
+			<!-- <footer class="footerContent">
+				<div class="copyrightStore">
+					<i class="fa-regular fa-copyright"></i>
+					<p>2023 - Artsphera. Todos los derechos reservados.</p>
+				</div>
+				<img src="/img/class-payments.png" alt="" width="250x" />
+			</footer> -->
+		</main>
+	</body>
 </html>
