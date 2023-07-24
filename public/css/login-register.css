@@ -1,5 +1,4 @@
-/* Solamente quitando el header,
-y footer. main {
+/* main {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -37,7 +36,7 @@ y footer. main {
 	}
 }
 
-.headerMenu > i {
+.headerMenu > button {
 	font-size: 1.65rem;
 	line-height: 1.65rem;
 }
@@ -73,7 +72,7 @@ y footer. main {
 }
 
 .leftNav > input {
-	padding: 0.5rem 100% 0.5rem 100%;
+	padding: 0.5rem 75% 0.5rem 75%;
 	border: 1px solid #d1d5db;
 	border-radius: 9999px;
 }
@@ -88,7 +87,7 @@ y footer. main {
 	align-items: center;
 }
 
-.rightHeader > i {
+.rightHeader > a {
 	font-size: 1.65rem;
 	line-height: 1.65rem;
 }
@@ -101,15 +100,22 @@ y footer. main {
 	}
 }
 
-.headerSearch > i {
+.headerSearch > button {
 	font-size: 1.65rem;
 }
 
 .subHeader {
-	font-size: 0.75rem;
-	line-height: 0.75rem;
+	display: none;
+	font-size: 0.65rem;
+	line-height: 1.15rem;
 	text-align: center;
 	background-color: #baa17b;
+
+	@media (min-width: 640px) {
+		font-size: 0.75rem;
+		line-height: 1.15rem;
+		display: block;
+	}
 }
 
 /* Header */
@@ -189,8 +195,8 @@ y footer. main {
 }
 
 .form > button {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 0.9rem;
+	padding-bottom: 0.9rem;
 	border-radius: 9999px;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -296,6 +302,7 @@ y footer. main {
 }
 
 /* Segundo Articulo */
+/* Footer */
 
 .secondArticle {
 	display: flex;
@@ -316,7 +323,7 @@ y footer. main {
 	gap: 2.5rem;
 	justify-content: space-around;
 	width: 100%;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	line-height: 1.75rem;
 	text-align: center;
 	color: #6b7280;
@@ -342,10 +349,6 @@ y footer. main {
 .subInformation > a {
 	color: #6b7280;
 }
-
-/* Main */
-
-/* Footer */
 
 .footerContent {
 	display: flex;
