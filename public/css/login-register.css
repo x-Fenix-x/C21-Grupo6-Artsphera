@@ -128,18 +128,16 @@
 	justify-content: center;
 	gap: 15rem;
 	align-items: center;
-	background-image: var(--login-tablet);
+	background-image: var(--loginWallpaper);
 	background-size: auto;
 	background-repeat: repeat;
 
 	@media (min-width: 640px) {
 		gap: 0rem;
-		background-image: var(--login-tablet);
 	}
 
 	@media (min-width: 1024px) {
 		background-position: center;
-		background-image: var(--login-tablet);
 	}
 }
 

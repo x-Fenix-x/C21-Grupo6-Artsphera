@@ -8,9 +8,7 @@
 	--colorNegro: #000000;
 	--colorRojo: #de2222;
 	--colorVerde: #2edf1f;
-	--login: url("/img/EyesMobile.png");
-	--login-tablet: url("/img/W.png");
-	--login-desktop: url("/img/steve.jpg");
+	--loginWallpaper: url("/img/loginWallpaper.png");
 }
 
 * {
