@@ -1,0 +1,38 @@
+/* MAIN */
+
+.index {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CAROUSEL */
+
+.index-main__section--banner {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 35vh;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #eb6c1d;
+}
