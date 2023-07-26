@@ -1,0 +1,21 @@
+.informacion__tienda{
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+.sub__informacion{
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	justify-content: space-around;
+	width: 100%;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	text-align: center;
+	color: #0f1013;
+	text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
