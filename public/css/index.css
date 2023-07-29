@@ -1,3 +1,123 @@
+/* HEADER */
+
+.contentHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.firstHeader {
+  display: flex;
+  padding: 1.25rem 3rem;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstHeader > img {
+  display: block;
+  width: 3rem;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.headerMenu {
+  display: inline-block;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.headerMenu > button {
+  font-size: 1.65rem;
+  line-height: 1.65rem;
+  border: none;
+  background-color: inherit;
+}
+
+.leftHeader {
+  display: none;
+  gap: 3rem;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+}
+
+.leftHeader > img {
+  width: 16.5em;
+}
+
+.leftHeader > a {
+  font-style: italic;
+}
+
+.leftNav {
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.leftNav > i {
+  position: absolute;
+  padding-left: 1rem;
+}
+
+.leftNav > input {
+  padding: 0.5rem 75% 0.5rem 75%;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+}
+
+.leftNav > input::placeholder {
+  color: black;
+}
+
+.rightHeader {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.rightHeader > a {
+  font-size: 1.65rem;
+  line-height: 1.65rem;
+}
+
+.headerSearch {
+  display: inline-block;
+  background-color: none;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.headerSearch > button {
+  font-size: 1.65rem;
+  border: none;
+  background-color: inherit;
+}
+
+.subHeader {
+  display: none;
+  font-size: 0.65rem;
+  line-height: 1.15rem;
+  text-align: center;
+  background-color: #baa17b;
+
+  @media (min-width: 640px) {
+    font-size: 0.75rem;
+    line-height: 1.15rem;
+    display: block;
+  }
+}
+
 /* MAIN */
 
 .index {
@@ -127,7 +247,7 @@
   margin-right: 20px;
 }
 
-.producto-card:nth-child(1){
+.producto-card:nth-child(1) {
   margin-left: 15px;
 }
 
@@ -175,7 +295,8 @@
   opacity: 1;
 }
 
-.producto-card__boton:hover, .producto-card__boton.selected {
+.producto-card__boton:hover,
+.producto-card__boton.selected {
   background: var(--colorBeige);
   color: #fff;
 }
