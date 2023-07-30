@@ -335,3 +335,62 @@
   text-decoration: line-through;
   color: var(--colorRojo);
 }
+
+/* FORMULARIO - BOLETIN INFORMATIVO */
+
+.index-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 250px;
+  justify-content: center;
+  background-image: url('/img/form-boletin.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.index-form h2,
+.index-form h3 {
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.index-form h3 {
+  color: #6c6a67c9;
+}
+
+.index-form > div {
+  margin: 10px 0;
+}
+
+.index-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.index-form-container__email {
+  background-color: #000000;
+  border-radius: 5px 0 0 5px;
+  color: #ffffff;
+  width: 70%;
+  padding: 5px;
+  border: none;
+}
+
+.index-form-container__email::placeholder {
+  color: var(--colorBlancoClaro);
+}
+
+.index-form-container button {
+  border: none;
+  background-color: var(--colorBeige);
+  color: #ffffff;
+  border-radius: 0 5px 5px 0;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: -4px;
+}
