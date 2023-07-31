@@ -7,6 +7,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+<<<<<<< HEAD
 
 html {
 	line-height: 1.15; /* 1 */
@@ -15,13 +16,31 @@ html {
 
 /* Sections
 	 ========================================================================== */
+=======
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+>>>>>>> carrito
 
 /**
    * Remove the margin in all browsers.
    */
 
 body {
+<<<<<<< HEAD
 	margin: 0;
+=======
+  margin: 0;
+>>>>>>> carrito
 }
 
 /**
@@ -29,7 +48,11 @@ body {
    */
 
 main {
+<<<<<<< HEAD
 	display: block;
+=======
+  display: block;
+>>>>>>> carrito
 }
 
 /**
@@ -38,12 +61,21 @@ main {
    */
 
 h1 {
+<<<<<<< HEAD
 	font-size: 2em;
 	margin: 0.67em 0;
 }
 
 /* Grouping content
 	 ========================================================================== */
+=======
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+>>>>>>> carrito
 
 /**
    * 1. Add the correct box sizing in Firefox.
@@ -51,9 +83,15 @@ h1 {
    */
 
 hr {
+<<<<<<< HEAD
 	box-sizing: content-box; /* 1 */
 	height: 0; /* 1 */
 	overflow: visible; /* 2 */
+=======
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+>>>>>>> carrito
 }
 
 /**
@@ -62,19 +100,32 @@ hr {
    */
 
 pre {
+<<<<<<< HEAD
 	font-family: monospace, monospace; /* 1 */
 	font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
 	 ========================================================================== */
+=======
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+>>>>>>> carrito
 
 /**
    * Remove the gray background on active links in IE 10.
    */
 
 a {
+<<<<<<< HEAD
 	background-color: transparent;
+=======
+  background-color: transparent;
+>>>>>>> carrito
 }
 
 /**
@@ -83,9 +134,15 @@ a {
    */
 
 abbr[title] {
+<<<<<<< HEAD
 	border-bottom: none; /* 1 */
 	text-decoration: underline; /* 2 */
 	text-decoration: underline dotted; /* 2 */
+=======
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+>>>>>>> carrito
 }
 
 /**
@@ -105,8 +162,13 @@ strong {
 code,
 kbd,
 samp {
+<<<<<<< HEAD
 	font-family: monospace, monospace; /* 1 */
 	font-size: 1em; /* 2 */
+=======
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+>>>>>>> carrito
 }
 
 /**
@@ -139,18 +201,30 @@ sup {
 }
 
 /* Embedded content
+<<<<<<< HEAD
 	 ========================================================================== */
+=======
+     ========================================================================== */
+>>>>>>> carrito
 
 /**
    * Remove the border on images inside links in IE 10.
    */
 
 img {
+<<<<<<< HEAD
 	border-style: none;
 }
 
 /* Forms
 	 ========================================================================== */
+=======
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+>>>>>>> carrito
 
 /**
    * 1. Change the font styles in all browsers.
@@ -162,10 +236,17 @@ input,
 optgroup,
 select,
 textarea {
+<<<<<<< HEAD
 	font-family: inherit; /* 1 */
 	font-size: 100%; /* 1 */
 	line-height: 1.15; /* 1 */
 	margin: 0; /* 2 */
+=======
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+>>>>>>> carrito
 }
 
 /**
@@ -175,8 +256,13 @@ textarea {
 
 button,
 input {
+<<<<<<< HEAD
 	/* 1 */
 	overflow: visible;
+=======
+  /* 1 */
+  overflow: visible;
+>>>>>>> carrito
 }
 
 /**
@@ -186,8 +272,13 @@ input {
 
 button,
 select {
+<<<<<<< HEAD
 	/* 1 */
 	text-transform: none;
+=======
+  /* 1 */
+  text-transform: none;
+>>>>>>> carrito
 }
 
 /**
@@ -198,7 +289,11 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+<<<<<<< HEAD
 	-webkit-appearance: button;
+=======
+  -webkit-appearance: button;
+>>>>>>> carrito
 }
 
 /**
@@ -209,8 +304,13 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
+<<<<<<< HEAD
 	border-style: none;
 	padding: 0;
+=======
+  border-style: none;
+  padding: 0;
+>>>>>>> carrito
 }
 
 /**
@@ -221,7 +321,11 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
+<<<<<<< HEAD
 	outline: 1px dotted ButtonText;
+=======
+  outline: 1px dotted ButtonText;
+>>>>>>> carrito
 }
 
 /**
@@ -229,7 +333,11 @@ button:-moz-focusring,
    */
 
 fieldset {
+<<<<<<< HEAD
 	padding: 0.35em 0.75em 0.625em;
+=======
+  padding: 0.35em 0.75em 0.625em;
+>>>>>>> carrito
 }
 
 /**
@@ -240,12 +348,21 @@ fieldset {
    */
 
 legend {
+<<<<<<< HEAD
 	box-sizing: border-box; /* 1 */
 	color: inherit; /* 2 */
 	display: table; /* 1 */
 	max-width: 100%; /* 1 */
 	padding: 0; /* 3 */
 	white-space: normal; /* 1 */
+=======
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+>>>>>>> carrito
 }
 
 /**
@@ -253,7 +370,11 @@ legend {
    */
 
 progress {
+<<<<<<< HEAD
 	vertical-align: baseline;
+=======
+  vertical-align: baseline;
+>>>>>>> carrito
 }
 
 /**
@@ -261,7 +382,11 @@ progress {
    */
 
 textarea {
+<<<<<<< HEAD
 	overflow: auto;
+=======
+  overflow: auto;
+>>>>>>> carrito
 }
 
 /**
@@ -271,8 +396,13 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
+<<<<<<< HEAD
 	box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
+=======
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+>>>>>>> carrito
 }
 
 /**
@@ -281,7 +411,11 @@ textarea {
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
+<<<<<<< HEAD
 	height: auto;
+=======
+  height: auto;
+>>>>>>> carrito
 }
 
 /**
@@ -290,8 +424,13 @@ textarea {
    */
 
 [type="search"] {
+<<<<<<< HEAD
 	-webkit-appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
+=======
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+>>>>>>> carrito
 }
 
 /**
@@ -299,7 +438,11 @@ textarea {
    */
 
 [type="search"]::-webkit-search-decoration {
+<<<<<<< HEAD
 	-webkit-appearance: none;
+=======
+  -webkit-appearance: none;
+>>>>>>> carrito
 }
 
 /**
@@ -308,19 +451,32 @@ textarea {
    */
 
 ::-webkit-file-upload-button {
+<<<<<<< HEAD
 	-webkit-appearance: button; /* 1 */
 	font: inherit; /* 2 */
 }
 
 /* Interactive
 	 ========================================================================== */
+=======
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+>>>>>>> carrito
 
 /*
    * Add the correct display in Edge, IE 10+, and Firefox.
    */
 
 details {
+<<<<<<< HEAD
 	display: block;
+=======
+  display: block;
+>>>>>>> carrito
 }
 
 /*
@@ -328,18 +484,30 @@ details {
    */
 
 summary {
+<<<<<<< HEAD
 	display: list-item;
 }
 
 /* Misc
 	 ========================================================================== */
+=======
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+>>>>>>> carrito
 
 /**
    * Add the correct display in IE 10+.
    */
 
 template {
+<<<<<<< HEAD
 	display: none;
+=======
+  display: none;
+>>>>>>> carrito
 }
 
 /**
@@ -347,5 +515,9 @@ template {
    */
 
 [hidden] {
+<<<<<<< HEAD
 	display: none;
+=======
+  display: none;
+>>>>>>> carrito
 }
