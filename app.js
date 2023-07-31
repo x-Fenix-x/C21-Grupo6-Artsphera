@@ -16,6 +16,4 @@ app.get('/header',(req,res) => res.sendFile(path.join(__dirname,'views','partial
 app.get('/footer',(req,res) => res.sendFile(path.join(__dirname,'views','partials','footer.html')));
 app.get('/*',(req,res)=> res.sendFile(path.join(__dirname,'/views/404.html')))
 
-
-
 app.listen(PORT, () => console.log('Servidor corriendo en http://localhost:' + PORT));
