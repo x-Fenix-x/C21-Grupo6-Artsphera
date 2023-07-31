@@ -22,3 +22,21 @@ let swiper = new Swiper('.mySwiper', {
 const toggleSelected = button => {
   button.classList.toggle('selected');
 }
+
+// BOTONES SIGUIENTE & ATRÁS
+
+const productoContainer = document.querySelectorAll('.producto-container');
+const antBoton = document.querySelectorAll('.ant-boton');
+const sigBoton = document.querySelectorAll('.sig-boton');
+
+productoContainer.forEach((card, i) => {
+  const cardWidth = card.querySelector('.producto-card').offsetWidth;
+
+  sigBoton[i].addEventListener('click', () => {
+    card.scrollLeft += cardWidth;
+  });
+
+  antBoton[i].addEventListener('click', () => {
+    card.scrollLeft -= cardWidth;
+  });
+});

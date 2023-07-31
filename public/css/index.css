@@ -360,6 +360,11 @@
   color: var(--colorRojo);
 }
 
+.ant-boton,
+.sig-boton {
+  display: none;
+}
+
 /* OFERTAS */
 
 .oferta-container {
@@ -539,5 +544,31 @@
   .producto-card {
     flex: 0 0 22%;
     margin-left: 5px;
+  }
+
+  /* BOTONES */
+
+  .ant-boton {
+    left: 0;
+  }
+
+  .sig-boton {
+    right: 0;
+  }
+
+  .ant-boton,
+  .sig-boton {
+    position: absolute;
+    width: 5vw;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 8;
+    border-radius: 50%;
+    border: none;
+    align-items: center;
+    background-color: #f9f9f8;
   }
 }
