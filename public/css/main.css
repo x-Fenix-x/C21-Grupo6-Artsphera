@@ -47,6 +47,7 @@
 }
 .main__div_secundario{
     background-color: black;
+    margin-top: 20px;
 }
 .main__div__secundario__titulo{
     text-align: center;
@@ -54,6 +55,9 @@
 }
 .main__div__secundario__h4{
     color: aliceblue;
+    text-align: left;
+    margin: 10px;
+    padding: 3px;
 }
 .main__div__cajas{
     border-radius: 1px solid rgb(199, 186, 186);
