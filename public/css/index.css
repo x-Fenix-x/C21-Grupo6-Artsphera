@@ -163,6 +163,7 @@
   font-size: 1.8rem;
   text-align: center;
   padding-top: 10px;
+  font-weight: 600;
 }
 
 .index-tematicas {
@@ -214,8 +215,8 @@
 
 .index-tematicas__button {
   border: none;
-  background-color: var(--colorCobre);
-  color: #ffffff;
+  background-color: var(--colorBeige);
+  color: #000000;
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
@@ -224,8 +225,8 @@
 }
 
 .index-tematicas__button:hover {
-  background: var(--colorBeige);
-  color: #000000;
+  background: var(--colorCobre);
+  color: #ffffff;
 }
 
 /* NOVEDADES & PRODUCTOS DESTACADOS */
@@ -243,6 +244,7 @@
   text-transform: capitalize;
   text-align: center;
   color: #ffffff;
+  font-weight: 600;
 }
 
 .producto-container {
@@ -302,8 +304,7 @@
   bottom: 10px;
   padding: 10px;
   transform: translateX(-50%);
-  text-transform: capitalize;
-  background: #fff;
+  background: var(--colorCobre);
   border-radius: 10px;
   transition: 500ms;
   cursor: pointer;
@@ -408,8 +409,8 @@
 }
 
 .agregar-carrito {
-  background-color: var(--colorCobre);
-  color: #ffffff;
+  background-color: var(--colorBeige);
+  color: #000000;
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -418,7 +419,7 @@
   margin-top: 10px;
   cursor: pointer;
   border-radius: 10px;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #000000;
@@ -426,8 +427,8 @@
 
 .agregar-carrito:hover,
 .agregar-carrito.selected {
-  background: var(--colorBeige);
-  color: #000000;
+  background: var(--colorCobre);
+  color: #fffbfb;
 }
 
 /* FORMULARIO - BOLETIN INFORMATIVO */
