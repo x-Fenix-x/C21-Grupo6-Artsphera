@@ -4,7 +4,17 @@
 }
 .main__div__principal{
     background-color: black;
-
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.main_columna{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.main__div__principal--sec{
+    display: flex;
 }
 .main__div__principal__imagen{
     margin: 20px;
@@ -22,10 +32,14 @@
 .main__div__principal__h5{
     color: #2EDF1F;
     text-align: center;
+    margin-top: 10px;
+    text-align: left;
 }
 .main__div__principal__btn{
     color: #2279DE;
     text-align: center;
+    padding: 5px;
+    margin-top: 10px;
 }
 .main__h3{
     color: black;
@@ -33,6 +47,7 @@
 }
 .main__div_secundario{
     background-color: black;
+    margin-top: 20px;
 }
 .main__div__secundario__titulo{
     text-align: center;
@@ -40,6 +55,9 @@
 }
 .main__div__secundario__h4{
     color: aliceblue;
+    text-align: left;
+    margin: 10px;
+    padding: 3px;
 }
 .main__div__cajas{
     border-radius: 1px solid rgb(199, 186, 186);
