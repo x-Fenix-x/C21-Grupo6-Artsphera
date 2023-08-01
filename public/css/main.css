@@ -17,7 +17,7 @@
     display: flex;
 }
 .main__div__principal__imagen{
-    margin: 20px;
+    margin: 5px;
     width: 50px;
     text-align: left;
 }
@@ -47,7 +47,7 @@
 }
 .main__div_secundario{
     background-color: black;
-    margin-top: 20px;
+    
 }
 .main__div__secundario__titulo{
     text-align: center;
@@ -67,8 +67,9 @@
     
 }
 .main__div__img{
-    margin: 20px;
+    margin: 50px;
     width: 50px;
+    align-items: center;
     text-align: center;
 }
 .main__div__h4{
@@ -79,10 +80,24 @@
 .main__div__p1{
     color: #DE2222;
     text-align: left;
+    display: inline-flex; 
+    margin-bottom: 5px; 
+    margin: 5%;
+    padding: 5%;
 }
 .main__div__p2{
     color: #2EDF1F;
-    text-align: right;
+    text-align: center;
+    display: inline-flex; 
+    margin-bottom: 5px; 
+    margin: 5%;
+    padding: 5%;
+}
+.main__div__alineado{
+    display: flex;
+    text-align: left;
+    padding: 5%;
+    margin: 5%;
 }
 .main__div__input{
     color:black;
@@ -108,17 +123,18 @@
     margin: 2%;
     margin-right: 0%;
     margin-bottom: 0%;
-    justify-content: space-between;
+    /* justify-content: space-between;
     align-content: space-between;
-    height: 42vh;
+    height: 20%; */
     background-color: #222020;
     border-radius: 10px 10px 10px 10px ;
 }
 .main__div__cajita{
     display: flex; 
     margin: 5px;
-    margin-bottom: 5px; 
+    margin-bottom: 10px; 
     background-color: #D0AD7A;
     color: #222020;
+    text-align: center;
 
 }
