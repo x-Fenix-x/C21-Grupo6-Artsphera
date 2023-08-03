@@ -17,12 +17,6 @@ let swiper = new Swiper('.mySwiper', {
   },
 });
 
-// BOTÓN SELECCIONADO
-
-const toggleSelected = button => {
-  button.classList.toggle('selected');
-}
-
 // BOTONES SIGUIENTE & ATRÁS
 
 const productoContainer = document.querySelectorAll('.producto-container');

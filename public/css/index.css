@@ -352,6 +352,7 @@
   cursor: pointer;
   opacity: 0;
   border: 1px solid #000000;
+  text-align: center;
 }
 
 .producto-card:hover .producto-card__boton {
@@ -455,7 +456,7 @@
   font-weight: bold;
 }
 
-.agregar-carrito {
+.index-ver__mas {
   background-color: var(--colorBeige);
   color: #000000;
   border: none;
@@ -472,8 +473,7 @@
   border: 1px solid #000000;
 }
 
-.agregar-carrito:hover,
-.agregar-carrito.selected {
+.index-ver__mas:hover {
   background: var(--colorCobre);
   color: #fffbfb;
 }
