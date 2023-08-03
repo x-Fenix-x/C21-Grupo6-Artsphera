@@ -19,7 +19,7 @@
 	align-items: center;
 }
 
-.firstHeader > img {
+.firstHeader > a {
 	display: block;
 	width: 3rem;
 
@@ -53,7 +53,7 @@
 	}
 }
 
-.leftHeader > img {
+.leftHeader > a > img {
 	width: 16.5em;
 }
 
