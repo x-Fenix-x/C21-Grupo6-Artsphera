@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login | Artesphera</title>
+		<link rel="icon" href="/img/Logo 3.png" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/948b015395.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<main>
+			<section class="mainContent">
+				<article class="firstArticle">
+					<div class="loginTop">
+						<h1>Dale Variedad: Agrega Productos</h1>
+						<p>¡Agrega más opciones!</p>
+					</div>
+					<form action="/login" class="form">
+						<input
+							type="text"
+							id="nameOfProduct"
+							name="nameOfProduct"
+							placeholder="Ingresa el nombre del producto."
+							required
+						/>
+						<input
+							type="file"
+							id="image"
+							name="image"
+							accept="image/*"
+							placeholder="Agrega una imagen."
+							required
+						/>
+						<select id="category" name="category" required>
+							<option value="ropa">Ropa</option>
+							<option value="electronicos">Electrónicos</option>
+							<option value="accesorios">Accesorios</option>
+							<option value="hogar">Hogar</option>
+						</select>
+						<input
+							type="number"
+							id="price"
+							name="price"
+							step="0.01"
+							placeholder="Precio"
+							required
+						/><br />
+						<textarea
+							id="description"
+							name="description"
+							rows="4"
+							placeholder="Descripcion del mismo."
+							required
+						></textarea>
+						<button type="submit">Agregalo</button>
+					</form>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>

@@ -51,8 +51,8 @@
 	}
 }
 
-.leftHeader > img {
-	width: 16.5em;
+.firstHeader > a > img {
+	width: 2.75rem;
 }
 
 .leftHeader > a {
