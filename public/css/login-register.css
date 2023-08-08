@@ -19,7 +19,7 @@
 	align-items: center;
 }
 
-.firstHeader > img {
+.firstHeader > a {
 	display: block;
 	width: 3rem;
 
@@ -39,6 +39,8 @@
 .headerMenu > button {
 	font-size: 1.65rem;
 	line-height: 1.65rem;
+	border: none;
+	background-color: inherit;
 }
 
 .leftHeader {
@@ -51,8 +53,13 @@
 	}
 }
 
+<<<<<<< HEAD
 .firstHeader > a > img {
 	width: 2.75rem;
+=======
+.leftHeader > a > img {
+	width: 16.5em;
+>>>>>>> develop
 }
 
 .leftHeader > a {
@@ -94,6 +101,7 @@
 
 .headerSearch {
 	display: inline-block;
+	background-color: none;
 
 	@media (min-width: 1024px) {
 		display: none;
@@ -102,6 +110,8 @@
 
 .headerSearch > button {
 	font-size: 1.65rem;
+	border: none;
+	background-color: inherit;
 }
 
 .subHeader {
@@ -128,18 +138,16 @@
 	justify-content: center;
 	gap: 15rem;
 	align-items: center;
-	background-image: var(--login-tablet);
+	background-image: var(--loginWallpaper);
 	background-size: auto;
 	background-repeat: repeat;
 
 	@media (min-width: 640px) {
 		gap: 0rem;
-		background-image: var(--login-tablet);
 	}
 
 	@media (min-width: 1024px) {
 		background-position: center;
-		background-image: var(--login-tablet);
 	}
 }
 
@@ -192,11 +200,13 @@
 	font-weight: 500;
 	color: #9ca3af;
 	background-color: #f6f6f6;
+	border: none;
 }
 
 .form > button {
 	padding-top: 0.9rem;
 	padding-bottom: 0.9rem;
+	border: none;
 	border-radius: 9999px;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -339,10 +349,11 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 
-.subInformation > h2 {
-	font-weight: 700;
+.subInformation > h4 {
 	color: #000000;
 }
 

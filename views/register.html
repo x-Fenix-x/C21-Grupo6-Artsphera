@@ -24,9 +24,13 @@
 					<div class="headerMenu">
 						<button class="fa-solid fa-bars"></button>
 					</div>
-					<img src="./img/Logo 3.svg" alt="" />
+					<a href="/">
+						<img src="./img/Logo 3.svg" alt="Logo" />
+					</a>
 					<div class="leftHeader">
-						<img src="./img/LogoExpanded.svg" alt="" />
+						<a href="/">
+							<img src="./img/LogoExpanded.svg" alt="" />
+						</a>
 						<a href="#">Disciplinas</a>
 						<div class="leftNav">
 							<i class="fa-solid fa-magnifying-glass"></i>
@@ -37,8 +41,8 @@
 						<div class="headerSearch">
 							<button class="fa-solid fa-magnifying-glass"></button>
 						</div>
-						<a href="#" class="fa-solid fa-cart-shopping"></a>
-						<a href="#" class="fa-sharp fa-solid fa-user"></a>
+						<a href="/carrito" class="fa-solid fa-cart-shopping"></a>
+						<a href="/login" class="fa-sharp fa-solid fa-user"></a>
 					</div>
 				</div>
 			</header>
@@ -55,12 +59,19 @@
 							name="usernameOrEmail"
 							placeholder="Correo electrónico"
 						/>
-
 						<input
 							type="password"
 							id="password"
 							name="password"
 							placeholder="Contraseña"
+						/>
+
+						<input
+							type="password"
+							id="confirmPassword"
+							name="confirmPassword"
+							placeholder="Ingresa nuevamente tu contraseña"
+							required
 						/>
 						<button type="submit">Registrarse</button>
 					</form>
@@ -112,12 +123,6 @@
 						</div>
 					</div>
 					<div class="footerContent">
-						<!-- <div class="navStore">
-							<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-							<a href="#"><i class="fa-brands fa-twitter"></i></a>
-							<a href="#"><i class="fa-brands fa-instagram"></i></a>
-							<a href="#"><i class="fa-brands fa-youtube"></i></a>
-						</div> -->
 						<div class="copyrightStore">
 							<p>2023 - Artsphera. Todos los derechos reservados.</p>
 							<img src="/img/class-payments.png" alt="" width="250px" />
@@ -125,13 +130,6 @@
 					</div>
 				</footer>
 			</section>
-			<!-- <footer class="footerContent">
-				<div class="copyrightStore">
-					<i class="fa-regular fa-copyright"></i>
-					<p>2023 - Artsphera. Todos los derechos reservados.</p>
-				</div>
-				<img src="/img/class-payments.png" alt="" width="250x" />
-			</footer> -->
 		</main>
 	</body>
 </html>
