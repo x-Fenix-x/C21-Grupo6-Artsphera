@@ -1,8 +1,8 @@
-/* main {
+main {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-} */
+}
 
 /* Header */
 .contentHeader {
@@ -53,13 +53,8 @@
 	}
 }
 
-<<<<<<< HEAD
-.firstHeader > a > img {
-	width: 2.75rem;
-=======
 .leftHeader > a > img {
 	width: 16.5em;
->>>>>>> develop
 }
 
 .leftHeader > a {
@@ -135,7 +130,7 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	gap: 15rem;
 	align-items: center;
 	background-image: var(--loginWallpaper);
