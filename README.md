@@ -40,4 +40,6 @@
 ### [Retrospectiva SPRINT 1](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/tree/retrospectivas/Retro%201)
 ### [Retrospectiva SPRINT 2](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro2.MD)
 
+## JIRA: https://arteshera.atlassian.net
+
 ## TRELLO: https://trello.com/b/SbEzd56P/c21-grupo-6-artesphera
