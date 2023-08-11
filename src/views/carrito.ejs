@@ -1,58 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <!-- <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/header.css"> -->
-    <!-- <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/index.css"> -->
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="https://kit.fontawesome.com/16018bb78d.js" crossorigin="anonymous"></script>
+<%- include('partials/head') %>
 
-</head>
 <body class="body">
-    <header class="headerContent">
-        <div class="subHeader">
-            <p>
-                Hacemos envíos a todo el país. Política de devolución de 15 días.
-                Envío gratuito en pedidos superiores a $ 10000.
-            </p>
-        </div>
-        <div class="firstHeader">
-            <div class="headerMenu">
-                <button class="fa-solid fa-bars"></button>
-            </div>
-            <img src="/images/Logo 3.svg" alt="Logo" />
-            <div class="leftHeader">
-                <img src="/images/LogoExpanded.svg" alt="LogoExpanded" />
-                <div class="dropdown">
-                    <a href="#" class="dropdown-titulo">Disciplinas</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Pintura</a></li>
-                        <li><a href="#">Escultura</a></li>
-                        <li><a href="#">Fotografía</a></li>
-                        <li><a href="#">Dibujo</a></li>
-                        <li><a href="#">Arte Digital</a></li>
-                        <li><a href="#">Collage</a></li>
-                    </ul>
-                </div>
-                <div class="leftNav">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Que deseas encontrar?" />
-                </div>
-            </div>
-            <div class="rightHeader">
-                <div class="headerSearch">
-                    <button class="fa-solid fa-magnifying-glass"></button>
-                </div>
-                <a href="carrito" class="fa-solid fa-cart-shopping"></a>
-                <a href="login" class="fa-sharp fa-solid fa-user"></a>
-            </div>
-        </div>
-    </header>
+    <%- include('partials/header') %>
     <main class="main">
         <div class="main__div__principal">
             <div class="main__div__principal--sec">
@@ -124,49 +75,6 @@
             </div>
         </div>
     </main>
-    <footer class="secondArticle">
-        <div class="informationStore">
-                <div class="subInformation">
-                    <h2>Informacion de la tienda</h2>
-                    <a href="#">Avenida siempre viva 742</a>
-                    <a href="#">ventas@artsphera.com</a>
-                    <a href="#">0800-000-0000</a>
-                </div>
-                <div class="subInformation">
-                    <h2>Productos</h2>
-                    <a href="#">Nuevos productos</a>
-                    <a href="#">Más vendidos</a>
-                    <a href="#">Ofertas especiales</a>
-                </div>
-                <div class="subInformation">
-                    <h2>Empresa</h2>
-                    <a href="#">Contacta con nosotros</a>
-                    <a href="#">Terminos y condiciones</a>
-                    <a href="#">Sobre nosotros</a>
-                </div>
-                <div class="subInformation">
-                    <h2>Tu cuenta</h2>
-                    <a href="#">Información personal</a>
-                    <a href="#">Pedidos</a>
-                    <a href="#">Cupones de descuento</a>
-                </div>
-            </div>
-        <article class="footer__parte__baja">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </article>
-        <article class="footer__parte__baja">
-            <p>
-                <img src="/images/Group.png" alt="">2023-arthespera.todos los derechos reservados   
-                <img src="/images/visa.png" alt="">
-                <img src="/images/american_express.png" alt="">
-                <img src="/images/card_blue.png" alt="">
-                <img src="/images/master_card.png" alt="">
-                <img src="/images/paypal.png" alt="">
-            </p>
-        </article>
-    </footer> 
+    <%- include('partials/footer') %>
 </body>
 </html>

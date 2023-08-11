@@ -1,51 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Register | Artesphera</title>
-		<link rel="icon" href="/images/Logo 3.png" type="image/x-icon" />
-		<link rel="stylesheet" href="/stylesheets/style.css" />
-		<script
-			src="https://kit.fontawesome.com/948b015395.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
+	<%- include('partials/head') %>
 	<body>
 		<main>
-			<header class="headerContent">
-				<div class="subHeader">
-					<p>
-						Hacemos envíos a todo el país. Política de devolución de 15 días.
-						Envío gratuito en pedidos superiores a $ 10000.
-					</p>
-				</div>
-				<div class="firstHeader">
-					<div class="headerMenu">
-						<button class="fa-solid fa-bars"></button>
-					</div>
-					<a href="/">
-						<img src="/images/Logo 3.svg" alt="Logo" />
-					</a>
-					<div class="leftHeader">
-						<a href="/">
-							<img src="/images/LogoExpanded.svg" alt="" />
-						</a>
-						<a href="#">Disciplinas</a>
-						<div class="leftNav">
-							<i class="fa-solid fa-magnifying-glass"></i>
-							<input type="text" placeholder="Que deseas encontrar?" />
-						</div>
-					</div>
-					<div class="rightHeader">
-						<div class="headerSearch">
-							<button class="fa-solid fa-magnifying-glass"></button>
-						</div>
-						<a href="/carrito" class="fa-solid fa-cart-shopping"></a>
-						<a href="/login" class="fa-sharp fa-solid fa-user"></a>
-					</div>
-				</div>
-			</header>
+			<%- include('partials/header') %>
 			<section class="mainContent">
 				<article class="firstArticle">
 					<div class="loginTop">
@@ -95,40 +53,7 @@
 						<a href="/login">Entra ahora</a>
 					</div>
 				</article>
-				<footer class="secondArticle">
-					<div class="informationStore">
-						<div class="subInformation">
-							<h2>Informacion de la tienda</h2>
-							<a href="#">Avenida siempre viva 742</a>
-							<a href="#">ventas@artsphera.com</a>
-							<a href="#">0800-000-0000</a>
-						</div>
-						<div class="subInformation">
-							<h2>Productos</h2>
-							<a href="#">Nuevos productos</a>
-							<a href="#">Más vendidos</a>
-							<a href="#">Ofertas especiales</a>
-						</div>
-						<div class="subInformation">
-							<h2>Empresa</h2>
-							<a href="#">Contacta con nosotros</a>
-							<a href="#">Terminos y condiciones</a>
-							<a href="#">Sobre nosotros</a>
-						</div>
-						<div class="subInformation">
-							<h2>Tu cuenta</h2>
-							<a href="#">Información personal</a>
-							<a href="#">Pedidos</a>
-							<a href="#">Cupones de descuento</a>
-						</div>
-					</div>
-					<div class="footerContent">
-						<div class="copyrightStore">
-							<p>2023 - Artsphera. Todos los derechos reservados.</p>
-							<img src="/images/class-payments.png" alt="" width="250px" />
-						</div>
-					</div>
-				</footer>
+				<%- include('partials/footer') %>
 			</section>
 		</main>
 	</body>
