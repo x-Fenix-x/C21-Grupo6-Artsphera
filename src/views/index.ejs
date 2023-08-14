@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head') %>
+
+<body class="index">
+  <%- include('partials/header') %>
+    <main class="index-main">
+      <div class="index-main__section--banner">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/images/banner/banner1.png" alt="banner1"></div>
+            <div class="swiper-slide"><img src="/images/banner/banner2.jpg" alt="banner2"></div>
+            <div class="swiper-slide"><img src="/images/banner/banner3.jpg" alt="banner3"></div>
+            <div class="swiper-slide"><img src="/images/banner/banner4.jpg" alt="banner4"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <section class="index-tematicas">
+        <h1 class="index__titulo">Explora por temáticas</h1>
+        <div class="index-tematicas__contenedor">
+          <article class="index-article">
+            <a href="#">
+              <img class="index-article__img" src="/images/productos/card1.jpg" alt="pintura">
+              <h3 class="index-article__titulo">Pintura</h3>
+            </a>
+          </article>
+          <article class="index-article">
+            <a href="#">
+              <img class="index-article__img" src="/images/productos/card2.jpeg" alt="escultura">
+              <h3 class="index-article__titulo">Escultura</h3>
+            </a>
+          </article>
+          <article class="index-article">
+            <a href="#">
+              <img class="index-article__img" src="/images/productos/card3.jpg" alt="fotografía">
+              <h3 class="index-article__titulo">Fotografía</h3>
+            </a>
+          </article>
+          <article class="index-article">
+            <a href="#">
+              <img class="index-article__img" src="/images/productos/card4.jpg" alt="dibujo">
+              <h3 class="index-article__titulo">Dibujo</h3>
+            </a>
+          </article>
+          <article class="index-article">
+            <a href="#">
+              <img class="index-article__img" src="/images/productos/card5.jpg" alt="arte digital">
+              <h3 class="index-article__titulo">Arte Digital</h3>
+            </a>
+          </article>
+          <article class="index-article">
+            <a href="#">
+              <img class="index-article__img" src="/images/productos/card6.jpg" alt="collage">
+              <h3 class="index-article__titulo">Collage</h3>
+            </a>
+          </article>
+        </div>
+        <a class="index-tematicas__button" href="#">Ver todos los productos</a>
+      </section>
+      <section class="index-producto">
+        <h2 class="index-producto__categoria">Novedades</h2>
+        <i class="fa-solid fa-chevron-left ant-boton"></i>
+        <i class="fa-solid fa-chevron-right sig-boton"></i>
+        <div class="producto-container">
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card1.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class=" producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card2.jpeg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card3.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card4.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card5.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card6.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card7.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card8.jpeg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card1.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <img class="producto-card__img" src="/images/productos/card2.jpeg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="index__titulo">Ofertas por tiempo limitado</h2>
+        <div class="oferta-container">
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="imagen-oferta">
+              <img src="/images/productos/card6.jpg" alt="producto">
+              <div class="descuento">
+                <span>-20%</span>
+              </div>
+            </div>
+            <div class="informacion-oferta">
+              <h3 class="producto-info__titulo">Producto</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Precio original: <span class="precio-original">$1000</span></p>
+              <p>Precio con descuento: <span class="precio-descuento">$800</span></p>
+              <p>Quedan <span class="stock">5</span> en stock</p>
+              <a href="/products/detail" class="index-ver__mas">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="index-producto">
+        <h2 class="index-producto__categoria">Productos Destacados</h2>
+        <div class="producto-container">
+          <i class="fa-solid fa-chevron-left ant-boton"></i>
+          <i class="fa-solid fa-chevron-right sig-boton"></i>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card1.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card2.jpeg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card3.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card4.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card5.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card6.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card7.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card8.jpeg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card1.jpg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+          <div class="producto-card">
+            <div class="producto-imagen">
+              <span class="producto-card__descuento">50% off</span>
+              <img class="producto-card__img" src="/images/productos/card2.jpeg" alt="producto">
+              <a href="/products/detail" class="producto-card__boton">Ver más</a>
+            </div>
+            <div class="producto-info">
+              <h2 class="producto-info__titulo">Producto</h2>
+              <p class="producto-info__descripcion">Lorem ipsum dolor sit amet.</p>
+              <span class="precio--descuento">$20</span><span class="precio">$40</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="index-form">
+        <h2>Recibe las últimas novedades</h2>
+        <h3>Suscribite a nuestro boletín para recibir novedades y/o cupones de descuentos</h3>
+        <div class="index-form-container">
+          <form>
+            <div>
+              <input class="index-form-container__email" type="email" name="email" placeholder="Ingresa tu email"
+                required>
+              <button type="submit">Suscribirse</button>
+              <div>
+                <label for="terminos">
+                  <input type="checkbox" name="terminos" id="terminos" required>
+                  Acepta nuestros terminos y condiciones
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script src="/javascripts/index-functions.js"></script>
+</body>
+
+</html>

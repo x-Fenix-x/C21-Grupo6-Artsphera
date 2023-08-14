@@ -6,9 +6,9 @@
   width: 100%;
 }
 
-.firstHeader {
+div.firstHeader {
   display: flex;
-  padding: 1.25rem 3rem;
+  padding: 1.25rem 2rem;
   gap: 2.5rem;
   justify-content: space-between;
   align-items: center;
@@ -128,7 +128,7 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: -32%;
+  left: -30%;
   background-color: #ffffffab;
   padding: 10px;
   border: 1px solid #ccc;
@@ -150,7 +150,7 @@
 
 .dropdown-menu li a {
   display: block;
-  padding: 5px 10px;
+  padding: 5px 8px;
   color: #333;
   text-decoration: none;
   font-weight: 500;
@@ -158,6 +158,16 @@
 
 .dropdown-menu li a:hover {
   background-color: #f9f9f95b;
+}
+
+.fa-user{
+  font-size: 1.65rem;
+  padding-bottom: 2px;
+}
+
+.dropdown-menu-user{
+  left: -100%;
+  padding: 5px 0;
 }
 
 /* MAIN */
@@ -485,7 +495,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   height: 220px;
-  background-image: url('/img/form-boletin.png');
+  background-image: url('/images/form-boletin.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

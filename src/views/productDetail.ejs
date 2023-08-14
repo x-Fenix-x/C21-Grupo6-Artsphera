@@ -1,48 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script src="https://kit.fontawesome.com/a80a6cbb3e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
-    <title>ProductDetail | Artesphera</title>
-  </head>
+  <%- include('partials/head') %>
   <body class="index">
-    <header class="headerContent">
-      <div class="subHeader">
-        <p>
-          Hacemos envíos a todo el país. Política de devolución de 15 días.
-          Envío gratuito en pedidos superiores a $ 10000.
-        </p>
-      </div>
-      <div class="firstHeader">
-        <div class="headerMenu">
-          <button class="fa-solid fa-bars"></button>
-        </div>
-        <img src="./img/Logo 3.svg" alt="" />
-        <div class="leftHeader">
-          <img src="./img/LogoExpanded.svg" alt="" />
-          <a href="#">Disciplinas</a>
-          <div class="leftNav">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Que deseas encontrar?" />
-          </div>
-        </div>
-        <div class="rightHeader">
-          <div class="headerSearch">
-            <button class="fa-solid fa-magnifying-glass"></button>
-          </div>
-          <a href="#" class="fa-solid fa-cart-shopping"></a>
-          <a href="#" class="fa-sharp fa-solid fa-user"></a>
-        </div>
-      </div>
-    </header>
+    <%- include('partials/header') %>
     <main class="mainContainer">
         <div class="mainFlexImg">
           <div class="img-detail">
-            <img src="./img/escultura.png" alt="" />
+            <img src="/images/escultura.png" alt="" />
           </div>
           <div class="mainAutor">
             <h1>Jean-Michel-Basquiat</h1>
@@ -105,7 +69,7 @@
         </div>
         <div class="mainEnvios">
           <div class="mainDetalleEnvios">
-            <img class="imgEnvio" src="./img/carro.png" alt="" />
+            <img class="imgEnvio" src="/images/carro.png" alt="" />
             <h4>ENVÍO & DEVOLUCIONES</h4>
             <p>
               Entrega internacional profesional, supervisada por nuestros
@@ -115,7 +79,7 @@
             </p>
           </div>
           <div class="mainDetalleEnvios">
-            <img class="imgEnvio" src="./img/garantia.png" alt="" />
+            <img class="imgEnvio" src="/images/garantia.png" alt="" />
             <h4>GARANTÍA</h4>
             <p>
               Artesphera garantiza fiabilidad y trazabilidad. Todos los artistas
@@ -128,7 +92,7 @@
             </p>
           </div>
           <div class="mainDetalleEnvios">
-            <img class="imgEnvio" src="./img/pago.png" alt="" />
+            <img class="imgEnvio" src="/images/pago.png" alt="" />
             <h4>PAGO</h4>
             <p>
               Con ARTESPHERA puede pagar de forma segura con tarjeta de crédito
@@ -139,7 +103,7 @@
             </p>
           </div>
           <div class="mainDetalleEnvios">
-            <img class="imgEnvio" src="./img/precio.png" alt="" />
+            <img class="imgEnvio" src="/images/precio.png" alt="" />
             <h4>PRECIO</h4>
             <p>
               Los precios de ARTESPHERA incluyen lo siguiente: El precio de la
@@ -162,7 +126,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="/img/productos/card1.jpg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card1.jpg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -175,7 +139,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card2.jpeg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card2.jpeg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -188,7 +152,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card3.jpg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card3.jpg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -201,7 +165,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card4.jpg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card4.jpg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -214,7 +178,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card5.jpg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card5.jpg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -227,7 +191,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card6.jpg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card6.jpg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -240,7 +204,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card7.jpg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card7.jpg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -253,7 +217,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card8.jpeg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card8.jpeg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -266,7 +230,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card1.jpg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card1.jpg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -279,7 +243,7 @@
             <div class="producto-card">
                 <div class="producto-imagen">
                     <span class="producto-card__descuento">50% off</span>
-                    <img class="producto-card__img" src="img/productos/card2.jpeg" alt="producto">
+                    <img class="producto-card__img" src="/images/productos/card2.jpeg" alt="producto">
                     <button class="producto-card__boton" onclick="toggleSelected(this)">Agregar al
                         carrito</button>
                 </div>
@@ -291,39 +255,6 @@
             </div>
         </div>
     </section>
-    <footer class="secondArticle">
-        <div class="informationStore">
-            <div class="subInformation">
-                <h4>Informacion de la tienda</h4>
-                <a href="#">Avenida siempre viva 742</a>
-                <a href="#">ventas@artsphera.com</a>
-                <a href="#">0800-000-0000</a>
-            </div>
-            <div class="subInformation">
-                <h4>Productos</h4>
-                <a href="#">Nuevos productos</a>
-                <a href="#">Más vendidos</a>
-                <a href="#">Ofertas especiales</a>
-            </div>
-            <div class="subInformation">
-                <h4>Empresa</h4>
-                <a href="#">Contacta con nosotros</a>
-                <a href="#">Terminos y condiciones</a>
-                <a href="#">Sobre nosotros</a>
-            </div>
-            <div class="subInformation">
-                <h4>Tu cuenta</h4>
-                <a href="#">Información personal</a>
-                <a href="#">Pedidos</a>
-                <a href="#">Cupones de descuento</a>
-            </div>
-        </div>
-        <div class="footerContent">
-            <div class="copyrightStore">
-                <p>2023 - Artsphera. Todos los derechos reservados.</p>
-                <img src="/img/class-payments.png" alt="" width="250px" />
-            </div>
-        </div>
-    </footer>
+    <%- include('partials/footer') %>
   </body>
 </html>

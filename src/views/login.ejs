@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partials/head') %>
+	<body>
+		<main>
+			<%- include('partials/header') %>
+			<section class="mainContent">
+				<article class="firstArticle">
+					<div class="loginTop">
+						<h1>Iniciar Sesión</h1>
+						<p>¡Ey! Ingresa tus datos para iniciar sesión.</p>
+					</div>
+					<form action="/login" class="form">
+						<input
+							type="text"
+							id="usernameOrEmail"
+							name="usernameOrEmail"
+							placeholder="Correo electrónico"
+						/>
+
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Contraseña"
+						/>
+						<div class="formOptions">
+							<label for="rememberMe" class="formRemember">
+								<input type="checkbox" id="rememberMe" name="rememberMe" />
+								Recuérdame
+							</label>
+							<a href="#">¿Olvidaste la Contraseña?</a>
+						</div>
+						<button type="submit">Iniciar Sesión</button>
+					</form>
+					<p>O inicia sesión con:</p>
+					<div class="loginLinks">
+						<a href="#" class="loginGoogle">
+							<i class="fa-brands fa-google"></i>
+							<p>Google</p>
+						</a>
+						<a href="#" class="loginApple">
+							<i class="fa-brands fa-apple"></i>
+							<p>Apple ID</p>
+						</a>
+						<a href="#" class="loginFacebook">
+							<i class="fa-brands fa-facebook"></i>
+							<p>Facebook</p>
+						</a>
+					</div>
+					<div class="loginNoAcc">
+						<p>¿No tienes una cuenta?</p>
+						<a href="/register">Solicítala ahora</a>
+					</div>
+				</article>
+				<%- include('partials/footer') %>
+			</section>
+		</main>
+	</body>
+</html>
