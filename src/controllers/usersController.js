@@ -4,5 +4,8 @@ module.exports = {
    },
    register: (req, res) => {
       return res.render('register');
+   }, 
+   adminPanel: (req, res) => {
+      return res.render('adminPanel');
    },
 };

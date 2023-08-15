@@ -1,3 +1,5 @@
 module.exports = {
-   detail: require('./products/detail'),
+	detail: require("./products/detail"),
+	add: require("./products/add"),
+	edit: require("./products/edit"),
 };

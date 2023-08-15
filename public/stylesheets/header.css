@@ -115,3 +115,10 @@
 		display: block;
 	}
 }
+
+.adminPanel {
+	display: none;
+	@media (min-width: 640px) {
+		display: inline-block;
+	}
+}
