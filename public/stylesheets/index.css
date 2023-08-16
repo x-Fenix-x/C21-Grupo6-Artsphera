@@ -180,18 +180,15 @@ div.firstHeader {
 
 /* CAROUSEL */
 
-.index-main__section--banner {
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  height: 35vh;
-}
-
 .swiper {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
+}
+
+.mySwiper{
+  width: 100%;
 }
 
 .swiper-slide {
@@ -201,20 +198,19 @@ div.firstHeader {
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 350px;
   object-fit: cover;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: #eb6c1d;
+.swiper-pagination-bullet{
+  background-color: var(--colorNegro);
 }
 
 /* TEMÁTICAS */
 
 .index__titulo {
+  margin: 0.67rem 0;
   font-size: 1.8rem;
   text-align: center;
-  padding-top: 10px;
   font-weight: 600;
 }
 
@@ -593,7 +589,7 @@ div.firstHeader {
   }
 
   /* PRODUCTOS */
-  .producto-card {
+   .producto-card {
     flex: 0 0 22%;
     margin-left: 5px;
   }
