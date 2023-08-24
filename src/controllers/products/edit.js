@@ -1,3 +1,3 @@
 module.exports = (req, res) => {
-	return res.render("editProduct");
+	return res.render("productEdit");
 };
