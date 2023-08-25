@@ -1,252 +1,32 @@
 [
    {
-      "id": 1,
-      "title": "bibendum",
-      "description": "donec quis orci eget orci",
-      "category": "Collage",
-      "price": 146767,
-      "discount": 80,
-      "stock": 15,
-      "image": "/images/products/polloCorazon.jpg"
-   },
-   {
-      "id": 2,
-      "title": "turpis nec euismod scelerisque quam",
-      "description": "sed justo pellentesque viverra pede",
-      "category": "Collage",
-      "price": 724615,
-      "discount": 29,
-      "stock": 20,
-      "image": "/images/products/jala.jpg"
-   },
-   {
-      "id": 3,
-      "title": "sapien arcu",
-      "description": "nulla ac enim in tempor turpis nec euismod scelerisque quam",
+      "id": "ffa4f311-a879-47a2-a743-ba32cebc9b24",
+      "title": "Alejandro Magno",
       "category": "Escultura",
-      "price": 13733,
-      "discount": 31,
-      "stock": 6,
-      "image": "/images/products/tostada.jpg"
+      "price": 9000,
+      "discount": 200,
+      "stock": 11,
+      "image": null,
+      "description": "Escultura de Alejandro Magno."
    },
    {
-      "id": 4,
-      "title": "mi integer",
-      "description": "morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in",
-      "category": "Ilustraciones",
-      "price": 165905,
-      "discount": 30,
-      "stock": 49,
-      "image": "/images/products/kipa.jpg"
-   },
-   {
-      "id": 5,
-      "title": "luctus",
-      "description": "nisl venenatis lacinia aenean sit amet",
-      "category": "Collage",
-      "price": 191086,
-      "discount": 35,
-      "stock": 5,
-      "image": ""
-   },
-   {
-      "id": 6,
-      "title": "tortor",
-      "description": "et magnis dis parturient montes nascetur ridiculus mus etiam vel augue",
-      "category": "Arte Digital",
-      "price": 1949852,
-      "discount": 53,
-      "stock": 7,
-      "image": "/images/products/tostada.jpg"
-   },
-   {
-      "id": 7,
-      "title": "consequat ut nulla sed accumsan",
-      "description": "nunc nisl duis bibendum felis sed interdum venenatis turpis",
+      "id": "21fb9839-5c89-454e-9fdd-78de683080ed",
+      "title": "Marilyn",
       "category": "Dibujo",
-      "price": 564519,
-      "discount": 93,
-      "stock": 29,
-      "image": "/images/products/pretzel.jpg"
+      "price": 555,
+      "discount": 77,
+      "stock": 1,
+      "image": null,
+      "description": "Dibujo de Marilyn Monroe."
    },
    {
-      "id": 8,
-      "title": "ut nunc vestibulum ante ipsum",
-      "description": "pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus",
-      "category": "Ilustraciones",
-      "price": 766327,
-      "discount": 86,
-      "stock": 22,
-      "image": "/images/products/polloCorazon.jpg"
-   },
-   {
-      "id": 9,
-      "title": "nunc proin at turpis a",
-      "description": "erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer",
-      "category": "Pintura",
-      "price": 1256128,
-      "discount": 59,
-      "stock": 41,
-      "image": ""
-   },
-   {
-      "id": 10,
-      "title": "orci mauris lacinia sapien",
-      "description": "a pede posuere nonummy integer non velit donec diam neque",
-      "category": "Fotografía",
-      "price": 480649,
-      "discount": 54,
-      "stock": 7,
-      "image": "/images/products/pretzel.jpg"
-   },
-   {
-      "id": 11,
-      "title": "et magnis dis",
-      "description": "quis orci eget orci vehicula condimentum curabitur in libero",
+      "id": "e2e04c38-2291-4179-b119-9269b3215d88",
+      "title": "Girl the colors",
       "category": "Dibujo",
-      "price": 278173,
-      "discount": 13,
-      "stock": 17,
-      "image": "/images/products/polloCorazon.jpg"
-   },
-   {
-      "id": 12,
-      "title": "amet",
-      "description": "duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec",
-      "category": "Dibujo",
-      "price": 173317,
-      "discount": 66,
-      "stock": 26,
-      "image": "/images/products/jala.jpg"
-   },
-   {
-      "id": 13,
-      "title": "interdum",
-      "description": "vivamus tortor duis mattis egestas metus",
-      "category": "Collage",
-      "price": 5022,
-      "discount": 31,
-      "stock": 14,
-      "image": "/images/products/jala.jpg"
-   },
-   {
-      "id": 14,
-      "title": "aliquam augue",
-      "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam",
-      "category": "Escultura",
-      "price": 1677852,
-      "discount": 60,
-      "stock": 50,
-      "image": "/images/products/kipa.jpg"
-   },
-   {
-      "id": 15,
-      "title": "turpis enim blandit",
-      "description": "rutrum at lorem integer tincidunt",
-      "category": "Escultura",
-      "price": 1010344,
-      "discount": 61,
-      "stock": 16,
-      "image": "/images/products/kipa.jpg"
-   },
-   {
-      "id": 16,
-      "title": "purus sit",
-      "description": "ut blandit non interdum in ante vestibulum",
-      "category": "Escultura",
-      "price": 1420745,
-      "discount": 60,
-      "stock": 10,
-      "image": "/images/products/tostada.jpg"
-   },
-   {
-      "id": 17,
-      "title": "vel enim sit amet",
-      "description": "nam congue risus semper porta volutpat quam pede lobortis ligula sit amet",
-      "category": "Ilustraciones",
-      "price": 1634266,
-      "discount": 70,
-      "stock": 35,
-      "image": "/images/products/jala.jpg"
-   },
-   {
-      "id": 18,
-      "title": "pretium nisl ut",
-      "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia",
-      "category": "Arte Digital",
-      "price": 48930,
-      "discount": 79,
-      "stock": 15,
-      "image": "/images/products/kipa.jpg"
-   },
-   {
-      "id": 19,
-      "title": "morbi vel lectus",
-      "description": "blandit lacinia erat vestibulum sed",
-      "category": "Dibujo",
-      "price": 70008,
-      "discount": 90,
-      "stock": 43,
-      "image": "/images/products/pletzale.jpg"
-   },
-   {
-      "id": 20,
-      "title": "sagittis nam congue",
-      "description": "elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue",
-      "category": "Dibujo",
-      "price": 104546,
-      "discount": 88,
-      "stock": 32,
-      "image": ""
-   },
-   {
-      "id": 21,
-      "title": "pulvinar",
-      "description": "amet eros suspendisse accumsan tortor quis",
-      "category": "Pintura",
-      "price": 65972,
-      "discount": 37,
-      "stock": 33,
-      "image": "/images/products/tostada.jpg"
-   },
-   {
-      "id": 22,
-      "title": "amet lobortis sapien",
-      "description": "duis at velit eu est",
-      "category": "Fotografía",
-      "price": 88056,
-      "discount": 51,
-      "stock": 31,
-      "image": ""
-   },
-   {
-      "id": 23,
-      "title": "erat",
-      "description": "aliquam erat volutpat in congue etiam justo etiam pretium iaculis",
-      "category": "Escultura",
-      "price": 66927,
-      "discount": 97,
-      "stock": 30,
-      "image": "/images/products/kipa.jpg"
-   },
-   {
-      "id": 24,
-      "title": "semper est",
-      "description": "morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet",
-      "category": "Arte Digital",
-      "price": 95334,
-      "discount": 55,
-      "stock": 22,
-      "image": "/images/products/jala.jpg"
-   },
-   {
-      "id": 25,
-      "title": "consequat varius",
-      "description": "justo in hac habitasse platea dictumst etiam faucibus cursus urna",
-      "category": "Dibujo",
-      "price": 19003,
-      "discount": 23,
-      "stock": 6,
-      "image": "/images/products/pretzel.jpg"
+      "price": 120,
+      "discount": 10,
+      "stock": 1,
+      "image": null,
+      "description": "Girl the colors."
    }
 ]

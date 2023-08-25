@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "name": "Pintura"
+   },
+   {
+      "id": 2,
+      "name": "Escultura"
+   },
+   {
+      "id": 3,
+      "name": "Fotografía"
+   },
+   {
+      "id": 4,
+      "name": "Dibujo"
+   },
+   {
+      "id": 5,
+      "name": "Arte Digital"
+   },
+   {
+      "id": 6,
+      "name": "Collage"
+   },
+   {
+      "id": 7,
+      "name": "Ilustración"
+   }
+]
