@@ -4,7 +4,7 @@
       "title": "Alejandro Magno",
       "category": "Escultura",
       "price": 9000,
-      "discount": 200,
+      "discount": 20,
       "stock": 11,
       "image": null,
       "description": "Escultura de Alejandro Magno."
@@ -28,5 +28,25 @@
       "stock": 1,
       "image": null,
       "description": "Girl the colors."
+   },
+   {
+      "id": "4d0ffa3b-ab25-41bb-907a-e1a74623de72",
+      "title": "Eye of the Tiger",
+      "category": "Ilustración",
+      "price": 888,
+      "discount": 12,
+      "stock": 23,
+      "image": null,
+      "description": "Eye of the tiger."
+   },
+   {
+      "id": "856c8d3d-6adf-4735-b1ae-cbd853e9d596",
+      "title": "The Power of Love",
+      "category": "Pintura",
+      "price": 500,
+      "discount": 25,
+      "stock": 3,
+      "image": null,
+      "description": " "
    }
 ]

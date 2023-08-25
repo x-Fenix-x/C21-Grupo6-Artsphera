@@ -1,11 +1,5 @@
 module.exports = {
-   login: (req, res) => {
-      return res.render('login');
-   },
-   register: (req, res) => {
-      return res.render('register');
-   }, 
-   adminPanel: (req, res) => {
-      return res.render('adminPanel');
-   },
+    adminPanel: require("./users/adminPanel"),
+    login: require("./users/login"),
+    register: require("./users/register"),
 };
