@@ -19,7 +19,7 @@
 							method="post"
 							class="flex flex-col justify-center gap-12"
 						>
-							<p class="text-3xl font-bold">Más productos...</p>
+							<p class="text-3xl font-bold">Agregar producto</p>
 							<div>
 								<div class="flex flex-col">
 									<label for="title" class="font-medium">Título</label>
@@ -38,21 +38,17 @@
 										name="category"
 										id="category"
 										class="p-3 text-sm bg-gray-100"
-									>
-										<option value="value1 ">Pintura</option>
-										<option value="value2" selected>Escultura</option>
-										<option value="value3">Dibujo</option>
-									</select>
-								</div>
-								<div class="flex flex-col">
-									<label for="imagen">Imagen:</label>
-									<input
-										type="file"
-										id="imagen"
-										name="imagen"
-										accept="image/*"
 										required
-									/>
+									>
+										<option disabled selected>Elige una opción</option>
+										<option value="Pintura">Pintura</option>
+										<option value="Escultura">Escultura</option>
+										<option value="Fotografía">Fotografía</option>
+										<option value="Dibujo">Dibujo</option>
+										<option value="Arte Digital">Arte Digital</option>
+										<option value="Collage">Collage</option>
+										<option value="Ilustración">Ilustración</option>
+									</select>
 								</div>
 								<div class="flex flex-col">
 									<label for="price" class="font-medium">Precio</label>
@@ -74,6 +70,27 @@
 										required
 										class="p-3 bg-gray-100 text-sm"
 										placeholder="Descuento en porcentaje"
+									/>
+								</div>
+								<div class="flex flex-col">
+									<label for="discount" class="font-medium">Stock</label>
+									<input
+										type="number"
+										id="discount"
+										name="discount"
+										required
+										class="p-3 bg-gray-100 text-sm"
+										placeholder="Cantidad disponible"
+									/>
+								</div>
+								<div class="flex flex-col">
+									<label for="imagen">Imagen:</label>
+									<input
+										type="file"
+										id="imagen"
+										name="imagen"
+										accept="image/*"
+										required
 									/>
 								</div>
 								<div class="flex flex-col">
