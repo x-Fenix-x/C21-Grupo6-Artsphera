@@ -15,11 +15,11 @@
 						class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12"
 					>
 						<form
-							action="/"
-							method="post"
+							action="/products/update/<%= product.id %>?_method=PUT"
+							method="POST"
 							class="flex flex-col justify-center gap-12"
 						>
-							<p class="text-3xl font-bold">Editar productos...</p>
+							<p class="text-3xl font-bold">Editar producto</p>
 							<div>
 								<div class="flex flex-col">
 									<label for="title" class="font-medium">Título</label>
@@ -30,6 +30,7 @@
 										required
 										class="p-3 bg-gray-100 text-sm"
 										placeholder="Título del producto "
+										value="<%= product.title %>"
 									/>
 								</div>
 								<div class="flex flex-col">
@@ -38,21 +39,13 @@
 										name="category"
 										id="category"
 										class="p-3 text-sm bg-gray-100"
-									>
-										<option value="value1 ">Pintura</option>
-										<option value="value2" selected>Escultura</option>
-										<option value="value3">Dibujo</option>
-									</select>
-								</div>
-								<div class="flex flex-col">
-									<label for="imagen">Imagen:</label>
-									<input
-										type="file"
-										id="imagen"
-										name="imagen"
-										accept="image/*"
 										required
-									/>
+									>
+										<option value="" disabled>Elige una opción</option>
+										<% categories.forEach(item => { %>
+											<option <%= item.name === product.category && "selected" %> value="<%= item.name %>"><%= item.name %></option>
+										<% }) %>
+									</select>
 								</div>
 								<div class="flex flex-col">
 									<label for="price" class="font-medium">Precio</label>
@@ -63,6 +56,7 @@
 										required
 										class="p-3 bg-gray-100 text-sm"
 										placeholder="Ejemplo: 99.99"
+										value="<%= product.price %>"
 									/>
 								</div>
 								<div class="flex flex-col">
@@ -74,6 +68,29 @@
 										required
 										class="p-3 bg-gray-100 text-sm"
 										placeholder="Descuento en porcentaje"
+										value="<%= product.discount %>"
+									/>
+								</div>
+								<div class="flex flex-col">
+									<label for="discount" class="font-medium">Stock</label>
+									<input
+										type="number"
+										id="discount"
+										name="stock"
+										required
+										class="p-3 bg-gray-100 text-sm"
+										placeholder="Cantidad disponible"
+										value="<%= product.stock %>"
+									/>
+								</div>
+								<div class="flex flex-col">
+									<label for="imagen">Imagen:</label>
+									<input
+										type="file"
+										id="imagen"
+										name="image"
+										accept="image/*"
+										required
 									/>
 								</div>
 								<div class="flex flex-col">
@@ -85,7 +102,7 @@
 										cols="50"
 										required
 										class="bg-gray-100 p-2"
-									></textarea>
+									><%= product.description %></textarea>
 								</div>
 							</div>
 							<button

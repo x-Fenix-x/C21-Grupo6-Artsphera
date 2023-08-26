@@ -3,11 +3,11 @@
       "id": "ffa4f311-a879-47a2-a743-ba32cebc9b24",
       "title": "Alejandro Magno",
       "category": "Escultura",
-      "price": 9000,
+      "price": 10000,
       "discount": 20,
       "stock": 11,
       "image": null,
-      "description": "Escultura de Alejandro Magno."
+      "description": "Alejandro Magno."
    },
    {
       "id": "21fb9839-5c89-454e-9fdd-78de683080ed",
@@ -37,7 +37,7 @@
       "discount": 30,
       "stock": 2,
       "image": null,
-      "description": "-"
+      "description": "Smile"
    },
    {
       "id": "cbeebb56-282e-4be1-ad4a-50ea4b9a49fb",
@@ -51,22 +51,22 @@
    },
    {
       "id": "3f714b2f-7ff5-41d2-a5c5-0c76894237b6",
-      "title": "Blondie",
+      "title": "Wonderland",
       "category": "Collage",
-      "price": 2222,
-      "discount": 0,
-      "stock": 15,
+      "price": 1200,
+      "discount": 10,
+      "stock": 5,
       "image": null,
-      "description": ""
+      "description": "Wonderland data del siglo XVIII."
    },
    {
       "id": "0650c1b9-b00d-46d2-96c9-1f1e7a142f72",
-      "title": "Life",
+      "title": "Life & Love",
       "category": "Ilustración",
-      "price": 2900,
-      "discount": 25,
-      "stock": 4,
-      "image": null,
-      "description": "Siglo XX."
+      "price": 3500,
+      "discount": 15,
+      "stock": 2,
+      "image": "card5.jpg",
+      "description": "Life & Love plasmadas en esta ilustración."
    }
 ]

@@ -1,9 +1,10 @@
 const express = require("express");
-const indexController = require("../controllers/indexController");
+const { index, carrito } = require("../controllers/indexController");
 const router = express.Router();
 
 /* Index */
-router.get("/", indexController.index);
-router.get("/carrito", indexController.carrito);
+router
+    .get("/", index)
+    .get("/carrito", carrito);
 
 module.exports = router;
