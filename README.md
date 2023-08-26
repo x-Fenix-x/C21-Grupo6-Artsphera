@@ -2,7 +2,7 @@
 
 ## Descripción del proyecto:
 
-- Desarrollar un e-commerce basado en la venta de artes. El cliente final son aquellas personas apasionadas por el arte en general, interesadas en adquirir obras de arte originales creadas por artistas independientes y productos relacionados como pintura, escultura, fotografía, dibujo, arte digital, collage, ilustraciones, etc.
+- Desarrollar un e-commerce basado en la venta de artes. El cliente final son aquellas personas apasionadas por el arte en general, interesadas en adquirir obras de arte originales creadas por artistas independientes y productos relacionados como pintura, escultura, fotografía, dibujo, ilustración, collage, etc.
 
 ## Integrantes:
 

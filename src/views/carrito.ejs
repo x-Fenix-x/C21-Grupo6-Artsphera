@@ -1,82 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<%- include('partials/head') %>
+<html lang="es">
+<%- include('partials/head',{title: "Artesphera | Carrito"}) %>
 
 <body class="body">
     <%- include('partials/header') %>
     <main class="main">
         <section class="section__tematica">
+            <h3 class="main__h3">Carrito de compras</h3>
             <div class="main__div__principal--sec">
                 <article class="section__div__principal__article">
                     <img class="main__div__principal__imagen" src="/images/productos/card5.jpg" alt="pintura1">
-                    <p class="main__div__principal__p">Agregaste a tu carrito</p>
                     <p class="main__div__principal__p">Pintura de la decada 80 ilustrada por pablo picaso mostrando el reflejo del alma</p>
-                    <h3 class="main__div__principal__h3">1 producto en tu carrito:9200</h3>
-                    <button class="main__div__principal__btn">Ver carrito</button>
-                    <button class="main__div__principal__btn">Comprar carrito</button>
+                    <h3 class="main__div__principal__h3">Precio: $12000</h3>
+                    <button class="main__div__principal__btn">Comprar</button>
+                    <button class="main__div__principal__btn">Borrar</button>
                     <h5 class="main__div__principal__h5">Envio gratis</h5>
                 </article>
                 <article class="section__div__principal__article">
                         <img class="main__div__principal__imagen" src="/images/productos/card6.jpg" alt="pintura2">
-                        <p class="main__div__principal__p">Agregaste a tu carrito</p>
                         <p class="main__div__principal__p">Pintura de la decada 80 ilustrada por pablo picaso mostrando el reflejo del alma</p>
-                        <h3 class="main__div__principal__h3">2 producto en tu carrito:9200</h3>
-                        <button class="main__div__principal__btn">Ver carrito</button>
-                        <button class="main__div__principal__btn">Comprar carrito</button>
+                        <h3 class="main__div__principal__h3">Precio: $15000</h3>
+                        <button class="main__div__principal__btn">Comprar</button>
+                        <button class="main__div__principal__btn">Borrar</button>
                         <h5 class="main__div__principal__h5">Envio gratis</h5>
                 </article> 
-            </div>
-        </section>
-
-        <h3 class="main__h3">Carrito de compra</h3>
-
-        <section class="section__producto">
-            <h2 class="section__producto__categoria">Pintura | Escultura | Fotografia | Ilustraciones</h2>
-            <div class="div__producto__container">
-                <div class="div__producto__card">
-                    <div class="div__producto__imagen">
-                        <span class="producto-card__descuento">20% off</span>
-                        <img class="div__producto__card__img" src="/images/productos/card6.jpg" alt="producto">
-                        <button class="div__producto__card__boton" onclick="toggleSelected(this)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="div__producto__info">
-                        <span class="span__precio__descuento">$9200</span><span class="precio">$10000</span>
-                    </div>
-                </div>
-                <div class="div__producto__card">
-                    <div class="div__producto__imagen">
-                        <span class="producto-card__descuento">20% off</span>
-                        <img class="div__producto__card__img" src="/images/productos/card1.jpg" alt="producto">
-                        <button class="div__producto__card__boton" onclick="toggleSelected(this)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="div__producto__info">
-                        <span class="span__precio__descuento">$9200</span><span class="precio">$10000</span>
-                    </div>
-                </div>
-                <div class="div__producto__card">
-                    <div class="div__producto__imagen">
-                        <span class="producto-card__descuento">20% off</span>
-                        <img class="div__producto__card__img" src="/images/productos/card7.jpg" alt="producto">
-                        <button class="div__producto__card__boton" onclick="toggleSelected(this)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="div__producto__info">
-                        <span class="span__precio__descuento">$9200</span><span class="precio">$10000</span>
-                    </div>
-                </div>
-                <div class="div__producto__card">
-                    <div class="div__producto__imagen">
-                        <span class="producto-card__descuento">20% off</span>
-                        <img class="div__producto__card__img" src="/images/productos/card5.jpg" alt="producto">
-                        <button class="div__producto__card__boton" onclick="toggleSelected(this)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="div__producto__info">
-                        <span class="span__precio__descuento">$9020</span><span class="precio">$10000</span>
-                    </div>
-                </div>
             </div>
         </section>
     </main>

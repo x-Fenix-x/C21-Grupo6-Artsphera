@@ -22,7 +22,7 @@
    {
       "id": "e2e04c38-2291-4179-b119-9269b3215d88",
       "title": "Girl the colors",
-      "category": "Dibujo",
+      "category": "Fotografía",
       "price": 120,
       "discount": 10,
       "stock": 1,
@@ -30,23 +30,43 @@
       "description": "Girl the colors."
    },
    {
-      "id": "4d0ffa3b-ab25-41bb-907a-e1a74623de72",
-      "title": "Eye of the Tiger",
+      "id": "22477cb8-e1ee-4fa0-bf92-a0294976097f",
+      "title": "Smile",
       "category": "Ilustración",
-      "price": 888,
-      "discount": 12,
-      "stock": 23,
+      "price": 600,
+      "discount": 30,
+      "stock": 2,
       "image": null,
-      "description": "Eye of the tiger."
+      "description": "-"
    },
    {
-      "id": "856c8d3d-6adf-4735-b1ae-cbd853e9d596",
-      "title": "The Power of Love",
+      "id": "cbeebb56-282e-4be1-ad4a-50ea4b9a49fb",
+      "title": "Diana",
       "category": "Pintura",
-      "price": 500,
-      "discount": 25,
-      "stock": 3,
+      "price": 700,
+      "discount": 15,
+      "stock": 1,
       "image": null,
-      "description": " "
+      "description": "Siglo XIX, conservada en perfecto estado."
+   },
+   {
+      "id": "3f714b2f-7ff5-41d2-a5c5-0c76894237b6",
+      "title": "Blondie",
+      "category": "Collage",
+      "price": 2222,
+      "discount": 0,
+      "stock": 15,
+      "image": null,
+      "description": ""
+   },
+   {
+      "id": "0650c1b9-b00d-46d2-96c9-1f1e7a142f72",
+      "title": "Life",
+      "category": "Ilustración",
+      "price": 2900,
+      "discount": 25,
+      "stock": 4,
+      "image": null,
+      "description": "Siglo XX."
    }
 ]

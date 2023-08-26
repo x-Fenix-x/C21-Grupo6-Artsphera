@@ -1,9 +1,10 @@
 {
   "name": "src",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/bin/www"
+    "start": "node ./src/bin/www",
+    "dev": "nodemon ./src/bin/www"
   },
   "dependencies": {
     "autoprefixer": "^10.4.15",
