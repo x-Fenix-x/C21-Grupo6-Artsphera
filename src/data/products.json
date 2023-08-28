@@ -68,5 +68,16 @@
       "stock": 2,
       "image": "card5.jpg",
       "description": "Life & Love plasmadas en esta ilustración."
+   },
+   {
+      "id": "6aa8501a-1801-4e03-bdb8-a37dda2e30f9",
+      "title": "Flower",
+      "category": "Fotografía",
+      "price": 2222,
+      "discount": 2,
+      "stock": 2,
+      "image": "banner2.png",
+      "images": "",
+      "description": "Flower"
    }
 ]
