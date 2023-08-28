@@ -44,19 +44,9 @@
 										<input type="number" id="stock" name="stock"
 											class="p-3 bg-gray-100 text-sm" placeholder="Cantidad disponible" />
 									</div>
-									<div class="flex flex-col">
-										<label for="image_type" class="font-medium">Imagen</label>
-										<select id="image_type" name="image_type" class="p-3 text-sm bg-gray-100">
-											<option value="" disabled selected>Elige una opción de carga</option>
-											<option value="single">Cargar una imagen</option>
-											<option value="multiple">Cargar varias imágenes</option>
-										</select>
-									</div>
-
 									<div id="multiple_images" class="flex flex-col">
-										<label for="images">Imágenes:</label>
-										<input type="file" id="images" name="images"
-											accept="image/*" multiple />
+										<label for="images" class="font-medium">Carga una o mas imagenes:</label>
+										<input type="file" id="images" name="images" accept="image/*" multiple />
 									</div>
 									<div class="flex flex-col">
 										<label for="description">Descripción:</label>
