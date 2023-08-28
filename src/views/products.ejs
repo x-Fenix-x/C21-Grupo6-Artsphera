@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partials/head',{title: "Products | Registro"}) %>
+	<link rel="stylesheet" href="/dist/output.css" />
+	<body>
+		<main class="flex flex-col bg-white">
+			<%- include("partials/header") %> <%- include('partials/subHeader') %>
+			<article class="flex gap-12 px-6 sm:px-12 py-12">
+				<div
+					class="flex-col gap-8 grow max-w-[12rem] hidden lg:flex sticky h-full top-[14rem] z-0"
+				>
+					<div class="flex flex-col gap-4">
+						<h3 class="font-medium text-2xl tracking-[0.15em]">CATEGORIA</h3>
+						<% categories.forEach(categorie => { %>
+						<div class="flex gap-3 flex-col">
+							<p><%= categorie.name %></p>
+						</div>
+						<% }) %>
+					</div>
+					<!-- <div class="flex flex-col gap-4">
+						<h3 class="font-medium text-2xl tracking-[0.15em]">EDICIONES</h3>
+						<div class="flex gap-3 flex-col">
+							<p>Limitada</p>
+						</div>
+					</div> -->
+					<div class="flex flex-col gap-4">
+						<h3 class="font-medium text-2xl tracking-[0.15em]">PRECIO</h3>
+						<div class="flex gap-3 flex-col">
+							<p>Más de 1000</p>
+							<p>Menos de 100</p>
+							<p>$100 - $500</p>
+							<p>$500 - $1000</p>
+						</div>
+					</div>
+					<button class="p-2 border-2 border-gray-400 font-medium text-lg">
+						Resetear
+					</button>
+				</div>
+				<div class="flex flex-col gap-32 grow pb-6">
+					<div class="flex flex-col gap-12">
+						<div
+							class="items-center gap-4 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3"
+						>
+							<!-- Ejemplos, aplicar foreach con productos en un json -->
+							<%- include('partials/productCard') %>
+						</div>
+					</div>
+					<div class="flex items-center border-gray-300 self-center">
+						<p class="border-b-2 border-black px-12 py-2">1</p>
+						<p class="border-b-2 px-12 py-2">2</p>
+						<p class="border-b-2 px-12 py-2">3</p>
+					</div>
+				</div>
+			</article>
+			<%- include('partials/footer') %>
+		</main>
+	</body>
+</html>

@@ -58,26 +58,5 @@
       "stock": 5,
       "image": null,
       "description": "Wonderland data del siglo XVIII."
-   },
-   {
-      "id": "0650c1b9-b00d-46d2-96c9-1f1e7a142f72",
-      "title": "Life & Love",
-      "category": "Ilustración",
-      "price": 3500,
-      "discount": 15,
-      "stock": 2,
-      "image": "card5.jpg",
-      "description": "Life & Love plasmadas en esta ilustración."
-   },
-   {
-      "id": "6aa8501a-1801-4e03-bdb8-a37dda2e30f9",
-      "title": "Flower",
-      "category": "Fotografía",
-      "price": 2222,
-      "discount": 2,
-      "stock": 2,
-      "image": "banner2.png",
-      "images": "",
-      "description": "Flower"
    }
 ]

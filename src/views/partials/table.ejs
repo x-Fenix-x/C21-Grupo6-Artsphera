@@ -14,19 +14,27 @@
 		<tbody class="text-[16.5px]">
 			<% products.forEach((product, index) => { %>
 			<tr class="border-b border-gray-400">
-				<td class="font-bold px-3"><%= index + 1%> </td>
-					<td class="p-1"><%= product.title %></td>
-					<td class="p-1"><%= product.category %></td>
-					<td class="p-1"><%= product.price %></td>
-					<td class="p-1"><%= product.discount%>%</td>
-					<td class="p-1"><%= priceFinal(product.price ,product.discount)%></td>
-					<td class="p-1">
-						<div class="flex gap-2">
-							<a href="#" class="fa-regular fa-eye text-gray-700"></a>
-							<a href="/products/edit/<%= product.id %>" class="fa-regular fa-pen-to-square text-gray-700"></a>
-							<a href="#" class="fa-regular fa-trash-can text-gray-700"></a>
-						</div>
-					</td>
+				<td class="font-bold px-3"><%= index + 1%></td>
+				<td class="p-1"><%= product.title %></td>
+				<td class="p-1"><%= product.category %></td>
+				<td class="p-1"><%= product.price %></td>
+				<td class="p-1"><%= product.discount%>%</td>
+				<td class="p-1"><%= priceFinal(product.price ,product.discount)%></td>
+				<td class="p-1">
+					<div class="flex gap-2 items-center">
+						<a href="#" class="fa-regular fa-eye text-gray-700"></a>
+						<a
+							href="/products/edit/<%= product.id %>"
+							class="fa-regular fa-pen-to-square text-gray-700"
+						></a>
+						<form
+							action="/products/delete/<%= product.id %>?_method=DELETE"
+							method="POST"
+						>
+							<button class="fa-regular fa-trash-can text-gray-700"></button>
+						</form>
+					</div>
+				</td>
 				<% }) %>
 			</tr>
 		</tbody>
