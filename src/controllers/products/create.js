@@ -3,8 +3,8 @@ const Product = require("../../data/Product");
 
 module.exports = (req, res) => {
     const products = readJSON("products.json");
+return res.send(products)
     const newProduct = new Product (req.body);
-
     products.push(newProduct);
 
     writeJSON(products, "products.json");

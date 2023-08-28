@@ -58,5 +58,78 @@
       "stock": 5,
       "image": null,
       "description": "Wonderland data del siglo XVIII."
+   },
+   {
+      "id": "e287262f-0e76-494f-af2a-8419dda70d8f",
+      "title": "adsasad",
+      "category": "Escultura",
+      "price": 2323,
+      "discount": 2,
+      "stock": 2,
+      "image": "banner2.png",
+      "images": "",
+      "description": "asdasd"
+   },
+   {
+      "id": "627d2f7f-4583-4259-b623-6272dd6a4654",
+      "title": "title",
+      "price": 222,
+      "discount": 22,
+      "stock": 2,
+      "image": "banner2.png",
+      "images": "",
+      "description": "sds"
+   },
+   {
+      "id": "60832c64-5c06-4d56-a2a8-7b9d5e334c59",
+      "title": "title",
+      "category": "Escultura",
+      "price": 2222,
+      "discount": 22,
+      "stock": 2,
+      "image": "",
+      "images": [
+         "banner2.png",
+         "banner3.png",
+         "banner4.png"
+      ],
+      "description": "asdasd"
+   },
+   {
+      "id": "a47df0d6-77b6-4500-a254-3f4b93914c61",
+      "title": "title",
+      "category": "Escultura",
+      "price": 22,
+      "discount": 222,
+      "stock": 1,
+      "images": [
+         "banner2.png",
+         "banner3.png",
+         "banner4.png"
+      ],
+      "description": "asfasf"
+   },
+   {
+      "id": "0c63f02d-f841-40d7-ae82-8b990cd7b103",
+      "title": "title",
+      "category": "Dibujo",
+      "price": 2222,
+      "discount": 22,
+      "stock": 11,
+      "images": [
+         "banner2.png",
+         "banner3.png",
+         "banner4.png"
+      ],
+      "description": "asdfasdf"
+   },
+   {
+      "id": "10afb38f-0d81-4deb-b1ba-d70e8779e009",
+      "title": "title",
+      "price": 3223,
+      "discount": 232,
+      "stock": 22,
+      "images": "",
+      "description": "dasdasd"
    }
 ]

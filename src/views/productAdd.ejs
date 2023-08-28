@@ -10,12 +10,12 @@
 					class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.png')] bg-auto bg-repeat sm:gap-0 lg:bg-center">
 					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
 						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
-							<form action="/products/add" method="POST" class="flex flex-col justify-center gap-12" >
+							<form action="/products/add" method="POST" class="flex flex-col justify-center gap-12" enctype="multipart/form-data">
 								<p class="text-3xl font-bold">Agregar producto</p>
 								<div>
 									<div class="flex flex-col">
 										<label for="title" class="font-medium">Título</label>
-										<input type="text" id="title" name="title" 
+										<input type="text" id="title" value="title" name="title" 
 											class="p-3 bg-gray-100 text-sm" placeholder="Título del producto " />
 									</div>
 									<div class="flex flex-col">
@@ -53,19 +53,14 @@
 										</select>
 									</div>
 
-									<div id="one_image" class="flex flex-col" hidden>
-										<label for="image">Imagen:</label>
-										<input type="file" id="image" name="image" accept="image/*" />
-									</div>
-
-									<div id="multiple_images" class="flex flex-col" hidden>
+									<div id="multiple_images" class="flex flex-col">
 										<label for="images">Imágenes:</label>
 										<input type="file" id="images" name="images"
 											accept="image/*" multiple />
 									</div>
 									<div class="flex flex-col">
 										<label for="description">Descripción:</label>
-										<textarea id="description" name="description" rows="4" cols="50"
+										<textarea id="description" value="title" name="description" rows="4" cols="50"
 											class="bg-gray-100 p-2"></textarea>
 									</div>
 								</div>

@@ -17,9 +17,9 @@ router
 	.get("/", products)
 	.get("/detail/:id", detail)
 	.get("/add", add)
-	.post("/add", create)
+	.post("/add",upload.array("images"), create)
 	.get("/edit/:id", edit)
-	.put("/update/:id", update)
+	.put("/update/:id", update, upload.array("images"))
 	.delete("/delete/:id", remove);
 
 module.exports = router;
