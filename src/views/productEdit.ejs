@@ -48,13 +48,21 @@
 											class="p-3 bg-gray-100 text-sm" placeholder="Cantidad disponible"
 											value="<%= product.stock %>" />
 									</div>
-									<div id="multiple_images" class="flex flex-col">
-										<label for="images" class="font-medium">Editar multimedia:</label> <input
-											type="file" id="images" name="images" accept="image/*" multiple />
-										<div class="mt-2">
-											<img src="/images/productos/<%= product.images %>" alt="">
+									<div id="multiple_images" class="flex flex-col mt-2" >
+										<label for="images" class="font-medium">Editar multimedia:</label>
+										<div class="mb-2">
+											<input type="file" id="images" name="images" accept="image/*" multiple />
 										</div>
 									</div>
+										<div class="mt-2 flex flex-wrap gap-2 py-2">
+											<% for (let i=0; i < product.images.length; i++) { %>
+												<div class="img__edit">
+													<img width="150px" src="/images/productos/<%= product.images[i] %>"
+														alt="">
+												</div>
+												<% } %>
+										</div>
+
 									<div class="flex flex-col">
 										<label for="description">Descripción:</label>
 										<textarea id="description" name="description" rows="4" cols="50" required
@@ -68,7 +76,6 @@
 								</button>
 							</form>
 							<%- include('partials/table') %>
-								<%- include('partials/script') %>
 						</div>
 					</article>
 				</section>

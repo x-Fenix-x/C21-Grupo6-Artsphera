@@ -6,9 +6,7 @@
       "price": 10000,
       "discount": 20,
       "stock": 11,
-      "images": [
-         "1693252422334_products_.jpg"
-      ],
+      "images": [],
       "description": "Alejandro Magno."
    },
    {
@@ -19,7 +17,11 @@
       "discount": 77,
       "stock": 1,
       "images": [
-         "1693252429897_products_.jpg"
+         "1693263647788_products_.jpg",
+         "1693263647790_products_.jpg",
+         "1693263647793_products_.jpg",
+         "1693263647804_products_.jpg",
+         "1693263647836_products_.jpg"
       ],
       "description": "Dibujo de Marilyn Monroe."
    },
@@ -43,7 +45,9 @@
       "discount": 30,
       "stock": 2,
       "images": [
-         "1693252456483_products_.jpeg"
+         "1693263182105_products_.jpg",
+         "1693263182144_products_.jpeg",
+         "1693263182145_products_.jpg"
       ],
       "description": "Smile"
    },
@@ -54,9 +58,7 @@
       "price": 700,
       "discount": 15,
       "stock": 1,
-      "images": [
-         "1693252467713_products_.jpeg"
-      ],
+      "images": [],
       "description": "Siglo XIX, conservada en perfecto estado."
    },
    {

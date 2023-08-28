@@ -3,7 +3,6 @@ const Product = require("../../data/Product");
 
 module.exports = (req, res) => {
     const products = readJSON("products.json");
-    // const newProduct = new Product (req.body);
 
     const images = req.files ? req.files.map(file => file.filename) : [];
 
@@ -14,7 +13,7 @@ module.exports = (req, res) => {
         discount: req.body.discount,
         stock: req.body.stock,
         images: images,
-        description: req.body.description
+        description: req.body.description.trim()
     });
 
     products.push(newProduct);
