@@ -139,7 +139,11 @@
 							<h2 class="producto-info__titulo"><%= product.title %></h2>
 							<p class="producto-info__descripcion"><%= product.category %></p>
 							<% if (product.discount > 0) { %>
-							<span class="precio--descuento">$<%= product.discount %></span>
+							<span class="precio--descuento"
+								>$<%= (product.price - (product.price * (product.discount /
+								100))).toLocaleString('es-AR', { minimumFractionDigits: 2,
+								maximumFractionDigits: 2 }) %></span
+							>
 							<span class="precio">$<%= product.price %></span>
 
 							<% } else { %>

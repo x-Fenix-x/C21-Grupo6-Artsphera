@@ -22,7 +22,10 @@
 				<td class="p-1"><%= priceFinal(product.price ,product.discount)%></td>
 				<td class="p-1">
 					<div class="flex gap-2 items-center">
-						<a href="#" class="fa-regular fa-eye text-gray-700"></a>
+						<a
+							href="/products/detail/<%= product.id %>"
+							class="fa-regular fa-eye text-gray-700"
+						></a>
 						<a
 							href="/products/edit/<%= product.id %>"
 							class="fa-regular fa-pen-to-square text-gray-700"
