@@ -11,7 +11,7 @@ module.exports = (req, res) => {
 	if (category) {
 		// Si hay una categoría en la URL, filtra los productos por esa categoría
 		filteredProducts = products.filter(
-			(product) => product.category === category
+			(product) => product.category.toLowerCase() === category
 		);
 	}
 

@@ -16,15 +16,18 @@
 			<a href="/">
 				<img src="/images/LogoExpanded.svg" alt="" />
 			</a>
+
 			<div class="dropdown">
 				<a href="#" class="dropdown-titulo">Disciplinas</a>
+
 				<ul class="dropdown-menu">
-					<li><a href="#">Pintura</a></li>
-					<li><a href="#">Escultura</a></li>
-					<li><a href="#">Fotografía</a></li>
-					<li><a href="#">Dibujo</a></li>
-					<li><a href="#">Ilustración</a></li>
-					<li><a href="#">Collage</a></li>
+					<% categories.forEach(categorie => { %>
+					<li>
+						<a href="/products/category/<%= categorie.name.toLowerCase() %>"
+							><%= categorie.name %></a
+						>
+					</li>
+					<% }) %>
 				</ul>
 			</div>
 			<form action="/products/search" method="GET" class="leftNav">

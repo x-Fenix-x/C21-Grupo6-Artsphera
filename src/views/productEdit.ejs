@@ -1,85 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head',{ title : "Artesphera | Edición producto" }) %>
+	<%- include('partials/head',{ title : "Artesphera | Edición producto" }) %>
 	<link rel="stylesheet" href="/dist/output.css" />
 
 	<body>
 		<main class="min-h-screen flex flex-col">
 			<%- include('partials/header') %>
-				<section
-					class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.png')] bg-auto bg-repeat sm:gap-0 lg:bg-center">
-					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
-						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
-							<form action="/products/update/<%= product.id %>?_method=PUT" method="POST"
-								class="flex flex-col justify-center gap-12" enctype="multipart/form-data">
-								<p class="text-3xl font-bold">Editar producto</p>
-								<div>
-									<div class="flex flex-col">
-										<label for="title" class="font-medium">Título</label>
-										<input type="text" id="title" name="title" required
-											class="p-3 bg-gray-100 text-sm" placeholder="Título del producto "
-											value="<%= product.title %>" />
-									</div>
-									<div class="flex flex-col">
-										<label for="category" class="font-medium">Categoría</label>
-										<select name="category" id="category" class="p-3 text-sm bg-gray-100" required>
-											<option value="" disabled>Elige una opción</option>
-											<% categories.forEach(item=> { %> <option <%=item.name===product.category
-													&& "selected" %> value="<%= item.name %>"><%= item.name %>
-												</option>
-												<% }) %>
-										</select>
-									</div>
-									<div class="flex flex-col">
-										<label for="price" class="font-medium">Precio</label>
-										<input type="number" id="price" name="price" required
-											class="p-3 bg-gray-100 text-sm" placeholder="Ejemplo: 99.99"
-											value="<%= product.price %>" />
-									</div>
-									<div class="flex flex-col">
-										<label for="discount" class="font-medium">Descuento</label>
-										<input type="number" id="discount" name="discount" required
-											class="p-3 bg-gray-100 text-sm" placeholder="Descuento en porcentaje"
-											value="<%= product.discount %>" />
-									</div>
-									<div class="flex flex-col">
-										<label for="stock" class="font-medium">Stock</label>
-										<input type="number" id="stock" name="stock" required
-											class="p-3 bg-gray-100 text-sm" placeholder="Cantidad disponible"
-											value="<%= product.stock %>" />
-									</div>
-									<div id="multiple_images" class="flex flex-col mt-2" >
-										<label for="images" class="font-medium">Editar multimedia:</label>
-										<div class="mb-2">
-											<input type="file" id="images" name="images" accept="image/*" multiple />
-										</div>
-									</div>
-										<div class="mt-2 flex flex-wrap gap-2 py-2">
-											<% for (let i=0; i < product.images.length; i++) { %>
-												<div class="img__edit">
-													<img width="150px" src="/images/productos/<%= product.images[i] %>"
-														alt="">
-												</div>
-												<% } %>
-										</div>
+			<section
+				class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.png')] bg-auto bg-repeat sm:gap-0 lg:bg-center"
+			>
+				<article
+					class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base"
+				>
+					<div
+						class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12"
+					>
+						<form
+							action="/products/update/<%= product.id %>?_method=PUT"
+							method="POST"
+							class="flex flex-col justify-center gap-12"
+							enctype="multipart/form-data"
+						>
+							<p class="text-3xl font-bold">Editar producto</p>
+							<div>
+								<div class="flex flex-col">
+									<label for="title" class="font-medium">Título</label>
+									<input
+										type="text"
+										id="title"
+										name="title"
+										required
+										class="p-3 bg-gray-100 text-sm"
+										placeholder="Título del producto "
+										value="<%= product.title %>"
+									/>
+								</div>
+								<div class="flex flex-col">
+									<label for="category" class="font-medium">Categoría</label>
+									<select
+										name="category"
+										id="category"
+										class="p-3 text-sm bg-gray-100"
+										required
+									>
+										<option value="" disabled>Elige una opción</option>
+										<% categories.forEach(item=> { %> <option
+										<%=item.name===product.category && "selected" %> value="<%=
+										item.name %>"><%= item.name %> <% }) %>
+									</select>
+								</div>
+								<div class="flex flex-col">
+									<label for="price" class="font-medium">Precio</label>
+									<input
+										type="number"
+										id="price"
+										name="price"
+										required
+										class="p-3 bg-gray-100 text-sm"
+										placeholder="Ejemplo: 99.99"
+										value="<%= product.price %>"
+									/>
+								</div>
+								<div class="flex flex-col">
+									<label for="discount" class="font-medium">Descuento</label>
+									<input
+										type="number"
+										id="discount"
+										name="discount"
+										required
+										class="p-3 bg-gray-100 text-sm"
+										placeholder="Descuento en porcentaje"
+										value="<%= product.discount %>"
+									/>
+								</div>
+								<div class="flex flex-col">
+									<label for="stock" class="font-medium">Stock</label>
+									<input
+										type="number"
+										id="stock"
+										name="stock"
+										required
+										class="p-3 bg-gray-100 text-sm"
+										placeholder="Cantidad disponible"
+										value="<%= product.stock %>"
+									/>
+								</div>
+								<div
+									id="multiple_images"
+									class="flex flex-row mt-2 items-start justify-between"
+								>
+									<div class="flex-col">
+										<label for="images" class="font-medium"
+											>Editar multimedia:</label
+										>
 
-									<div class="flex flex-col">
-										<label for="description">Descripción:</label>
-										<textarea id="description" name="description" rows="4" cols="50" required
-											class="bg-gray-100 p-2">
-										<%= product.description %></textarea>
+										<div class="mb-2">
+											<input
+												type="file"
+												id="images"
+												name="images"
+												accept="image/*"
+												multiple
+											/>
+										</div>
+									</div>
+									<div class="mt-2 flex flex-wrap gap-2 py-2">
+										<% for (let i=0; i < product.images.length; i++) { %>
+										<div class="img__edit">
+											<img
+												src="/images/productos/<%= product.images[i] %>"
+												alt=""
+												class="w-24 h-24 object-cover"
+											/>
+										</div>
+										<% } %>
 									</div>
 								</div>
-								<button type="submit"
-									class="font-bold py-4 text-[#5e4a2d] bg-[#d0ad7a] hover:bg-[#3d3220] hover:text-[#967c57] transition-all ease-in-out rounded-full">
-									Guardar Cambios
-								</button>
-							</form>
-							<%- include('partials/table') %>
-						</div>
-					</article>
-				</section>
+
+								<div class="flex flex-col">
+									<label for="description">Descripción:</label>
+									<textarea
+										id="description"
+										name="description"
+										rows="4"
+										cols="50"
+										required
+										class="bg-gray-100 p-2"
+									>
+										<%= product.description %></textarea
+									>
+								</div>
+							</div>
+							<button
+								type="submit"
+								class="font-bold py-4 text-[#5e4a2d] bg-[#d0ad7a] hover:bg-[#3d3220] hover:text-[#967c57] transition-all ease-in-out rounded-full"
+							>
+								Guardar Cambios
+							</button>
+						</form>
+						<%- include('partials/table') %>
+					</div>
+				</article>
+			</section>
 		</main>
 	</body>
-
 </html>

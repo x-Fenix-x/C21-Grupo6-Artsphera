@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include('partials/head',{title: "Products | Registro"}) %>
+	<%- include('partials/head',{title: "Products | Artesphera"}) %>
 	<link rel="stylesheet" href="/dist/output.css" />
 	<body>
 		<main class="flex flex-col bg-white">
@@ -13,7 +13,7 @@
 						<h3 class="font-medium text-2xl tracking-[0.15em]">CATEGORIA</h3>
 						<% categories.forEach(categorie => { %>
 						<div class="flex gap-3 flex-col">
-							<a href="/products/category/<%= categorie.name %>"
+							<a href="/products/category/<%= categorie.name.toLowerCase() %>"
 								><%= categorie.name %></a
 							>
 						</div>
@@ -44,7 +44,7 @@
 				<div class="flex flex-col gap-32 grow pb-6">
 					<div class="flex flex-col gap-12">
 						<div
-							class="items-center gap-4 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3"
+							class="items-center gap-8 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3"
 						>
 							<!-- Ejemplos, aplicar foreach con productos en un json -->
 							<%- include('partials/productCard') %>
