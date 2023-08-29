@@ -6,9 +6,7 @@
       "price": 10000,
       "discount": 20,
       "stock": 11,
-      "images": [
-         "1693322184445_products_.jpg"
-      ],
+      "images": [],
       "description": "Alejandro Magno.",
       "section": "Ofertas"
    },
@@ -20,7 +18,7 @@
       "discount": 77,
       "stock": 1,
       "images": [
-         "1693322202862_products_.jpg"
+         "1693338741903_products_.jpg"
       ],
       "description": "Dibujo de Marilyn Monroe.",
       "section": "Ofertas"
@@ -33,9 +31,10 @@
       "discount": 10,
       "stock": 1,
       "images": [
-         "1693281101571_products_.jpg"
+         "1693338673148_products_.jpg"
       ],
-      "description": "Girl the colors."
+      "description": "Girl the colors.",
+      "section": "Nuevo"
    },
    {
       "id": "22477cb8-e1ee-4fa0-bf92-a0294976097f",
@@ -45,9 +44,10 @@
       "discount": 30,
       "stock": 2,
       "images": [
-         "1693281111349_products_.jpeg"
+         "1693338694531_products_.jpg"
       ],
-      "description": "Smile"
+      "description": "Smile",
+      "section": "Nuevo"
    },
    {
       "id": "cbeebb56-282e-4be1-ad4a-50ea4b9a49fb",
@@ -56,7 +56,9 @@
       "price": 700,
       "discount": 15,
       "stock": 1,
-      "images": [],
+      "images": [
+         "1693338700471_products_.jpeg"
+      ],
       "description": "Siglo XIX, conservada en perfecto estado.",
       "section": "Destacados"
    },
@@ -68,7 +70,9 @@
       "discount": 10,
       "stock": 5,
       "description": "Wonderland data del siglo XVIII.",
-      "images": [],
+      "images": [
+         "1693339962031_products_.jpg"
+      ],
       "section": "Ofertas"
    }
 ]

@@ -1,26 +1,34 @@
 const { readJSON, writeJSON } = require("../../data");
+const { existsSync, unlinkSync } = require("fs");
 
 module.exports = (req, res) => {
     const products = readJSON("products.json");
     const { title, category, price, discount, stock, description, section } = req.body;
-    const images = req.files ? req.files.map(file => file.filename) : [];
+    const images = req.files ? req.files.map((file) => file.filename) : [];
 
-    const productEdit = products.map((product) => {
-        if (product.id === req.params.id) {
-            product.title = title.trim();
-            product.category = category;
-            product.price = +price;
-            product.discount = +discount;
-            product.stock = +stock;
-            product.images = images || product.images;
-            product.section = section;
-            product.description = description.trim();
-        }
+    const productToUpdate = products.find(
+        (product) => product.id === req.params.id
+    );
 
-        return product;
-    });
+    if (productToUpdate.images && Array.isArray(productToUpdate.images)) {
+        productToUpdate.images.forEach((image) => {
+            const imagePath = `./public/images/productos/${image}`;
+            if (existsSync(imagePath)) {
+                unlinkSync(imagePath);
+            }
+        });
+    }
 
-    writeJSON(productEdit, "products.json");
+    productToUpdate.title = title.trim();
+    productToUpdate.category = category;
+    productToUpdate.price = +price;
+    productToUpdate.discount = +discount;
+    productToUpdate.stock = +stock;
+    productToUpdate.images = images || productToUpdate.images;
+    productToUpdate.section = section;
+    productToUpdate.description = description.trim();
+
+    writeJSON(products, "products.json");
 
     return res.redirect("/users/admin");
 };
