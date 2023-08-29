@@ -112,220 +112,45 @@
 				</div>
 			</section>
 			<section class="index-producto">
-				<h2 class="index-producto__categoria">Productos Destacados</h2>
+				<h2 class="index-producto__categoria">Ultimas unidades</h2>
 				<div class="producto-container">
 					<i class="fa-solid fa-chevron-left ant-boton"></i>
 					<i class="fa-solid fa-chevron-right sig-boton"></i>
+					<% lastunits.forEach(product => { %>
 					<div class="producto-card">
 						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
+							<% if (product.discount > 0) { %>
+							<span class="producto-card__descuento">
+								-<%= product.discount %> off
+							</span>
+							<% } %>
 							<img
 								class="producto-card__img"
-								src="/images/productos/card1.jpg"
+								src="/images/productos/<%= product.images %>"
 								alt="producto"
 							/>
-							<a href="/products/detail" class="producto-card__boton"
+							<a
+								href="/products/detail/<%= product.id %>"
+								class="producto-card__boton"
 								>Ver más</a
 							>
 						</div>
 						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
+							<h2 class="producto-info__titulo"><%= product.title %></h2>
+							<p class="producto-info__descripcion"><%= product.category %></p>
+							<% if (product.discount > 0) { %>
+							<span class="precio--descuento">$<%= product.discount %></span>
+							<span class="precio">$<%= product.price %></span>
+
+							<% } else { %>
+							<span class="precio--descuento">$<%= product.price %></span>
+							<% } %>
+							<p>
+								Quedan <span class="stock"><%= product.stock %></span> en stock
 							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
 						</div>
 					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card2.jpeg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card3.jpg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card4.jpg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card5.jpg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card6.jpg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card7.jpg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card8.jpeg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card1.jpg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<span class="producto-card__descuento">50% off</span>
-							<img
-								class="producto-card__img"
-								src="/images/productos/card2.jpeg"
-								alt="producto"
-							/>
-							<a href="/products/detail" class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo">Producto</h2>
-							<p class="producto-info__descripcion">
-								Lorem ipsum dolor sit amet.
-							</p>
-							<span class="precio--descuento">$20</span
-							><span class="precio">$40</span>
-						</div>
-					</div>
+					<% }) %>
 				</div>
 			</section>
 			<section class="index-form">
