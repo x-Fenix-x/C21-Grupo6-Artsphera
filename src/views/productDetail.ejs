@@ -11,7 +11,20 @@
 				<div class="mainAutor">
 					<h1><%= product.title %></h1>
 					<p><%= product.description %></p>
-					<p class="mainPrecio"><%= product.price %>$</p>
+
+					<% if (product.discount > 0) { %>
+					<div>
+						<span class="precio">$<%= product.price %></span>
+						<span class="precio--descuento"
+							>$<%= (product.price - (product.price * (product.discount /
+							100))).toLocaleString('es-AR', { minimumFractionDigits: 2,
+							maximumFractionDigits: 2 }) %></span
+						>
+						<span> -<%= product.discount %> off </span>
+					</div>
+					<% } else { %>
+					<span class="precio--descuento">$<%= product.price %></span>
+					<% } %>
 					<p>Gastos de envio e impuestos incluidos</p>
 					<button>Añadir al carrito</button>
 					<div class="mainSobre">
