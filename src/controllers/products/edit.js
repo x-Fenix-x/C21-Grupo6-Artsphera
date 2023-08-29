@@ -4,6 +4,7 @@ const priceFinal = require("../../../public/javascripts/products-function");
 module.exports = (req, res) => {
     const categories = readJSON("categories.json");
     const products = readJSON("products.json");
+    const sections = readJSON("sections.json");
     const id = req.params.id;
 
     const product = products.find((product) => product.id === id);
@@ -12,6 +13,7 @@ module.exports = (req, res) => {
         categories,
         products,
         product,
+        sections,
         priceFinal,
     });
 };

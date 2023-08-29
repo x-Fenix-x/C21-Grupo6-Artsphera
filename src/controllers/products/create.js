@@ -13,7 +13,8 @@ module.exports = (req, res) => {
         discount: req.body.discount,
         stock: req.body.stock,
         images: images,
-        description: req.body.description.trim()
+        section: req.body.section,
+        description: req.body.description
     });
 
     products.push(newProduct);
