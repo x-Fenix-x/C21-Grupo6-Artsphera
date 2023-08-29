@@ -2,7 +2,7 @@ const { readJSON, writeJSON } = require("../../data");
 
 module.exports = (req, res) => {
     const products = readJSON("products.json");
-    const { title, category, price, discount, stock, description } = req.body;
+    const { title, category, price, discount, stock, description, section } = req.body;
     const images = req.files ? req.files.map(file => file.filename) : [];
 
     const productEdit = products.map((product) => {
@@ -13,6 +13,7 @@ module.exports = (req, res) => {
             product.discount = +discount;
             product.stock = +stock;
             product.images = images || product.images;
+            product.section = section;
             product.description = description.trim();
         }
 

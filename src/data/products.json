@@ -6,8 +6,11 @@
       "price": 10000,
       "discount": 20,
       "stock": 11,
-      "images": [],
-      "description": "Alejandro Magno."
+      "images": [
+         "1693322184445_products_.jpg"
+      ],
+      "description": "Alejandro Magno.",
+      "section": "Ofertas"
    },
    {
       "id": "21fb9839-5c89-454e-9fdd-78de683080ed",
@@ -17,13 +20,10 @@
       "discount": 77,
       "stock": 1,
       "images": [
-         "1693263647788_products_.jpg",
-         "1693263647790_products_.jpg",
-         "1693263647793_products_.jpg",
-         "1693263647804_products_.jpg",
-         "1693263647836_products_.jpg"
+         "1693322202862_products_.jpg"
       ],
-      "description": "Dibujo de Marilyn Monroe."
+      "description": "Dibujo de Marilyn Monroe.",
+      "section": "Ofertas"
    },
    {
       "id": "e2e04c38-2291-4179-b119-9269b3215d88",
@@ -59,7 +59,8 @@
       "discount": 15,
       "stock": 1,
       "images": [],
-      "description": "Siglo XIX, conservada en perfecto estado."
+      "description": "Siglo XIX, conservada en perfecto estado.",
+      "section": "Destacados"
    },
    {
       "id": "3f714b2f-7ff5-41d2-a5c5-0c76894237b6",
@@ -69,8 +70,7 @@
       "discount": 10,
       "stock": 5,
       "description": "Wonderland data del siglo XVIII.",
-      "images": [
-         "1693252450329_products_.jpg"
-      ]
+      "images": [],
+      "section": "Ofertas"
    }
 ]

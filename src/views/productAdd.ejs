@@ -10,12 +10,13 @@
 					class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.png')] bg-auto bg-repeat sm:gap-0 lg:bg-center">
 					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
 						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
-							<form action="/products/add" method="POST" class="flex flex-col justify-center gap-12" enctype="multipart/form-data">
+							<form action="/products/add" method="POST" class="flex flex-col justify-center gap-12"
+								enctype="multipart/form-data">
 								<p class="text-3xl font-bold">Agregar producto</p>
 								<div>
 									<div class="flex flex-col">
 										<label for="title" class="font-medium">Título</label>
-										<input type="text" id="title" value="title" name="title" 
+										<input type="text" id="title" name="title"
 											class="p-3 bg-gray-100 text-sm" placeholder="Título del producto " />
 									</div>
 									<div class="flex flex-col">
@@ -26,13 +27,24 @@
 												<option value="<%= category.name %>">
 													<%= category.name %>
 												</option>
-											<% }) %>
+												<% }) %>
+										</select>
+									</div>
+									<div class="flex flex-col">
+										<label for="section" class="font-medium">Sección</label>
+										<select name="section" id="section" class="p-3 text-sm bg-gray-100">
+											<option value="" disabled selected>Elige una opción</option>
+											<% sections.forEach(section=> { %>
+												<option value="<%= section.name %>">
+													<%= section.name %>
+												</option>
+												<% }) %>
 										</select>
 									</div>
 									<div class="flex flex-col">
 										<label for="price" class="font-medium">Precio</label>
-										<input type="number" id="price" name="price"
-											class="p-3 bg-gray-100 text-sm" placeholder="Ejemplo: 99.99" />
+										<input type="number" id="price" name="price" class="p-3 bg-gray-100 text-sm"
+											placeholder="Ejemplo: 99.99" />
 									</div>
 									<div class="flex flex-col">
 										<label for="discount" class="font-medium">Descuento</label>
@@ -41,8 +53,8 @@
 									</div>
 									<div class="flex flex-col">
 										<label for="stock" class="font-medium">Stock</label>
-										<input type="number" id="stock" name="stock"
-											class="p-3 bg-gray-100 text-sm" placeholder="Cantidad disponible" />
+										<input type="number" id="stock" name="stock" class="p-3 bg-gray-100 text-sm"
+											placeholder="Cantidad disponible" />
 									</div>
 									<div id="multiple_images" class="flex flex-col">
 										<label for="images" class="font-medium">Carga una o mas imagenes:</label>
@@ -50,7 +62,7 @@
 									</div>
 									<div class="flex flex-col">
 										<label for="description">Descripción:</label>
-										<textarea id="description" value="title" name="description" rows="4" cols="50"
+										<textarea id="description" name="description" rows="4" cols="50"
 											class="bg-gray-100 p-2"></textarea>
 									</div>
 								</div>
