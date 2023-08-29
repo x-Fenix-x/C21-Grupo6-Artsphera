@@ -12,7 +12,7 @@ module.exports = (req, res) => {
 	// Verificar si hay imágenes asociadas al producto antes de eliminar
 	if (productToRemove.images && Array.isArray(productToRemove.images)) {
 		productToRemove.images.forEach((image) => {
-			const imagePath = `./public/images/${image}`;
+			const imagePath = `./public/images/productos/${image}`;
 			if (existsSync(imagePath)) {
 				unlinkSync(imagePath);
 			}

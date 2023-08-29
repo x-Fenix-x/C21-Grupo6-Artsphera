@@ -7,13 +7,15 @@
 			<%- include("partials/header") %> <%- include('partials/subHeader') %>
 			<article class="flex gap-12 px-6 sm:px-12 py-12">
 				<div
-					class="flex-col gap-8 grow max-w-[12rem] hidden lg:flex sticky h-full top-[14rem] z-0"
+					class="flex-col items-start gap-8 grow max-w-[12rem] hidden lg:flex sticky h-full top-[14rem] z-0"
 				>
 					<div class="flex flex-col gap-4">
 						<h3 class="font-medium text-2xl tracking-[0.15em]">CATEGORIA</h3>
 						<% categories.forEach(categorie => { %>
 						<div class="flex gap-3 flex-col">
-							<p><%= categorie.name %></p>
+							<a href="/products/category/<%= categorie.name %>"
+								><%= categorie.name %></a
+							>
 						</div>
 						<% }) %>
 					</div>
@@ -32,9 +34,12 @@
 							<p>$500 - $1000</p>
 						</div>
 					</div>
-					<button class="p-2 border-2 border-gray-400 font-medium text-lg">
+					<a
+						href="/products"
+						class="py-2 px-12 text-center border-2 border-gray-400 font-medium text-xl"
+					>
 						Resetear
-					</button>
+					</a>
 				</div>
 				<div class="flex flex-col gap-32 grow pb-6">
 					<div class="flex flex-col gap-12">
