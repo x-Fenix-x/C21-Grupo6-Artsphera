@@ -4,7 +4,7 @@ module.exports = {
 	index: (req, res) => {
 		const products = readJSON("products.json");
 		const categories = readJSON("categories.json");
-		const news = products.filter((product) => product.discount === 0);
+		const news = products.filter((product) => product.section === "Destacados");
 		const offers = products.filter((product) => product.discount);
 		const lastunits = products.filter((product) => product.stock <= 3);
 
