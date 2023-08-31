@@ -5,7 +5,7 @@
       "lastName": "lacus at",
       "email": "mbalmer0@nymag.com",
       "password": "xR3%~WCoq6",
-      "category": "Admin",
+      "role": "Admin",
       "image": ""
    },
    {
@@ -14,7 +14,7 @@
       "lastName": "convallis",
       "email": "spenwright1@mit.edu",
       "password": "tE6~M<Lo'L{7yr}",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/pletzale.jpg"
    },
    {
@@ -23,7 +23,7 @@
       "lastName": "cubilia",
       "email": "tbeswell2@accuweather.com",
       "password": "nC8&xY*~UrZ_YP",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/jala.jpg"
    },
    {
@@ -32,7 +32,7 @@
       "lastName": "purus phasellus",
       "email": "fgilphillan3@slashdot.org",
       "password": "fX8#ooSQ_z+HD",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/pletzale.jpg"
    },
    {
@@ -41,7 +41,7 @@
       "lastName": "in hac",
       "email": "bmattes4@wunderground.com",
       "password": "cZ8\"Uvx{wH8>",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/jala.jpg"
    },
    {
@@ -50,7 +50,7 @@
       "lastName": "quisque",
       "email": "ilillicrop5@cnet.com",
       "password": "nG3+HQq6C7",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/polloCorazon.jpg"
    },
    {
@@ -59,7 +59,7 @@
       "lastName": "vitae ipsum",
       "email": "fleftwich6@amazon.com",
       "password": "jW0!CuR!S",
-      "category": "User",
+      "role": "User",
       "image": ""
    },
    {
@@ -68,7 +68,7 @@
       "lastName": "congue diam",
       "email": "kgehrels7@photobucket.com",
       "password": "eU7#YIS7!",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/jala.jpg"
    },
    {
@@ -77,7 +77,7 @@
       "lastName": "enim leo",
       "email": "bcovendon8@google.ca",
       "password": "dB4(rBzO,{",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/polloCorazon.jpg"
    },
    {
@@ -86,7 +86,7 @@
       "lastName": "vulputate",
       "email": "ckristiansen9@yolasite.com",
       "password": "fI7/39m}",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/tostada.jpg"
    },
    {
@@ -95,7 +95,7 @@
       "lastName": "enim",
       "email": "aohollegana@google.nl",
       "password": "qG4}`LR\"t97\\A{a",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/pretzel.jpg"
    },
    {
@@ -104,7 +104,7 @@
       "lastName": "morbi",
       "email": "hpercifullb@linkedin.com",
       "password": "jX4'mR06#c(Vcc",
-      "category": "Admin",
+      "role": "Admin",
       "image": ""
    },
    {
@@ -113,7 +113,7 @@
       "lastName": "sit",
       "email": "dgittosec@zimbio.com",
       "password": "hG9>uXL}~)>u",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/pletzale.jpg"
    },
    {
@@ -122,7 +122,7 @@
       "lastName": "consequat",
       "email": "lropkinsd@ow.ly",
       "password": "cW4\"IDU%<A/wI`",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/polloCorazon.jpg"
    },
    {
@@ -131,7 +131,7 @@
       "lastName": "orci",
       "email": "egalliforde@eventbrite.com",
       "password": "lP3+_QUUvqu)H`xB",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/tostada.jpg"
    },
    {
@@ -140,7 +140,7 @@
       "lastName": "neque sapien",
       "email": "lmaffinf@nsw.gov.au",
       "password": "pI8|Rxt\"Vi)3",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/tostada.jpg"
    },
    {
@@ -149,7 +149,7 @@
       "lastName": "tempor",
       "email": "ibeedieg@ehow.com",
       "password": "oD1)2,IeL82",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/tostada.jpg"
    },
    {
@@ -158,7 +158,7 @@
       "lastName": "dapibus",
       "email": "ccartledgeh@mozilla.com",
       "password": "sY1/bNf>6zFnzJ",
-      "category": "Admin",
+      "role": "Admin",
       "image": ""
    },
    {
@@ -167,7 +167,7 @@
       "lastName": "velit id",
       "email": "bseaborni@epa.gov",
       "password": "yK4'wZg/%G\\T",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/pletzale.jpg"
    },
    {
@@ -176,7 +176,7 @@
       "lastName": "pellentesque",
       "email": "ylanpherej@topsy.com",
       "password": "fL7?I17+=w",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/tostada.jpg"
    },
    {
@@ -185,7 +185,7 @@
       "lastName": "etiam faucibus",
       "email": "gtixallk@clickbank.net",
       "password": "fT7{!V\\U9Bw",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/pletzale.jpg"
    },
    {
@@ -194,7 +194,7 @@
       "lastName": "nibh ligula",
       "email": "rcayetl@yellowpages.com",
       "password": "vU4@GY9Z0Y'%B",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/pretzel.jpg"
    },
    {
@@ -203,7 +203,7 @@
       "lastName": "sed",
       "email": "mstylem@hugedomains.com",
       "password": "iD5,!l.C(A",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/kipa.jpg"
    },
    {
@@ -212,7 +212,7 @@
       "lastName": "nullam molestie",
       "email": "djosilevichn@ycombinator.com",
       "password": "qD4$PzB6}",
-      "category": "User",
+      "role": "User",
       "image": "/images/avatars/polloCorazon.jpg"
    },
    {
@@ -221,7 +221,7 @@
       "lastName": "consequat varius",
       "email": "aeilero@arizona.edu",
       "password": "vW2'I#~=Q",
-      "category": "Admin",
+      "role": "Admin",
       "image": "/images/avatars/jala.jpg"
    }
 ]
