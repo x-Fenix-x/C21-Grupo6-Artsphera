@@ -25,13 +25,30 @@
 								placeholder="Ingrese su email" value="<%= user.email %>" />
 						</div>
 						<div class="profile-form__div">
-							<label class="profile-form__title" for="password">Contraseña</label>
-							<input class="profile-form__input" type="password" id="password" name="password"
-								placeholder="Ingrese contraseña" value="<%= user.password %>" />
-						</div>
-						<div class="profile-form__div">
 							<label for="profile-form__button" class="profile-form__button">
 								<input type="submit" id="profile-form__button" class="profile-form__actualizar">
+								<span>Actualizar</span>
+							</label>
+						</div>
+					</form>
+				</div>
+
+				<h2 class="profile__title">Cambiar contraseña</h2>
+				<div class="profile-form">
+					<form action="/users/update/<%= user.id %>?_method=PUT" class="profile-form__form" method="POST">
+						<div class="profile-form__div">
+							<label class="profile-form__title" for="password">Contraseña</label>
+							<input class="profile-form__input" type="password" id="password" name="password"
+								placeholder="Ingrese contraseña"/>
+						</div>
+						<div class="profile-form__div">
+							<label class="profile-form__title" for="password2">Confirmar contraseña</label>
+							<input class="profile-form__input" type="password" id="password2" name="password2"
+								placeholder="Repita su contraseña" />
+						</div>
+						<div class="profile-form__div">
+							<label for="profile-form__button-password" class="profile-form__button">
+								<input type="submit" id="profile-form__button-password" class="profile-form__actualizar">
 								<span>Actualizar</span>
 							</label>
 						</div>
@@ -64,7 +81,7 @@
 									</div>
 									<div class="modal-body">
 										<p>
-											Seguro que quiere eliminar su cuenta?
+											Esta a punto de eliminar su cuenta. ¿Desea continuar?
 										</p>
 									</div>
 									<div class="modal-footer">

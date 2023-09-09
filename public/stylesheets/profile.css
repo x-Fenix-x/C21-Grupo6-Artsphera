@@ -102,10 +102,9 @@
     position: relative;
 }
 
-.modal-title{
+.modal-title {
     margin: 0;
     margin-bottom: 20px;
-
 }
 
 .modal-body p {
@@ -144,6 +143,22 @@
     color: #ffffff;
 }
 
-.modal-footer__btn-delete{
+.modal-footer__btn-delete {
     width: 45%;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+    .profile-form {
+        width: 80%;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+    .profile-form {
+        width: 60%;
+    }
 }

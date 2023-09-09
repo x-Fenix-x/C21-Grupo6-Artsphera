@@ -157,7 +157,7 @@
       "name": "Leti",
       "surname": "Widows",
       "email": "letiwidows@ehow.com",
-      "password": "oD1)2,IeL82",
+      "password": "widows",
       "role": "User",
       "image": "/images/usuarios/tostada.jpg"
    },
@@ -166,7 +166,7 @@
       "name": "homero",
       "surname": "simpsons",
       "email": "homerosimpsons@gmail.com",
-      "password": "homerosimpsons",
+      "password": "homero",
       "role": "Admin",
       "image": "/images/usuarios/pletzale.jpg"
    }
