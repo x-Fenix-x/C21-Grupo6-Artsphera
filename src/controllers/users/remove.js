@@ -1,7 +1,7 @@
 const { readJSON, writeJSON } = require("../../data");
 
 module.exports = (req, res) => {
-    const userId = +req.params.id;
+    const userId = req.params.id;
     const users = readJSON("users.json");
 
     const userRemove = users.find((user) => user.id === userId);

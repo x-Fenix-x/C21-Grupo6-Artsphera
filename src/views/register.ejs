@@ -1,60 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include('partials/head',{title: "Artesphera | Registro"}) %>
+<%- include('partials/head',{title: "Artesphera | Registro" }) %>
+
 	<body>
 		<main>
 			<%- include('partials/header') %>
-			<section class="mainContent">
-				<article class="firstArticle">
-					<div class="loginTop">
-						<h1>Crea una cuenta</h1>
-						<p>¡Ey! Regístrate ingresando tus datos.</p>
-					</div>
-					<form action="/login" class="form">
-						<input
-							type="text"
-							id="usernameOrEmail"
-							name="usernameOrEmail"
-							placeholder="Correo electrónico"
-						/>
-						<input
-							type="password"
-							id="password"
-							name="password"
-							placeholder="Contraseña"
-						/>
-
-						<input
-							type="password"
-							id="confirmPassword"
-							name="confirmPassword"
-							placeholder="Ingresa nuevamente tu contraseña"
-							required
-						/>
-						<button type="submit">Registrarse</button>
-					</form>
-					<p>O puedes crearla también con:</p>
-					<div class="loginLinks">
-						<a href="#" class="loginGoogle">
-							<i class="fa-brands fa-google"></i>
-							<p>Google</p>
-						</a>
-						<a href="#" class="loginApple">
-							<i class="fa-brands fa-apple"></i>
-							<p>Apple ID</p>
-						</a>
-						<a href="#" class="loginFacebook">
-							<i class="fa-brands fa-facebook"></i>
-							<p>Facebook</p>
-						</a>
-					</div>
-					<div class="loginNoAcc">
-						<p>¿Ya tienes una cuenta?</p>
-						<a href="/users/login">Entra ahora</a>
-					</div>
-				</article>
-				<%- include('partials/footer') %>
-			</section>
+				<section class="mainContent">
+					<article class="firstArticle">
+						<div class="loginTop">
+							<h1>Crea una cuenta</h1>
+							<p>¡Ey! Regístrate ingresando tus datos.</p>
+						</div>
+						<form action="" class="form" method="POST">
+							<input type="text" id="name" name="name" placeholder="Ingresa tu nombre" />
+							<input type="text" id="surname" name="surname" placeholder="Ingresa tu apellido" />
+							<input type="email" id="email" name="email" placeholder="Correo electrónico" />
+							<input type="password" id="password" name="password" placeholder="Contraseña" />
+							<input type="password" id="password2" name="password2"
+								placeholder="Ingresa nuevamente tu contraseña" />
+							<button type="submit">Registrarse</button>
+						</form>
+						<p>O puedes crearla también con:</p>
+						<div class="loginLinks">
+							<a href="#" class="loginGoogle">
+								<i class="fa-brands fa-google"></i>
+								<p>Google</p>
+							</a>
+							<a href="#" class="loginApple">
+								<i class="fa-brands fa-apple"></i>
+								<p>Apple ID</p>
+							</a>
+							<a href="#" class="loginFacebook">
+								<i class="fa-brands fa-facebook"></i>
+								<p>Facebook</p>
+							</a>
+						</div>
+						<div class="loginNoAcc">
+							<p>¿Ya tienes una cuenta?</p>
+							<a href="/users/login">Entra ahora</a>
+						</div>
+					</article>
+					<%- include('partials/footer') %>
+				</section>
 		</main>
 	</body>
+
 </html>
