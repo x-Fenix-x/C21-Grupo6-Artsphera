@@ -1,5 +1,14 @@
 [
    {
+      "id": "0fab55b2-0e28-478d-ab6a-a1c030318e82",
+      "name": "artes",
+      "surname": "phera",
+      "email": "artesphera@artesphera.com",
+      "password": "$2a$10$JVOrFZ65.4Q5hGZyTT6Iku.JJllRdcU/NcP6mt2f61mUxTBUw7a.e",
+      "role": "admin",
+      "createAt": "2023-09-17T23:14:11.088Z"
+   },
+   {
       "id": "096a7414-d865-4547-ba7d-caf894139b04",
       "name": "pepe",
       "surname": "argento",
