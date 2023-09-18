@@ -536,6 +536,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.static{
+  position: static;
+}
+
 .relative{
   position: relative;
 }
@@ -630,10 +634,6 @@ video {
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.flex-row{
-  flex-direction: row;
 }
 
 .flex-col{
@@ -761,6 +761,11 @@ video {
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-red-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -899,6 +904,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -948,6 +958,15 @@ video {
 .text-gray-800{
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.text-red-900{
+  --tw-text-opacity: 1;
+  color: rgb(127 29 29 / var(--tw-text-opacity));
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all{
@@ -2549,9 +2568,11 @@ a {
 
 .leftHeader {
   display: none;
-  gap: 3rem;
+  gap: 1.25rem;
   align-items: center;
   @media (min-width: 1024px) {
+    gap: 3rem;
+
     display: flex;
   }
 }
@@ -2577,7 +2598,7 @@ a {
 }
 
 .leftNav > input {
-  padding: 0.5rem 75% 0.5rem 75%;
+  padding: 0.5rem 25% 0.5rem 25%;
   border: 1px solid #d1d5db;
   border-radius: 9999px;
 }
@@ -2598,6 +2619,12 @@ a {
 
 .rightHeader > a {
   font-size: 1.65rem;
+  line-height: 1.65rem;
+}
+
+.exit,
+.admin {
+  font-size: 1.35rem;
   line-height: 1.65rem;
 }
 
@@ -2631,8 +2658,21 @@ a {
 }
 
 .adminPanel {
-  display: none;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
   @media (min-width: 640px) {
+    display: flex;
+
+    gap: 1.25rem;
+
+    align-items: center;
+  }
+}
+
+.hiAdmin {
+  display: none;
+  @media (min-width: 1024px) {
     display: inline-block;
   }
 }
@@ -3253,6 +3293,168 @@ a {
   background: #fff;
   color: #ff7d7d;
   text-transform: capitalize;
+}
+
+/* MAIN */
+
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile__title {
+  margin: 10px;
+}
+
+/* FORMULARIO ACTUALIZAR */
+
+.profile-form {
+  background-color: #fafafa;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.profile-form__form {
+  width: 90%;
+}
+
+.profile-form__input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #757575;
+  border-radius: 3px;
+}
+
+.profile-form__input[type="text"] {
+  text-transform: capitalize;
+}
+
+.profile-form__title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.profile-form__div {
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.profile-form__button {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 0;
+  background-color: #2b2b2b;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.profile-form__actualizar {
+  display: none;
+}
+
+.profile-form__button:hover {
+  background-color: #000000;
+}
+
+/* FORMULARIO ELIMINAR */
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 80%;
+  max-width: 300px;
+  margin: 150px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.modal-body p {
+  padding-bottom: 30px;
+  font-weight: 600;
+}
+
+/* BOTONES MODAL */
+
+.btn {
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #a90303;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #961414;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #000;
+  width: 45%;
+}
+
+.btn-secondary:hover {
+  background-color: #919191;
+  color: #ffffff;
+}
+
+.modal-footer__btn-delete {
+  width: 45%;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  .profile-form {
+    width: 80%;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+  .profile-form {
+    width: 60%;
+  }
 }
 
 .hover\:bg-\[\#3d3220\]:hover{

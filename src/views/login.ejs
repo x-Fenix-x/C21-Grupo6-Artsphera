@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<%- include('partials/head',{title: "Artesphera | Login"}) %>
+	<link rel="stylesheet" href="/dist/output.css" />
 	<body>
 		<main>
 			<%- include('partials/header') %>
@@ -10,20 +11,25 @@
 						<h1>Iniciar Sesión</h1>
 						<p>¡Ey! Ingresa tus datos para iniciar sesión.</p>
 					</div>
-					<form action="/login" class="form">
+					<form action="" method="POST" class="form">
 						<input
-							type="text"
+							type="email"
 							id="usernameOrEmail"
 							name="usernameOrEmail"
 							placeholder="Correo electrónico"
 						/>
-
+						<% if (locals.errors && errors.usernameOrEmail) { %>
+						<p class="text-sm"><%= errors.usernameOrEmail.msg %></p>
+						<% } %>
 						<input
 							type="password"
 							id="password"
 							name="password"
 							placeholder="Contraseña"
 						/>
+						<% if (locals.errors && errors.password) { %>
+						<p class="text-sm"><%= errors.password.msg %></p>
+						<% } %>
 						<div class="formOptions">
 							<label for="rememberMe" class="formRemember">
 								<input type="checkbox" id="rememberMe" name="rememberMe" />

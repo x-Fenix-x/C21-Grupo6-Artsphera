@@ -54,10 +54,11 @@
 
 .leftHeader {
 	display: none;
-	gap: 3rem;
+	gap: 1.25rem;
 	align-items: center;
 
 	@media (min-width: 1024px) {
+		gap: 3rem;
 		display: flex;
 	}
 }
@@ -83,7 +84,7 @@
 }
 
 .leftNav > input {
-	padding: 0.5rem 75% 0.5rem 75%;
+	padding: 0.5rem 25% 0.5rem 25%;
 	border: 1px solid #d1d5db;
 	border-radius: 9999px;
 }
@@ -103,6 +104,11 @@
 	line-height: 1.65rem;
 }
 
+.exit,
+.admin {
+	font-size: 1.35rem;
+	line-height: 1.65rem;
+}
 .headerSearch {
 	display: inline-block;
 	background-color: none;
@@ -133,8 +139,21 @@
 }
 
 .adminPanel {
-	display: none;
+	display: flex;
+	gap: 1.25rem;
+	align-items: center;
+
 	@media (min-width: 640px) {
+		display: flex;
+		gap: 1.25rem;
+		align-items: center;
+	}
+}
+
+.hiAdmin {
+	display: none;
+
+	@media (min-width: 1024px) {
 		display: inline-block;
 	}
 }

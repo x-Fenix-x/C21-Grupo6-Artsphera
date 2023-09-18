@@ -1,104 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('partials/head',{ title: "Tu Perfil" }) %>
+	<%- include('partials/head',{ title: "Tu Perfil" }) %>
 
 	<body>
 		<%- include('partials/header') %>
-			<main class="profile">
-				<h1 class="profile__title">Mis datos</h1>
-				<h2 class="profile__title">Actualiza tu información</h2>
-				<div class="profile-form">
-					<form action="/users/update/<%= user.id %>?_method=PUT" class="profile-form__form" method="POST">
-						<div class="profile-form__div">
-							<label class="profile-form__title" for="name">Nombre</label>
-							<input class="profile-form__input" type="text" id="name" name="name"
-								placeholder="Ingrese su nombre" value="<%= user.name %>" />
-						</div>
-						<div class="profile-form__div">
-							<label class="profile-form__title" for="surname">Apellido</label>
-							<input class="profile-form__input" type="text" id="surname" name="surname"
-								placeholder="Ingrese su apellido" value="<%= user.surname %>" />
-						</div>
-						<div class="profile-form__div">
-							<label class="profile-form__title" for="email">Email</label>
-							<input class="profile-form__input" type="email" id="email" name="email"
-								placeholder="Ingrese su email" value="<%= user.email %>" />
-						</div>
-						<div class="profile-form__div">
-							<label for="profile-form__button" class="profile-form__button">
-								<input type="submit" id="profile-form__button" class="profile-form__actualizar">
-								<span>Actualizar</span>
-							</label>
-						</div>
-					</form>
-				</div>
+		<main class="profile">
+			<h1 class="profile__title">Mis datos</h1>
+			<h2 class="profile__title">Actualiza tu información</h2>
+			<div class="profile-form">
+				<form
+					action="/users/update/<%= user.id %>?_method=PUT"
+					class="profile-form__form"
+					method="POST"
+				>
+					<div class="profile-form__div">
+						<label class="profile-form__title" for="name">Nombre</label>
+						<input
+							class="profile-form__input"
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Ingrese su nombre"
+							value="<%= user.name %>"
+						/>
+					</div>
+					<div class="profile-form__div">
+						<label class="profile-form__title" for="surname">Apellido</label>
+						<input
+							class="profile-form__input"
+							type="text"
+							id="surname"
+							name="surname"
+							placeholder="Ingrese su apellido"
+							value="<%= user.surname %>"
+						/>
+					</div>
+					<div class="profile-form__div">
+						<label class="profile-form__title" for="email">Email</label>
+						<input
+							class="profile-form__input"
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Ingrese su email"
+							value="<%= user.email %>"
+						/>
+					</div>
+					<div class="profile-form__div">
+						<label for="profile-form__button" class="profile-form__button">
+							<input
+								type="submit"
+								id="profile-form__button"
+								class="profile-form__actualizar"
+							/>
+							<span>Actualizar</span>
+						</label>
+					</div>
+				</form>
+			</div>
 
-				<h2 class="profile__title">Cambiar contraseña</h2>
-				<div class="profile-form">
-					<form action="/users/update/<%= user.id %>?_method=PUT" class="profile-form__form" method="POST">
-						<div class="profile-form__div">
-							<label class="profile-form__title" for="password">Contraseña</label>
-							<input class="profile-form__input" type="password" id="password" name="password"
-								placeholder="Ingrese contraseña"/>
-						</div>
-						<div class="profile-form__div">
-							<label class="profile-form__title" for="password2">Confirmar contraseña</label>
-							<input class="profile-form__input" type="password" id="password2" name="password2"
-								placeholder="Repita su contraseña" />
-						</div>
-						<div class="profile-form__div">
-							<label for="profile-form__button-password" class="profile-form__button">
-								<input type="submit" id="profile-form__button-password" class="profile-form__actualizar">
-								<span>Actualizar</span>
-							</label>
-						</div>
-					</form>
-				</div>
+			<h2 class="profile__title">Cambiar contraseña</h2>
+			<div class="profile-form">
+				<form
+					action="/users/update-password/<%= user.id %>?_method=PUT"
+					class="profile-form__form"
+					method="POST"
+				>
+					<div class="profile-form__div">
+						<label class="profile-form__title" for="password">Contraseña</label>
+						<input
+							class="profile-form__input"
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Ingrese contraseña"
+						/>
+					</div>
+					<div class="profile-form__div">
+						<label class="profile-form__title" for="password2"
+							>Confirmar contraseña</label
+						>
+						<input
+							class="profile-form__input"
+							type="password"
+							id="password2"
+							name="password2"
+							placeholder="Repita su contraseña"
+						/>
+					</div>
+					<div class="profile-form__div">
+						<label
+							for="profile-form__button-password"
+							class="profile-form__button"
+						>
+							<input
+								type="submit"
+								id="profile-form__button-password"
+								class="profile-form__actualizar"
+							/>
+							<span>Actualizar</span>
+						</label>
+					</div>
+				</form>
+			</div>
 
-				<h2 class="profile__title">Eliminar cuenta</h2>
-				<div class="profile-form">
-					<form action="/users/delete/<%= user.id %>?_method=DELETE" class="profile-form__form" method="POST">
-						<div>
-							<h3>
-								Al hacer click su cuenta se eliminara de forma definitiva, una vez hecho esto no hay manera de recuperarla.
-							</h3>
-						</div>
-						<div class="profile-form__div">
-							<!-- Button trigger modal -->
-							<button type="button" class="profile-form__button btn btn-primary" data-bs-toggle="modal"
-								data-bs-target="#staticBackdrop">
-								Eliminar cuenta
-							</button>
-						</div>
+			<h2 class="profile__title">Eliminar cuenta</h2>
+			<div class="profile-form">
+				<form
+					action="/users/delete/<%= user.id %>?_method=DELETE"
+					class="profile-form__form"
+					method="POST"
+				>
+					<div>
+						<h3>
+							Al hacer click su cuenta se eliminara de forma definitiva, una vez
+							hecho esto no hay manera de recuperarla.
+						</h3>
+					</div>
+					<div class="profile-form__div">
+						<!-- Button trigger modal -->
+						<button
+							type="button"
+							class="profile-form__button btn btn-primary"
+							data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop"
+						>
+							Eliminar cuenta
+						</button>
+					</div>
 
-						<!-- Modal -->
-						<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-							tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h2 class="modal-title" id="staticBackdropLabel">Eliminar cuenta</h2>
-									</div>
-									<div class="modal-body">
-										<p>
-											Esta a punto de eliminar su cuenta. ¿Desea continuar?
-										</p>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary"
-											data-bs-dismiss="modal">Cancelar</button>
-										<button type="submit" class="btn btn-primary modal-footer__btn-delete">Eliminar</button>
-									</div>
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="staticBackdrop"
+						data-bs-backdrop="static"
+						data-bs-keyboard="false"
+						tabindex="-1"
+						aria-labelledby="staticBackdropLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h2 class="modal-title" id="staticBackdropLabel">
+										Eliminar cuenta
+									</h2>
+								</div>
+								<div class="modal-body">
+									<p>Esta a punto de eliminar su cuenta. ¿Desea continuar?</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button
+										type="submit"
+										class="btn btn-primary modal-footer__btn-delete"
+									>
+										Eliminar
+									</button>
 								</div>
 							</div>
 						</div>
-					</form>
-				</div>
-			</main>
-			<%- include('partials/footer') %>
+					</div>
+				</form>
+			</div>
+		</main>
+		<%- include('partials/footer') %>
 	</body>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-		crossorigin="anonymous"></script>
-
+		crossorigin="anonymous"
+	></script>
 </html>

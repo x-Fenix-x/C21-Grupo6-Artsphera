@@ -25,5 +25,14 @@
       "password": "$2a$10$Q6CrWMzCBO9GFGuONEvqRO36vmcPG6Qh1lNENZnuIfn7smZjD4sfC",
       "role": "user",
       "createAt": "2023-09-10T14:08:10.697Z"
+   },
+   {
+      "id": "a406e87b-c48d-4a6f-8519-c128cb6edfe5",
+      "name": "lucas",
+      "surname": "Pausin",
+      "email": "lucaspausin@gmail.com",
+      "password": "$2a$10$IuQ77BK4wn8PtdkbiHMx3uJJdJLO2lRq6kZK9tcTjCjO8ExZKvpcu",
+      "role": "admin",
+      "createAt": "2023-09-18T03:51:50.817Z"
    }
 ]

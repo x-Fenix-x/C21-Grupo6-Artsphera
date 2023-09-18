@@ -1,5 +1,5 @@
 <header class="headerContent">
-	<div class="subHeader">
+	<div class="subHeader bg-red-700">
 		<p>
 			Hacemos envíos a todo el país. Política de devolución de 15 días. Envío
 			gratuito en pedidos superiores a $ 10000.
@@ -19,7 +19,6 @@
 
 			<div class="dropdown">
 				<a href="#" class="dropdown-titulo">Disciplinas</a>
-
 				<ul class="dropdown-menu">
 					<% categories.forEach(categorie => { %>
 					<li>
@@ -36,20 +35,37 @@
 			</form>
 		</div>
 		<div class="rightHeader">
+			<% if (locals.userLogin) { %>
 			<div class="adminPanel">
-				<a href="/users/admin">Admin</a>
+				<p class="hiAdmin">Hola, <%= userLogin.name %> !</p>
+				<% if (userLogin.role === "admin") { %>
+				<a href="/users/admin" class="admin">
+					<i class="fa-solid fa-solar-panel"></i>
+				</a>
+				<% } %>
 			</div>
 			<div class="headerSearch">
 				<button class="fa-solid fa-magnifying-glass"></button>
 			</div>
+			<% if (locals.userLogin) { %>
+			<a
+				href="/users/profile/<%= locals.userLogin.id %>"
+				class="fa-sharp fa-solid fa-user"
+			></a>
+			<% }else{ %>
+			<a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
+			<% } %>
 			<a href="/carrito" class="fa-solid fa-cart-shopping"></a>
-			<div class="dropdown">
-				<a href="#" class="fa-sharp fa-solid fa-user"></a>
-				<ul class="dropdown-menu dropdown-menu-user">
-					<li><a href="/users/login">Iniciar sesión</a></li>
-					<li><a href="/users/register">Registro</a></li>
-				</ul>
+			<a href="/users/logout" class="exit">
+				<i class="fa-solid fa-xmark"></i>
+			</a>
+			<% }else{ %>
+			<div class="headerSearch">
+				<button class="fa-solid fa-magnifying-glass"></button>
 			</div>
+			<a href="/carrito" class="fa-solid fa-cart-shopping"></a>
+			<a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
+			<% } %>
 		</div>
 	</div>
 </header>
