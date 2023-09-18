@@ -18,6 +18,8 @@ module.exports = (req, res) => {
         const categories = readJSON("categories.json");
         return res.render("register",{
             categories,
+            errors: errors.mapped(),
+            old: req.body,
         })
     }
 };
