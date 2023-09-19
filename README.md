@@ -37,8 +37,13 @@
 - Logotipo: https://www.figma.com/file/1U391S0BAS97U7sSZ9E9JL/arte?type=design&node-id=16-391&t=QAW3F7wMM875YNXy-0
 
 ## RETROSPECTIVAS:
+
 ### [Retrospectiva SPRINT 1](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro1.jpeg)
+
 ### [Retrospectiva SPRINT 2](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro2.MD)
+
 ### [Retrospectiva SPRINT 3](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro3.MD)
+
+### [Retrospectiva SPRINT 4](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro4.MD)
 
 ## TRELLO: https://trello.com/b/SbEzd56P/c21-grupo-6-artesphera
