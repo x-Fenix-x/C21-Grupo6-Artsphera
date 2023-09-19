@@ -23,6 +23,9 @@
 							placeholder="Ingrese su nombre"
 							value="<%= user.name %>"
 						/>
+						<% if (locals.errors && errors.name) { %>
+						<p class="text-sm"><%= errors.name.msg %></p>
+						<% } %>
 					</div>
 					<div class="profile-form__div">
 						<label class="profile-form__title" for="surname">Apellido</label>
@@ -34,6 +37,9 @@
 							placeholder="Ingrese su apellido"
 							value="<%= user.surname %>"
 						/>
+						<% if (locals.errors && errors.surname) { %>
+						<p class="text-sm"><%= errors.surname.msg %></p>
+						<% } %>
 					</div>
 					<div class="profile-form__div">
 						<label class="profile-form__title" for="email">Email</label>
@@ -45,6 +51,9 @@
 							placeholder="Ingrese su email"
 							value="<%= user.email %>"
 						/>
+						<% if (locals.errors && errors.email) { %>
+						<p class="text-sm"><%= errors.email.msg %></p>
+						<% } %>
 					</div>
 					<div class="profile-form__div">
 						<label for="profile-form__button" class="profile-form__button">
@@ -75,6 +84,9 @@
 							name="password"
 							placeholder="Ingrese contraseña"
 						/>
+						<% if (locals.errors && errors.password) { %>
+						<p class="text-sm"><%= errors.password.msg %></p>
+						<% } %>
 					</div>
 					<div class="profile-form__div">
 						<label class="profile-form__title" for="password2"
@@ -87,6 +99,9 @@
 							name="password2"
 							placeholder="Repita su contraseña"
 						/>
+						<% if (locals.errors && errors.password2) { %>
+						<p class="text-sm"><%= errors.password2.msg %></p>
+						<% } %>
 					</div>
 					<div class="profile-form__div">
 						<label

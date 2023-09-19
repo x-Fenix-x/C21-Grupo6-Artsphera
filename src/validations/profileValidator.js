@@ -23,4 +23,31 @@ const profileValidator = [
 		.withMessage("Ingrese un email valido"),
 ];
 
-module.exports = profileValidator;
+const profileErrors = (req, res, next) => {
+	const errors = validationResult(req);
+	const users = readJSON("users.json");
+	const categories = readJSON("categories.json");
+	const id = req.params.id;
+
+	const user = users.find((user) => user.id === id);
+
+	if (!user) {
+		return res.redirect("/users/login");
+	}
+
+	if (errors.isEmpty()) {
+	} else {
+		return res.render("profile", {
+			errors: errors.mapped(),
+			categories,
+			users,
+			user,
+		});
+	}
+	next();
+};
+
+module.exports = {
+	profileValidator,
+	profileErrors,
+};

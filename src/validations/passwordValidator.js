@@ -1,4 +1,5 @@
-const { check, body } = require("express-validator");
+const { check, body, validationResult } = require("express-validator");
+const { readJSON } = require("../data");
 
 const passwordValidator = [
 	check("password")
@@ -17,4 +18,31 @@ const passwordValidator = [
 		.withMessage("Las contraseñas deben coincidir"),
 ];
 
-module.exports = passwordValidator;
+const passwordErrors = (req, res, next) => {
+	const errors = validationResult(req);
+	const users = readJSON("users.json");
+	const categories = readJSON("categories.json");
+	const id = req.params.id;
+
+	const user = users.find((user) => user.id === id);
+
+	if (!user) {
+		return res.redirect("/users/login");
+	}
+
+	if (errors.isEmpty()) {
+	} else {
+		return res.render("profile", {
+			errors: errors.mapped(),
+			categories,
+			users,
+			user,
+		});
+	}
+	next();
+};
+
+module.exports = {
+	passwordValidator,
+	passwordErrors,
+};

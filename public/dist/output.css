@@ -904,11 +904,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -958,11 +953,6 @@ video {
 .text-gray-800{
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
-.text-red-900{
-  --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity));
 }
 
 .filter{
@@ -2341,6 +2331,13 @@ a {
 
 .form > p {
   font-weight: 500;
+}
+
+.text-danger {
+  color: #ff0000;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .formOptions {
