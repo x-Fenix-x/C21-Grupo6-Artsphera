@@ -3,6 +3,7 @@ const { detail,	add, create, edit, update, products, remove, search } = require(
 
 const router = express.Router();
 const upload = require("../middlewares/upload");
+const productAddValidator = require('../validations/productAddValidator');
 
 /* Productos */
 router
@@ -11,7 +12,7 @@ router
 	.get("/search", search)
 	.get("/detail/:id", detail)
 	.get("/add", add)
-	.post("/add", upload.array("images"), create)
+	.post("/add", upload.array("images"), productAddValidator, create)
 	.get("/edit/:id", edit)
 	.put("/update/:id", upload.array("images"), update)
 	.delete("/delete/:id", remove);

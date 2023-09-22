@@ -16,6 +16,9 @@ module.exports = {
 		});
 	},
 	carrito: (req, res) => {
-		return res.render("carrito");
-	},
+        const categories = readJSON("categories.json");
+        return res.render("carrito", {
+            categories
+        });
+    },
 };
