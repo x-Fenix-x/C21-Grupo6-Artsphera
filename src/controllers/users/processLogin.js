@@ -12,7 +12,7 @@ module.exports = (req, res) => {
 		role,
 	};
 
-	req.body.remember !== undefined &&
+	req.body.rememberMe !== undefined &&
 		res.cookie("artesphera", req.session.userLogin, {
 			maxAge: 1000 * 60 * 5,
 		});

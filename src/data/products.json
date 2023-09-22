@@ -3,37 +3,37 @@
       "id": "ffa4f311-a879-47a2-a743-ba32cebc9b24",
       "title": "Alejandro Magno",
       "category": "Escultura",
-      "price": 10000,
-      "discount": 20,
-      "stock": 11,
+      "price": 2000,
+      "discount": 0,
+      "stock": 7,
       "images": [
-         "1695343176504_products_.png"
+         "1695415612426_products_.jpg"
       ],
       "description": "Alejandro Magno.",
       "section": "Nuevo"
    },
    {
       "id": "21fb9839-5c89-454e-9fdd-78de683080ed",
-      "title": "Marilyn",
+      "title": "Marilyn Monroe",
       "category": "Dibujo",
-      "price": 555,
-      "discount": 77,
+      "price": 100,
+      "discount": 0,
       "stock": 1,
       "images": [
-         "1693338741903_products_.jpg"
+         "1695413712318_products_.jpg"
       ],
-      "description": "Dibujo de Marilyn Monroe.",
+      "description": "Marilyn Monroe.",
       "section": "Ofertas"
    },
    {
       "id": "e2e04c38-2291-4179-b119-9269b3215d88",
       "title": "Girl the colors",
       "category": "Fotografía",
-      "price": 120,
+      "price": 250,
       "discount": 10,
-      "stock": 1,
+      "stock": 50,
       "images": [
-         "1693338673148_products_.jpg"
+         "1695413718224_products_.jpg"
       ],
       "description": "Girl the colors.",
       "section": "Nuevo"
@@ -42,9 +42,9 @@
       "id": "22477cb8-e1ee-4fa0-bf92-a0294976097f",
       "title": "Smile",
       "category": "Ilustración",
-      "price": 600,
+      "price": 200,
       "discount": 30,
-      "stock": 2,
+      "stock": 20,
       "images": [
          "1693338694531_products_.jpg"
       ],

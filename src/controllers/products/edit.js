@@ -9,16 +9,11 @@ module.exports = (req, res) => {
 
     const product = products.find((product) => product.id === id);
 
-    if (product) {
-        return res.render('productEdit', {
-          categories,
-          products,
-          product,
-          sections,
-          priceFinal,
-        });
-      } else {
-        return res.redirect("/products/edit")
-      }
-      
+    return res.render('productEdit', {
+        categories,
+        products,
+        product,
+        sections,
+        priceFinal,
+    });
 };

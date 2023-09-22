@@ -19,7 +19,7 @@
 							placeholder="Correo electrónico"
 						/>
 						<% if (locals.errors && errors.usernameOrEmail) { %>
-						<p class="text-sm"><%= errors.usernameOrEmail.msg %></p>
+						<p class="text-sm text-danger"><%= errors.usernameOrEmail.msg %></p>
 						<% } %>
 						<input
 							type="password"
@@ -28,7 +28,7 @@
 							placeholder="Contraseña"
 						/>
 						<% if (locals.errors && errors.password) { %>
-						<p class="text-sm"><%= errors.password.msg %></p>
+						<p class="text-sm text-danger"><%= errors.password.msg %></p>
 						<% } %>
 						<div class="formOptions">
 							<label for="rememberMe" class="formRemember">

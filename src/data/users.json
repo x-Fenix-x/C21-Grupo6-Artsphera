@@ -34,5 +34,14 @@
       "password": "$2a$10$a5fYQRXnKQEYLVHDI2r1HOj0IBPpwS06WgDe.g8q4VJu2TIIagmX2",
       "role": "admin",
       "createAt": "2023-09-18T03:51:50.817Z"
+   },
+   {
+      "id": "56ebbf8b-8c7a-4820-82e5-629904d84800",
+      "name": "Pablo",
+      "surname": "Picasso",
+      "email": "1234@1234.com",
+      "password": "$2a$10$t0oLDMMUDEU0cMT4SdgDZe42AP/gqaJx65VQBs4xfYQgx3FXD5muS",
+      "role": "user",
+      "createAt": "2023-09-22T19:00:43.569Z"
    }
 ]

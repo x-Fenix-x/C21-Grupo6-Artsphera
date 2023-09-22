@@ -21,12 +21,6 @@ const loginValidator = [
 					role,
 				};
 
-				if (req.body.remember !== undefined) {
-					res.cookie("artesphera", req.session.userLogin, {
-						maxAge: 1000 * 60 * 5,
-					});
-				}
-
 				console.log(req.session.userLogin);
 
 				return true;
