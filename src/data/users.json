@@ -41,7 +41,7 @@
       "surname": "Picasso",
       "email": "1234@1234.com",
       "password": "$2a$10$t0oLDMMUDEU0cMT4SdgDZe42AP/gqaJx65VQBs4xfYQgx3FXD5muS",
-      "role": "user",
+      "role": "admin",
       "createAt": "2023-09-22T19:00:43.569Z"
    }
 ]
