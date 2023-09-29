@@ -2,31 +2,31 @@
 	{
 		"id": 1,
 		"name": "Pintura",
-		"images": ["1693278637908_products_.webp"]
+		"images": ["1.jpg"]
 	},
 	{
 		"id": 2,
 		"name": "Escultura",
-		"images": ["1693338700471_products_.jpeg"]
+		"images": ["2.jpeg"]
 	},
 	{
 		"id": 3,
 		"name": "Fotografía",
-		"images": ["1693278560060_products_.webp"]
+		"images": ["3.jpg"]
 	},
 	{
 		"id": 4,
 		"name": "Dibujo",
-		"images": ["1693278770421_products_.webp"]
+		"images": ["4.jpg"]
 	},
 	{
 		"id": 5,
 		"name": "Ilustración",
-		"images": ["1693278828230_products_.webp"]
+		"images": ["5.jpg"]
 	},
 	{
 		"id": 6,
 		"name": "Collage",
-		"images": ["1693339962031_products_.jpg"]
+		"images": ["6.jpg"]
 	}
 ]
