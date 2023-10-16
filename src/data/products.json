@@ -165,5 +165,31 @@
          "1693279044931_products_.webp"
       ],
       "description": "El fotógrafo Ala Khier documenta varios aspectos de la vida cotidiana y la cultura en Sudán."
+   },
+   {
+      "id": "6eaeff0b-5429-4da4-9073-814f3aed6d3b",
+      "title": "asdfasdf",
+      "category": "Escultura",
+      "price": 23232,
+      "discount": 0,
+      "stock": 1,
+      "images": [
+         "../../../images/defaultImage.png"
+      ],
+      "section": "Últimas unidades",
+      "description": "asdasdasafsd"
+   },
+   {
+      "id": "382c5074-b79e-416f-a74e-6a346aa1b401",
+      "title": "Totoro",
+      "category": "Pintura",
+      "price": 120000,
+      "discount": 0,
+      "stock": 1,
+      "images": [
+         "1696003274778_products_.jpg"
+      ],
+      "section": "Nuevo",
+      "description": "Mi vecino Totoro."
    }
 ]

@@ -14,7 +14,7 @@ module.exports = (req, res) => {
 
 	req.body.rememberMe !== undefined &&
 		res.cookie("artesphera", req.session.userLogin, {
-			maxAge: 1000 * 60 * 5,
+			maxAge: 1000 * 60 * 10,
 		});
 
 	console.log(req.session.userLogin);

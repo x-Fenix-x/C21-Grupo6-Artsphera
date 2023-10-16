@@ -24,7 +24,7 @@ module.exports = [
             min: 0,
             max: 100,
         })
-        .withMessage('El rango debe ser de 0 a 100 y ser positivo'),
+        .withMessage('El rango debe ser de 0 a 100'),
     check('stock')
         .notEmpty()
         .withMessage('No puede quedar vacio')
