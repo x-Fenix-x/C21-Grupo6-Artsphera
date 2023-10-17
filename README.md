@@ -2,7 +2,7 @@
 
 ## Descripción del proyecto:
 
-- Desarrollar un e-commerce basado en la venta de artes. El cliente final son aquellas personas apasionadas por el arte en general, interesadas en adquirir obras de arte originales creadas por artistas independientes y productos relacionados como escultura, fotografia o ilustraciones.
+- Desarrollar un e-commerce basado en la venta de obras de arte. El cliente final son aquellas personas apasionadas por el arte en general, interesadas en adquirir obras de arte originales creadas por artistas independientes y productos relacionados como escultura, fotografía o ilustraciones.
 
 ## Integrantes:
 
@@ -28,11 +28,11 @@
 
 - Ideas generales de carrito y login https://vsco.co/user/login
 
-## Disenio:
+## Diseño:
 
 - Colores: https://colorhunt.co/palette/1b262c0f4c753282b8bbe1fa
 
-- Tipografia: https://fonts.google.com/
+- Tipografía: https://fonts.google.com/
 
 - Logotipo: https://www.figma.com/file/1U391S0BAS97U7sSZ9E9JL/arte?type=design&node-id=16-391&t=QAW3F7wMM875YNXy-0
 
