@@ -3,8 +3,8 @@
 	<%- include('partials/head',{title: "Products | Artesphera"}) %>
 	<link rel="stylesheet" href="/dist/output.css" />
 	<body>
+		<%- include("partials/header") %> <%- include('partials/subHeader') %>
 		<main class="flex flex-col bg-white">
-			<%- include("partials/header") %> <%- include('partials/subHeader') %>
 			<article class="flex gap-12 px-6 sm:px-12 py-12">
 				<div
 					class="flex-col items-start gap-8 grow max-w-[12rem] hidden lg:flex sticky h-full top-[14rem] z-0"
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 			</article>
-			<%- include('partials/footer') %>
 		</main>
+		<%- include('partials/footer') %>
 	</body>
 </html>

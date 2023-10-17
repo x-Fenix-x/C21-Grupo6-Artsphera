@@ -3,8 +3,8 @@
 <%- include('partials/head',{title: "Artesphera | Registro" }) %>
 
 	<body>
-		<main>
-			<%- include('partials/header') %>
+		<%- include('partials/header') %>
+			<main>
 				<section class="mainContent">
 					<article class="firstArticle">
 						<div class="loginTop">
@@ -14,28 +14,27 @@
 						<form action="" class="form" method="POST">
 							<input type="text" id="name" name="name"
 								class="form-control <%= locals.errors && (locals.errors.name && 'is-invalid') %>"
-								placeholder="Ingresa tu nombre" 
-								value="<%= locals.old && (old.name && old.name) %>"/>
+								placeholder="Ingresa tu nombre" value="<%= locals.old && (old.name && old.name) %>" />
 							<small class="text-danger">
 								<%= locals.errors && (errors.name && errors.name.msg) %>
 							</small>
 							<input type="text" id="surname" name="surname"
 								class="form-control <%= locals.errors && (locals.errors.surname && 'is-invalid') %>"
-								placeholder="Ingresa tu apellido" value="<%= locals.old && (old.surname && old.surname) %>" />
+								placeholder="Ingresa tu apellido"
+								value="<%= locals.old && (old.surname && old.surname) %>" />
 							<small class="text-danger">
 								<%= locals.errors && (errors.surname && errors.surname.msg) %>
 							</small>
 							<input type="email" id="email" name="email"
 								class="form-control <%= locals.errors && (locals.errors.email && 'is-invalid') %>"
-								placeholder="Ingresa tu email"
-								value="<%= locals.old && (old.email && old.email) %>" />
+								placeholder="Ingresa tu email" value="<%= locals.old && (old.email && old.email) %>" />
 							<small class="text-danger">
 								<%= locals.errors && (errors.email && errors.email.msg) %>
 							</small>
 							<input type="password" id="password" name="password"
 								class="form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>"
-								placeholder="Ingresa tu contraseña" 
-								value="<%= locals.old && (old.password && old.password) %>"/>
+								placeholder="Ingresa tu contraseña"
+								value="<%= locals.old && (old.password && old.password) %>" />
 							<small class="text-danger">
 								<%= locals.errors && (errors.password && errors.password.msg) %>
 							</small>
@@ -68,9 +67,9 @@
 							<a href="/users/login">Entra ahora</a>
 						</div>
 					</article>
-					<%- include('partials/footer') %>
 				</section>
-		</main>
+			</main>
+			<%- include('partials/footer') %>
 	</body>
 
 </html>

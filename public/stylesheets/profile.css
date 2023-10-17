@@ -36,7 +36,7 @@
     border-radius: 3px;
 }
 
-.profile-form__input[type="text"] {
+.profile-form__input[type='text'] {
     text-transform: capitalize;
 }
 

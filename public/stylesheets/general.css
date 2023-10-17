@@ -1,33 +1,33 @@
 :root {
-	--tipografiaGeneral: "Dosis", sans-serif;
-	--colorBlanco: #ffffff;
-	--colorBlancoClaro: #f3f3f3;
-	--colorBeige: #d0ad7a;
-	--colorCobre: #d0947a;
-	--colorGrisClaro: #d9d9d9;
-	--colorNegro: #000000;
-	--colorRojo: #de2222;
-	--colorVerde: #2edf1f;
-	--loginWallpaper: url("/images/loginWallpaper.png");
+    --tipografiaGeneral: 'Dosis', sans-serif;
+    --colorBlanco: #ffffff;
+    --colorBlancoClaro: #f3f3f3;
+    --colorBeige: #d0ad7a;
+    --colorCobre: #d0947a;
+    --colorGrisClaro: #d9d9d9;
+    --colorNegro: #000000;
+    --colorRojo: #de2222;
+    --colorVerde: #2edf1f;
+    --loginWallpaper: url('/images/loginWallpaper.jpg');
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-	min-height: 100vh;
-	font-family: var(--tipografiaGeneral);
+    min-height: 100vh;
+    font-family: var(--tipografiaGeneral);
 }
 
 li {
-	list-style: none;
+    list-style: none;
 }
 
 a {
-	color: var(--colorNegro);
-	text-decoration: none;
+    color: var(--colorNegro);
+    text-decoration: none;
 }

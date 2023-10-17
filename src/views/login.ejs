@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include('partials/head',{title: "Artesphera | Login"}) %>
+<%- include('partials/head',{title: "Artesphera | Login" }) %>
 	<link rel="stylesheet" href="/dist/output.css" />
+
 	<body>
-		<main>
-			<%- include('partials/header') %>
-			<section class="mainContent">
-				<article class="firstArticle">
-					<div class="loginTop">
-						<h1>Iniciar Sesión</h1>
-						<p>¡Ey! Ingresa tus datos para iniciar sesión.</p>
-					</div>
-					<form action="" method="POST" class="form">
-						<input
-							type="email"
-							id="usernameOrEmail"
-							name="usernameOrEmail"
-							placeholder="Correo electrónico"
-						/>
-						<% if (locals.errors && errors.usernameOrEmail) { %>
-						<p class="text-sm text-danger"><%= errors.usernameOrEmail.msg %></p>
-						<% } %>
-						<input
-							type="password"
-							id="password"
-							name="password"
-							placeholder="Contraseña"
-						/>
-						<% if (locals.errors && errors.password) { %>
-						<p class="text-sm text-danger"><%= errors.password.msg %></p>
-						<% } %>
-						<div class="formOptions">
-							<label for="rememberMe" class="formRemember">
-								<input type="checkbox" id="rememberMe" name="rememberMe" />
-								Recuérdame
-							</label>
-							<a href="#">¿Olvidaste la Contraseña?</a>
+		<%- include('partials/header') %>
+			<main class="login">
+				<section class="mainContent">
+					<article class="firstArticle">
+						<div class="loginTop">
+							<h1>Iniciar Sesión</h1>
+							<p>¡Ey! Ingresa tus datos para iniciar sesión.</p>
 						</div>
-						<button type="submit">Iniciar Sesión</button>
-					</form>
-					<p>O inicia sesión con:</p>
-					<div class="loginLinks">
-						<a href="#" class="loginGoogle">
-							<i class="fa-brands fa-google"></i>
-							<p>Google</p>
-						</a>
-						<a href="#" class="loginApple">
-							<i class="fa-brands fa-apple"></i>
-							<p>Apple ID</p>
-						</a>
-						<a href="#" class="loginFacebook">
-							<i class="fa-brands fa-facebook"></i>
-							<p>Facebook</p>
-						</a>
-					</div>
-					<div class="loginNoAcc">
-						<p>¿No tienes una cuenta?</p>
-						<a href="/users/register">Solicítala ahora</a>
-					</div>
-				</article>
-				<%- include('partials/footer') %>
-			</section>
-		</main>
+						<form action="" method="POST" class="form">
+							<input type="email" id="usernameOrEmail" name="usernameOrEmail"
+								placeholder="Correo electrónico" />
+							<% if (locals.errors && errors.usernameOrEmail) { %>
+								<p class="text-sm text-danger">
+									<%= errors.usernameOrEmail.msg %>
+								</p>
+								<% } %>
+									<input type="password" id="password" name="password" placeholder="Contraseña" />
+									<% if (locals.errors && errors.password) { %>
+										<p class="text-sm text-danger">
+											<%= errors.password.msg %>
+										</p>
+										<% } %>
+											<div class="formOptions">
+												<label for="rememberMe" class="formRemember">
+													<input type="checkbox" id="rememberMe" name="rememberMe" />
+													Recuérdame
+												</label>
+												<a href="#">¿Olvidaste la Contraseña?</a>
+											</div>
+											<button type="submit">Iniciar Sesión</button>
+						</form>
+						<p>O inicia sesión con:</p>
+						<div class="loginLinks">
+							<a href="#" class="loginGoogle">
+								<i class="fa-brands fa-google"></i>
+								<p>Google</p>
+							</a>
+							<a href="#" class="loginApple">
+								<i class="fa-brands fa-apple"></i>
+								<p>Apple ID</p>
+							</a>
+							<a href="#" class="loginFacebook">
+								<i class="fa-brands fa-facebook"></i>
+								<p>Facebook</p>
+							</a>
+						</div>
+						<div class="loginNoAcc">
+							<p>¿No tienes una cuenta?</p>
+							<a href="/users/register">Solicítala ahora</a>
+						</div>
+					</article>
+				</section>
+			</main>
+			<%- include('partials/footer') %>
 	</body>
+
 </html>

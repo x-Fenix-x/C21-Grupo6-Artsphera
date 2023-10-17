@@ -1,54 +1,53 @@
-.a{
+.a {
     color: black;
     text-decoration: none;
 }
-.main_columna{
+.main_columna {
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
-.main__div__principal__imagen{
+.main__div__principal__imagen {
     margin: 5px;
     width: 50px;
     text-align: left;
     width: 50%;
     border-radius: 5px 5px 0 0;
 }
-.main__div__principal__p{
+.main__div__principal__p {
     color: aliceblue;
     text-align: center;
     padding: 5px;
 }
-.main__div__principal__h3{
+.main__div__principal__h3 {
     color: aliceblue;
     text-align: center;
 }
-.main__div__principal__h5{
-    color: #2EDF1F;
+.main__div__principal__h5 {
+    color: #2edf1f;
     text-align: center;
     margin-top: 10px;
 }
-.main__div__principal__btn{
+.main__div__principal__btn {
     text-align: center;
     padding: 5px;
     margin-top: 10px;
     background: var(--colorBeige);
     color: #fff;
-    border-radius: 10px 10px 10px 10px ;
-
+    border-radius: 10px 10px 10px 10px;
 }
-.main__div__principal--sec{
+.main__div__principal--sec {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.section__div__principal__article{
+.section__div__principal__article {
     text-align: center;
     padding: 5px;
 }
-.main__h3{
+.main__h3 {
     padding: 20px;
     font-size: 24px;
     color: black;
@@ -56,18 +55,17 @@
     text-decoration: var(--colorBeige);
     text-transform: uppercase;
 }
-.main__div_secundario{
+.main__div_secundario {
     background-color: black;
     position: relative;
     padding-left: 5px;
     overflow: hidden;
-    
 }
-.main__div__secundario__titulo{
+.main__div__secundario__titulo {
     text-align: center;
     color: white;
 }
-.main__div__secundario__h4{
+.main__div__secundario__h4 {
     padding: 12px;
     font-size: 1.8rem;
     text-transform: capitalize;
@@ -75,52 +73,43 @@
     color: #ffffff;
     font-weight: 600;
 }
-.main__div__cajas{
+.main__div__cajas {
     border-radius: 1px solid rgb(199, 186, 186);
     background-color: #222020;
     padding: 20px;
     margin: 15px;
-    
 }
-.main__div__img{
-    /* margin: 50px;
-    width: 50px;
-    align-items: center;
-    text-align: center; */
+.main__div__img {
     position: relative;
     width: 100%;
     height: 150px;
     overflow: hidden;
     padding: 5px;
 }
-.main__div__h4{
+.main__div__h4 {
     color: white;
     text-align: center;
     margin: 10px;
 }
-.main__div__p1{
-    color: #DE2222;
+.main__div__p1 {
+    color: #de2222;
     text-align: left;
-    display: inline-flex; 
-    margin-bottom: 5px; 
+    display: inline-flex;
+    margin-bottom: 5px;
     margin: 5%;
     padding: 5%;
 
     text-transform: uppercase;
 }
-.main__div__p2{
-    color: #2EDF1F;
+.main__div__p2 {
+    color: #2edf1f;
     text-align: center;
-    display: inline-flex; 
-    margin-bottom: 5px; 
+    display: inline-flex;
+    margin-bottom: 5px;
     margin: 5%;
     padding: 5%;
 }
-.main__div__alineado{
-    /* display: flex;
-    text-align: left;
-    padding: 5%;
-    margin: 5%; */
+.main__div__alineado {
     width: 80%;
     height: 80px;
     padding: 10px;
@@ -129,61 +118,45 @@
     border-radius: 0 0 8px 8px;
     background-color: #ffffff;
 }
-.main__div__input{
-    color:black;
-    background-color: #D0AD7A;
+.main__div__input {
+    color: black;
+    background-color: #d0ad7a;
     border-radius: 10px black;
 }
-.span__precio__descuento{
+.span__precio__descuento {
     font-weight: 600;
     font-size: 1rem;
     color: var(--colorVerde);
-  }
-  .precio {
+}
+.precio {
     margin-left: 20px;
     font-size: 1.5rem;
     opacity: 0.5;
     text-decoration: line-through;
     color: var(--colorRojo);
-  }
-.footer__parte__baja{
+}
+.footer__parte__baja {
     text-align: center;
 }
-.section__tematica{
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 20px;
-        background-color: black;
-}
-/* .enlaces{
+.section__tematica {
     display: flex;
-} */
-/* caja del carrito principal */
-.div__caja__carrito{
-    /* display: flex;
-    outline: 1px solid;
+    width: 100%;
     flex-wrap: wrap;
-    padding-right: 5%;
-    padding-bottom: 5%; */
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: black;
+}
 
+.div__caja__carrito {
     display: flex;
     justify-content: flex-start;
     overflow-x: auto;
     scroll-behavior: smooth;
     margin-bottom: 20px;
 }
-.article__caja__carrito{
-    /* flex: 0 1 20%;
-    margin: 2%;
-    margin-right: 0%;
-    margin-bottom: 0%; */
-    /* justify-content: space-between;
-    align-content: space-between;
-    height: 20%; */
+.article__caja__carrito {
     background-color: #222020;
-    border-radius: 10px 10px 10px 10px ;
+    border-radius: 10px 10px 10px 10px;
     flex: 0 0 auto;
     width: 30%;
     max-width: 50%;
@@ -191,64 +164,63 @@
     margin-right: 20px;
 }
 .main__div__cajita:hover,
-.main__div__cajita{
-  position: relative;
-  width: 50%;
-  left: 50%;
-  bottom: 10px;
-  padding: 10px;
-  transform: translateX(-50%);
-  background: var(--colorCobre);
-  color: #000000;
-  border-radius: 10px;
-  transition: 500ms;
-  cursor: pointer;
-  border: 1px solid var(--colorNegro);
-  text-align: center;
+.main__div__cajita {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    bottom: 10px;
+    padding: 10px;
+    transform: translateX(-50%);
+    background: var(--colorCobre);
+    color: #000000;
+    border-radius: 10px;
+    transition: 500ms;
+    cursor: pointer;
+    border: 1px solid var(--colorNegro);
+    text-align: center;
 }
 /*media de mobil*/
-@media(min-width:320px){
-
+@media (min-width: 320px) {
 }
 /*media de table*/
-@media (min-width:600px) {
+@media (min-width: 600px) {
     .section__producto {
         position: relative;
         padding-left: 5px;
         overflow: hidden;
         background-color: #000000;
-      }
-      
-      .section__producto__categoria{
+    }
+
+    .section__producto__categoria {
         padding: 12px;
         font-size: 1.8rem;
         text-transform: capitalize;
         text-align: center;
         color: #ffffff;
         font-weight: 600;
-      }
-    
-      .div__producto__container{
+    }
+
+    .div__producto__container {
         display: flex;
         justify-content: flex-start;
         overflow-x: auto;
         scroll-behavior: smooth;
         margin-bottom: 20px;
-      }
-      .div__producto__card{
+    }
+    .div__producto__card {
         flex: 0 0 auto;
         width: 85%;
         max-width: 100%;
         height: 400px;
         margin-right: 20px;
-      }
-      .div__producto__imagen{
+    }
+    .div__producto__imagen {
         position: relative;
         width: 100%;
         height: 350px;
         overflow: hidden;
-      }
-      .producto-card__descuento {
+    }
+    .producto-card__descuento {
         position: absolute;
         right: 10px;
         top: 10px;
@@ -257,14 +229,14 @@
         background: #fff;
         color: #ff7d7d;
         text-transform: capitalize;
-      }
-      .div__producto__card__img{
+    }
+    .div__producto__card__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 10px 10px 0 0;
-      }
-      .div__producto__card__boton{
+    }
+    .div__producto__card__boton {
         position: absolute;
         width: 90%;
         left: 50%;
@@ -277,18 +249,18 @@
         cursor: pointer;
         opacity: 0;
         border: 1px solid #000000;
-      }
-      
-      .div__producto__card:hover .div__producto__card__boton {
+    }
+
+    .div__producto__card:hover .div__producto__card__boton {
         opacity: 1;
-      }
-      
-      .div__producto__card__boton:hover,
-      .div__producto__card__boton.selected {
+    }
+
+    .div__producto__card__boton:hover,
+    .div__producto__card__boton.selected {
         background: var(--colorBeige);
         color: #fff;
-      }  
-      .div__producto__info{
+    }
+    .div__producto__info {
         width: 100%;
         height: 50px;
         padding: 10px;
@@ -297,47 +269,47 @@
         border-radius: 0 0 8px 8px;
         background-color: #ffffff;
         text-align: center;
-      }
+    }
 }
 /*media de desktop*/
-@media(min-width:1024px) {
+@media (min-width: 1024px) {
     .section__producto {
         position: relative;
         padding-left: 5px;
         overflow: hidden;
         background-color: #000000;
-      }
-      
-      .section__producto__categoria{
+    }
+
+    .section__producto__categoria {
         padding: 12px;
         font-size: 1.8rem;
         text-transform: capitalize;
         text-align: center;
         color: #ffffff;
         font-weight: 600;
-      }
-    
-      .div__producto__container{
+    }
+
+    .div__producto__container {
         display: flex;
         justify-content: flex-start;
         overflow-x: auto;
         scroll-behavior: smooth;
         margin-bottom: 20px;
-      }
-      .div__producto__card{
+    }
+    .div__producto__card {
         flex: 0 0 auto;
         width: 85%;
         max-width: 100%;
         height: 400px;
         margin-right: 20px;
-      }
-      .div__producto__imagen{
+    }
+    .div__producto__imagen {
         position: relative;
         width: 100%;
         height: 350px;
         overflow: hidden;
-      }
-      .producto-card__descuento {
+    }
+    .producto-card__descuento {
         position: absolute;
         right: 10px;
         top: 10px;
@@ -346,14 +318,14 @@
         background: #fff;
         color: #ff7d7d;
         text-transform: capitalize;
-      }
-      .div__producto__card__img{
+    }
+    .div__producto__card__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 10px 10px 0 0;
-      }
-      .div__producto__card__boton{
+    }
+    .div__producto__card__boton {
         position: absolute;
         width: 90%;
         left: 50%;
@@ -366,18 +338,18 @@
         cursor: pointer;
         opacity: 0;
         border: 1px solid #000000;
-      }
-      
-      .div__producto__card:hover .div__producto__card__boton {
+    }
+
+    .div__producto__card:hover .div__producto__card__boton {
         opacity: 1;
-      }
-      
-      .div__producto__card__boton:hover,
-      .div__producto__card__boton.selected {
+    }
+
+    .div__producto__card__boton:hover,
+    .div__producto__card__boton.selected {
         background: var(--colorBeige);
         color: #fff;
-      }  
-      .div__producto__info{
+    }
+    .div__producto__info {
         width: 100%;
         height: 50px;
         padding: 10px;
@@ -386,8 +358,7 @@
         border-radius: 0 0 8px 8px;
         background-color: #ffffff;
         text-align: center;
-      }
-    
+    }
 }
 
 /*parte del carrito de compra (pintura/escultura/fotografia*/
@@ -397,38 +368,38 @@
     padding-left: 5px;
     overflow: hidden;
     background-color: #000000;
-  }
-  
-  .section__producto__categoria{
+}
+
+.section__producto__categoria {
     padding: 12px;
     font-size: 1.8rem;
     text-transform: capitalize;
     text-align: center;
     color: #ffffff;
     font-weight: 600;
-  }
+}
 
-  .div__producto__container{
+.div__producto__container {
     display: flex;
     justify-content: flex-start;
     overflow-x: auto;
     scroll-behavior: smooth;
     margin-bottom: 20px;
-  }
-  .div__producto__card{
+}
+.div__producto__card {
     flex: 0 0 auto;
     width: 85%;
     max-width: 100%;
     height: 400px;
     margin-right: 20px;
-  }
-  .div__producto__imagen{
+}
+.div__producto__imagen {
     position: relative;
     width: 100%;
     height: 350px;
     overflow: hidden;
-  }
-  .producto-card__descuento {
+}
+.producto-card__descuento {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -437,14 +408,14 @@
     background: #fff;
     color: #ff7d7d;
     text-transform: capitalize;
-  }
-  .div__producto__card__img{
+}
+.div__producto__card__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-  }
-  .div__producto__card__boton{
+}
+.div__producto__card__boton {
     position: absolute;
     width: 90%;
     left: 50%;
@@ -457,18 +428,18 @@
     cursor: pointer;
     opacity: 0;
     border: 1px solid #000000;
-  }
-  
-  .div__producto__card:hover .div__producto__card__boton {
+}
+
+.div__producto__card:hover .div__producto__card__boton {
     opacity: 1;
-  }
-  
-  .div__producto__card__boton:hover,
-  .div__producto__card__boton.selected {
+}
+
+.div__producto__card__boton:hover,
+.div__producto__card__boton.selected {
     background: var(--colorBeige);
     color: #fff;
-  }  
-  .div__producto__info{
+}
+.div__producto__info {
     width: 100%;
     height: 50px;
     padding: 10px;
@@ -477,8 +448,8 @@
     border-radius: 0 0 8px 8px;
     background-color: #ffffff;
     text-align: center;
-  }
-  .producto-card__descuento {
+}
+.producto-card__descuento {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -487,4 +458,4 @@
     background: #fff;
     color: #ff7d7d;
     text-transform: capitalize;
-  }
+}
