@@ -1,10 +1,12 @@
 {
-	"name": "src",
+	"name": "artesphera",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"start": "node ./src/bin/www",
 		"dev": "nodemon ./src/bin/www",
+		"db:create": "sequelize db:drop & sequelize db:create & sequelize db:migrate & sequelize db:seed:all",
+		"db:reset": "sequelize db:migrate:undo:all & sequelize db:migrate & sequelize db:seed:all",
 		"tailwind": "npx tailwindcss -i ./public/stylesheets/style.css -o ./public/dist/output.css --watch"
 	},
 	"dependencies": {
