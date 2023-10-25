@@ -1,19 +1,17 @@
-const { readJSON } = require('../../data');
+const db = require('../../database/models');
 
 module.exports = (req, res) => {
-    const users = readJSON('users.json');
-    const categories = readJSON('categories.json');
-    const id = req.params.id;
-
-    const user = users.find((user) => user.id === id);
-
-    if (!user) {
-        return res.redirect('/users/login');
-    }
-
-    return res.render('profile', {
-        categories,
-        users,
-        user,
-    });
+    db.Category.findAll()
+        .then((categories) => {
+            db.User.findByPk(req.session.userLogin.id)
+                .then((user) => {
+                    return res.render('profile', {
+                        categories,
+                        ...user.dataValues,
+                        user
+                    });
+                })
+                .catch((error) => console.log(error));
+        })
+        .catch((error) => console.log(error));
 };

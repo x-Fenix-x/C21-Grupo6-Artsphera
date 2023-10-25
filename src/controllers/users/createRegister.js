@@ -1,25 +1,35 @@
-const { readJSON, writeJSON } = require('../../data');
+const db = require('../../database/models');
 const { validationResult } = require('express-validator');
-const User = require('../../data/User');
 
 module.exports = (req, res) => {
     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-        const users = readJSON('users.json');
-        const newUser = new User(req.body);
-
-        users.push(newUser);
-
-        writeJSON(users, 'users.json');
-
-        return res.redirect('/users/login');
-    } else {
-        const categories = readJSON('categories.json');
-        return res.render('register', {
-            categories,
-            errors: errors.mapped(),
-            old: req.body,
+        const { name, surname } = req.body;
+        db.User.update(
+            {
+                name: name.trim(),
+                surname: surname.trim(),
+            },
+            {
+                where: {
+                    id: req.session.userLogin.id,
+                },
+            }
+        ).then((response) => {
+            console.log(response);
+            req.session.userLogin.name = name;
+            res.locals.userLogin.name = name;
+            return res.redirect('/');
         });
+    } else {
+        db.User.findByPk(req.session.userLogin.id)
+            .then((user) => {
+                return res.render('profile', {
+                    ...user.dataValues,
+                    errors: errors.mapped(),
+                });
+            })
+            .catch((error) => console.log(error));
     }
 };

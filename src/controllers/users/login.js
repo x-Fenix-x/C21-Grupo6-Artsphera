@@ -1,8 +1,11 @@
-const { readJSON } = require("../../data");
+const db = require('../../database/models');
 
 module.exports = (req, res) => {
-	const categories = readJSON("categories.json");
-	return res.render("login", {
-		categories,
-	});
+    db.Category.findAll()
+        .then((categories) => {
+            return res.render('login', {
+                categories,
+            });
+        })
+        .catch((error) => console.log(error));
 };

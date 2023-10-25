@@ -1,39 +1,36 @@
-const { readJSON, writeJSON } = require('../../data');
-const { hashSync } = require('bcryptjs');
+const db = require('../../database/models');
 const { validationResult } = require('express-validator');
 
 module.exports = (req, res) => {
     const errors = validationResult(req);
-    const users = readJSON('users.json');
-    const { name, surname, email, password } = req.body;
-    const userUpdate = users.find((user) => user.id === req.params.id);
-
-    if (!userUpdate) {
-        return res.status(404).send('Usuario no encontrado');
-    }
 
     if (errors.isEmpty()) {
+        const { name, surname, email, password } = req.body;
+
+        db.User.update(
+            {
+                name: name.trim(),
+                surname: surname.trim(),
+            },
+            { where: { id: req.session.userLogin.id } }
+        ).then((response) => {
+            console.log(response);
+            req.session.userLogin.name = name;
+            res.locals.userLogin = req.session.userLogin;
+            return res.redirect('/users/profile/' + req.params.id);
+        });
     } else {
-        return res.send(errors.mapped());
+        db.Category.findAll().then((categories) => {
+            db.User.findByPk(req.session.userLogin.id)
+                .then((user) => {
+                    return res.render('profile', {
+                        ...user.dataValues,
+                        errors: errors.mapped(),
+                        categories,
+                        user,
+                    });
+                })
+                .catch((error) => console.log(error));
+        });
     }
-
-    if (name) {
-        userUpdate.name = name.trim();
-    }
-
-    if (surname) {
-        userUpdate.surname = surname.trim();
-    }
-
-    if (email) {
-        userUpdate.email = email.trim();
-    }
-
-    if (password) {
-        userUpdate.password = hashSync(password, 10);
-    }
-
-    writeJSON(users, 'users.json');
-
-    return res.redirect(`/users/profile/${req.params.id}`);
 };

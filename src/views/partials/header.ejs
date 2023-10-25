@@ -16,14 +16,13 @@
 			<a href="/">
 				<img src="/images/LogoExpanded.svg" alt="" />
 			</a>
-
 			<div class="dropdown">
 				<a href="#" class="dropdown-titulo">Disciplinas</a>
 				<ul class="dropdown-menu">
-					<% categories.forEach(categorie => { %>
+					<% categories.forEach(category => { %>
 					<li>
-						<a href="/products/category/<%= categorie.name.toLowerCase() %>"
-							><%= categorie.name %></a
+						<a href="/products/category/<%= category.name.toLowerCase() %>"
+							><%= category.name %></a
 						>
 					</li>
 					<% }) %>
@@ -38,7 +37,7 @@
 			<% if (locals.userLogin) { %>
 			<div class="adminPanel">
 				<p class="hiAdmin">Hola, <%= userLogin.name %> !</p>
-				<% if (userLogin.role === "admin") { %>
+				<% if (userLogin.role === 1) { %>
 				<a href="/users/admin" class="admin">
 					<i class="fa-solid fa-solar-panel"></i>
 				</a>

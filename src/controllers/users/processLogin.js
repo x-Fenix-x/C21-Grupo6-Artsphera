@@ -1,23 +1,39 @@
-const { readJSON } = require("../../data");
+const { validationResult } = require('express-validator');
+const db = require('../../database/models');
 
 module.exports = (req, res) => {
-	const users = readJSON("users.json");
-	const { id, name, role } = users.find(
-		(user) => user.email === req.body.usernameOrEmail
-	);
+    const errors = validationResult(req);
 
-	req.session.userLogin = {
-		id,
-		name,
-		role,
-	};
+    if (errors.isEmpty()) {
+        db.User.findOne({
+            where: {
+                email: req.body.email,
+            },
+        })
+            .then((user) => {
+                req.session.userLogin = {
+                    id: user.id,
+                    name: user.name,
+                    role: user.roleId,
+                };
 
-	req.body.rememberMe !== undefined &&
-		res.cookie("artesphera", req.session.userLogin, {
-			maxAge: 1000 * 60 * 10,
-		});
+                req.body.rememberMe !== undefined &&
+                    res.cookie('artesphera', req.session.userLogin, {
+                        maxAge: 1000 * 60 * 10,
+                    });
 
-	console.log(req.session.userLogin);
-
-	return res.redirect("/");
+                return res.redirect('/');
+            })
+            .catch((error) => console.log(error));
+    } else {
+        db.Category.findAll()
+            .then((categories) => {
+                return res.render('login', {
+                    categories,
+                    errors: errors.mapped(),
+                    old: req.body,
+                });
+            })
+            .catch((error) => console.log(error));
+    }
 };

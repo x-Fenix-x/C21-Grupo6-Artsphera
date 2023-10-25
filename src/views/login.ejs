@@ -13,11 +13,11 @@
 							<p>¡Ey! Ingresa tus datos para iniciar sesión.</p>
 						</div>
 						<form action="" method="POST" class="form">
-							<input type="email" id="usernameOrEmail" name="usernameOrEmail"
+							<input type="email" id="email" name="email"
 								placeholder="Correo electrónico" />
-							<% if (locals.errors && errors.usernameOrEmail) { %>
+							<% if (locals.errors && errors.email) { %>
 								<p class="text-sm text-danger">
-									<%= errors.usernameOrEmail.msg %>
+									<%= errors.email.msg %>
 								</p>
 								<% } %>
 									<input type="password" id="password" name="password" placeholder="Contraseña" />
