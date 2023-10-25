@@ -1,4 +1,4 @@
-const { readJSON, writeJSON } = require('../../data');
+const db = require('../../database/models');
 const { existsSync, unlinkSync } = require('fs');
 const { validationResult } = require('express-validator');
 const priceFinal = require('../../../public/javascripts/products-function');

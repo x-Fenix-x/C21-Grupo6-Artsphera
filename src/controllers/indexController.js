@@ -1,26 +1,54 @@
-const { readJSON } = require('../data');
+const db = require('../database/models');
 
 module.exports = {
     index: (req, res) => {
-        const products = readJSON('products.json');
-        const categories = readJSON('categories.json');
-        const news = products.filter(
-            (product) => product.section === 'Destacados'
-        );
-        const offers = products.filter((product) => product.discount);
-        const lastunits = products.filter((product) => product.stock <= 3);
-
-        return res.render('index', {
-            news,
-            categories,
-            offers,
-            lastunits,
+        const categories = db.Category.findAll({
+            order: ['id'],
         });
+        const sections = db.Section.findAll({
+            order: ['name'],
+        });
+
+        const products = db.Product.findAll({
+            order: ['title'],
+        });
+
+        Promise.all([categories, sections, products])
+            .then(([categories, sections, products]) => {
+                const news = products.filter(
+                    (product) => product.sectionId === 1
+                );
+                
+                const offers = products.filter(
+                    (product) => product.discount >= 5
+                );
+                const lastunits = products.filter(
+                    (product) => product.stock <= 3
+                );
+
+                return res.render('index', {
+                    news,
+                    categories,
+                    offers,
+                    lastunits,
+                    products,
+                });
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     },
     carrito: (req, res) => {
-        const categories = readJSON('categories.json');
-        return res.render('carrito', {
-            categories,
-        });
+        db.Category.findAll()
+            .then((categories) => {
+                return res.render('carrito', {
+                    errors: errors.mapped(),
+                    old: req.body,
+                    categories,
+                });
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     },
 };

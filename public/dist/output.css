@@ -1350,26 +1350,6 @@ template {
   display: none;
 }
 
-:root {
-  --tipografiaGeneral: "Dosis", sans-serif;
-  --colorBlanco: #ffffff;
-  --colorBlancoClaro: #f3f3f3;
-  --colorBeige: #d0ad7a;
-  --colorCobre: #d0947a;
-  --colorGrisClaro: #d9d9d9;
-  --colorNegro: #000000;
-  --colorRojo: #de2222;
-  --colorVerde: #2edf1f;
-  --loginWallpaper: url("/images/loginWallpaper.png");
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
 body {
   min-height: 100vh;
   font-family: var(--tipografiaGeneral);
@@ -2320,13 +2300,13 @@ a {
   line-height: 1.25rem;
   font-weight: 700;
   background-color: #d0ad7a;
-  color: #5e4a2d;
+  color: #000000;
   transition: 0.5s ease, color 0.7s ease;
 }
 
 .form > button:hover {
   background-color: #3d3220;
-  color: #967c57;
+  color: #ffffff;
 }
 
 .form > p {
@@ -2367,7 +2347,7 @@ a {
 .loginLinks > a {
   display: flex;
   justify-content: space-around;
-  color: #735d3c;
+  color: #000000;
   padding: 0.55rem;
   font-size: 0.875rem;
   font-weight: 700;
@@ -2380,18 +2360,18 @@ a {
 
 .loginGoogle:hover {
   background-color: #3d3220;
-  color: #967c57;
+  color: #ffffff;
   border-radius: 9999px 0 0 9999px;
 }
 
 .loginApple:hover {
   background-color: #3d3220;
-  color: #967c57;
+  color: #ffffff;
 }
 
 .loginFacebook:hover {
   background-color: #3d3220;
-  color: #967c57;
+  color: #ffffff;
   border-radius: 0 9999px 9999px 0;
 }
 
@@ -2509,14 +2489,6 @@ a {
     flex-direction: row;
   }
 }
-
-/* .headerContent {
-	position: sticky;
-	top: 0;
-	z-index: 40;
-	height: 100%;
-	background-color: #ffffff;
-} */
 
 .headerContent {
   position: sticky;
@@ -2848,10 +2820,6 @@ a {
 }
 
 .main__div__img{
-  /* margin: 50px;
-    width: 50px;
-    align-items: center;
-    text-align: center; */
   position: relative;
   width: 100%;
   height: 150px;
@@ -2931,18 +2899,9 @@ a {
   background-color: black;
 }
 
-/* .enlaces{
-    display: flex;
-} */
-
 /* caja del carrito principal */
 
 .div__caja__carrito{
-  /* display: flex;
-    outline: 1px solid;
-    flex-wrap: wrap;
-    padding-right: 5%;
-    padding-bottom: 5%; */
   display: flex;
   justify-content: flex-start;
   overflow-x: auto;
@@ -2951,13 +2910,6 @@ a {
 }
 
 .article__caja__carrito{
-  /* flex: 0 1 20%;
-    margin: 2%;
-    margin-right: 0%;
-    margin-bottom: 0%; */
-  /* justify-content: space-between;
-    align-content: space-between;
-    height: 20%; */
   background-color: #222020;
   border-radius: 10px 10px 10px 10px ;
   flex: 0 0 auto;

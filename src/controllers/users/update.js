@@ -11,12 +11,18 @@ module.exports = (req, res) => {
             {
                 name: name.trim(),
                 surname: surname.trim(),
+                email: surname.trim()
             },
             { where: { id: req.session.userLogin.id } }
         ).then((response) => {
             console.log(response);
             req.session.userLogin.name = name;
-            res.locals.userLogin = req.session.userLogin;
+            res.locals.userLogin.name = name;
+
+            if (req.cookies.artesphera) {
+                res.cookie('artesphera', req.session.userLogin);
+            }
+
             return res.redirect('/users/profile/' + req.params.id);
         });
     } else {

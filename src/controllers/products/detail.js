@@ -1,4 +1,4 @@
-const { readJSON } = require("../../data");
+const db = require('../../database/models');
 
 module.exports = (req, res) => {
 	const productId = req.params.id; // ID del producto recibido desde la URL
