@@ -13,9 +13,9 @@ router
 	.get("/search", search)
 	.get("/detail/:id", detail)
 	.get("/add", add)
-	.post("/add", upload.array("images"), productAddValidator, create)
+	.post("/add", upload.array("image"), productAddValidator, create)
 	.get("/edit/:id", edit)
-	.put("/update/:id", upload.array("images"), productEditValidator, update)
+	.put("/update/:id", upload.array("image"), productEditValidator, update)
 	.delete("/delete/:id", remove);
 
 module.exports = router;
