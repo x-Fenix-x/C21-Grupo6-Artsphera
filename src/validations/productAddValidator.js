@@ -10,8 +10,8 @@ module.exports = [
             max: 20,
         })
         .withMessage('Debe tener entre 3 y 20 caracteres'),
-    check('category').notEmpty().withMessage('Seleccione categoría'),
-    check('section').notEmpty().withMessage('Seleccione sección'),
+    check('categoryId').notEmpty().withMessage('Seleccione categoría'),
+    check('sectionId').notEmpty().withMessage('Seleccione sección'),
     check('price')
         .notEmpty()
         .withMessage('El precio es obligatorio')

@@ -25,33 +25,33 @@
 										</small>
 									</div>
 									<div class="flex flex-col">
-										<label for="category" class="font-medium">Categoría</label>
-										<select name="category" id="category" class="p-3 text-sm bg-gray-100">
+										<label for="categoryId" class="font-medium">Categoría</label>
+										<select name="categoryId" id="categoryId" class="p-3 text-sm bg-gray-100">
 											<option value="" disabled selected>Elige una opción</option>
 											<% categories.forEach(category=> { %>
-												<option value="<%= category.name %>" <%=locals.old &&
-													(locals.old.category===category.name && 'selected' ) %>>
+												<option value="<%= category.id %>" <%=locals.old &&
+													(locals.old.categoryId===category.id && 'selected' ) %>>
 													<%= category.name %>
 												</option>
 												<% }) %>
 										</select>
 										<small class="text-danger">
-											<%= locals.errors && (errors.category && errors.category.msg) %>
+											<%= locals.errors && (errors.categoryId && errors.categoryId.msg) %>
 										</small>
 									</div>
 									<div class="flex flex-col">
-										<label for="section" class="font-medium">Sección</label>
-										<select name="section" id="section" class="p-3 text-sm bg-gray-100">
+										<label for="sectionId" class="font-medium">Sección</label>
+										<select name="sectionId" id="sectionId" class="p-3 text-sm bg-gray-100">
 											<option value="" disabled selected>Elige una opción</option>
 											<% sections.forEach(section=> { %>
-												<option value="<%= section.name %>" <%=locals.old &&
-													(locals.old.section===section.name && 'selected' ) %>>
+												<option value="<%= section.id %>" <%=locals.old &&
+													(locals.old.sectionId===section.id && 'selected' ) %>>
 													<%= section.name %>
 												</option>
 												<% }) %>
 										</select>
 										<small class="text-danger">
-											<%= locals.errors && (errors.section && errors.section.msg) %>
+											<%= locals.errors && (errors.sectionId && errors.sectionId.msg) %>
 										</small>
 									</div>
 									<div class="flex flex-col">

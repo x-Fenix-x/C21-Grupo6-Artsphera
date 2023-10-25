@@ -81,12 +81,12 @@
     line-height: 1.25rem;
     font-weight: 700;
     background-color: #d0ad7a;
-    color: #5e4a2d;
+    color: #000000;
     transition: 0.5s ease, color 0.7s ease;
 }
 .form > button:hover {
     background-color: #3d3220;
-    color: #967c57;
+    color: #ffffff;
 }
 
 .form > p {
@@ -127,7 +127,7 @@
 .loginLinks > a {
     display: flex;
     justify-content: space-around;
-    color: #735d3c;
+    color: #000000;
     padding: 0.55rem;
     font-size: 0.875rem;
     font-weight: 700;
@@ -140,18 +140,18 @@
 
 .loginGoogle:hover {
     background-color: #3d3220;
-    color: #967c57;
+    color: #ffffff;
     border-radius: 9999px 0 0 9999px;
 }
 
 .loginApple:hover {
     background-color: #3d3220;
-    color: #967c57;
+    color: #ffffff;
 }
 
 .loginFacebook:hover {
     background-color: #3d3220;
-    color: #967c57;
+    color: #ffffff;
     border-radius: 0 9999px 9999px 0;
 }
 

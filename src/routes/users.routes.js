@@ -33,7 +33,7 @@ router
     .post('/register', registerValidator, createRegister)
     .get('/admin', adminCheck, adminPanel)
     .get('/profile/:id', userCheck, profile)
-    .put('/update/:id', profileValidator, update)
+    .put('/update/:id', profileValidator, userCheck, update)
     .put(
         '/update-password/:id',
         passwordValidator,

@@ -1,35 +1,30 @@
 const db = require('../../database/models');
+const { hashSync } = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 module.exports = (req, res) => {
     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-        const { name, surname } = req.body;
-        db.User.update(
-            {
-                name: name.trim(),
-                surname: surname.trim(),
-            },
-            {
-                where: {
-                    id: req.session.userLogin.id,
-                },
-            }
-        ).then((response) => {
-            console.log(response);
-            req.session.userLogin.name = name;
-            res.locals.userLogin.name = name;
-            return res.redirect('/');
-        });
-    } else {
-        db.User.findByPk(req.session.userLogin.id)
-            .then((user) => {
-                return res.render('profile', {
-                    ...user.dataValues,
-                    errors: errors.mapped(),
-                });
+        const { name, surname, email, password } = req.body;
+        db.User.create({
+            name: name.trim(),
+            surname: surname.trim(),
+            email: email.trim(),
+            password: hashSync(password, 10),
+            roleId: 2,
+        })
+            .then(() => {
+                return res.redirect('/users/login');
             })
             .catch((error) => console.log(error));
+    } else {
+        db.Category.findAll().then((categories) => {
+            return res.render('register', {
+                errors: errors.mapped(),
+                old: req.body,
+                categories
+            });
+        });
     }
 };
