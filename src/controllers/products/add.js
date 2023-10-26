@@ -10,7 +10,7 @@ module.exports = (req, res) => {
     });
 
     const products = db.Product.findAll({
-        order: ['title'],
+        include: ['category'],
     });
 
     Promise.all([categories, sections, products])

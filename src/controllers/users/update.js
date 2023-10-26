@@ -11,7 +11,7 @@ module.exports = (req, res) => {
             {
                 name: name.trim(),
                 surname: surname.trim(),
-                email: surname.trim()
+                email: email.trim()
             },
             { where: { id: req.session.userLogin.id } }
         ).then((response) => {
