@@ -2,15 +2,12 @@ const db = require('../../database/models');
 const priceFinal = require('../../../public/javascripts/products-function');
 
 module.exports = (req, res) => {
-    const categories = db.Category.findAll({
-        order: ['id'],
+    const products = db.Product.findAll({
+        include: ['category'],
     });
+    const categories = db.Category.findAll();
     const sections = db.Section.findAll({
         order: ['name'],
-    });
-
-    const products = db.Product.findAll({
-        order: ['title'],
     });
 
     Promise.all([categories, sections, products])
