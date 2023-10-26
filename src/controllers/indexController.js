@@ -18,7 +18,7 @@ module.exports = {
                 const news = products.filter(
                     (product) => product.sectionId === 1
                 );
-                
+
                 const offers = products.filter(
                     (product) => product.discount >= 5
                 );
@@ -42,8 +42,6 @@ module.exports = {
         db.Category.findAll()
             .then((categories) => {
                 return res.render('carrito', {
-                    errors: errors.mapped(),
-                    old: req.body,
                     categories,
                 });
             })
