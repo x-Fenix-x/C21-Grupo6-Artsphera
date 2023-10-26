@@ -16,16 +16,17 @@ module.exports = (req, res) => {
         db.Product.create({
             title: title.trim(),
             price,
-            discount,
+            discount: discount || 0,
             sectionId,
             categoryId,
             description: description.trim(),
         })
             .then((product) => {
                 if (req.files.image && req.files.length > 0) {
-                    const imageDefault = '../../../images/defaultImage.png';
+                    const imageDefault =
+                        '../../../public/images/defaultImage.png';
 
-                    db.Image.Create({
+                    db.Image.create({
                         file: req.files.image[0].filename || imageDefault,
                         main: true,
                         productId: product.id,
