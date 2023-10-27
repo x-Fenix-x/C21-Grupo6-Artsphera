@@ -1,17 +1,18 @@
 'use strict';
 
 const categoriesArray = [
-    'Pintura',
-    'Escultura',
-    'Fotografía',
-    'Dibujo',
-    'Ilustración',
-    'Collage',
+    { name: 'Pintura', image: '1.jpg' },
+    { name: 'Escultura', image: '2.jpeg' },
+    { name: 'Fotografía', image: '3.jpg' },
+    { name: 'Dibujo', image: '4.jpg' },
+    { name: 'Ilustración', image: '5.jpg' },
+    { name: 'Collage', image: '6.jpg' },
 ];
 
 const categoriesDB = categoriesArray.map((category) => {
     return {
-        name: category,
+        name: category.name,
+        image: category.image,
         createdAt: new Date(),
         updatedAt: new Date(),
     };

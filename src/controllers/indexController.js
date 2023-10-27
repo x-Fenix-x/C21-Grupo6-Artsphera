@@ -25,7 +25,7 @@ module.exports = {
                 const lastunits = products.filter(
                     (product) => product.stock <= 3
                 );
-
+                // return res.send(news)
                 return res.render('index', {
                     news,
                     categories,
