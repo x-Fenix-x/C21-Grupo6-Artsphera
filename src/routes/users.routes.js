@@ -31,7 +31,7 @@ router
     .post('/login', loginValidator, processLogin)
     .get('/register', register)
     .post('/register', registerValidator, createRegister)
-    .get('/admin',  adminPanel)
+    .get('/admin', adminCheck, adminPanel)
     .get('/profile/:id', userCheck, profile)
     .put('/update/:id', profileValidator, userCheck, update)
     .put(
