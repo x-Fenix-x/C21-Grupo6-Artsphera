@@ -10,14 +10,14 @@
 					class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.png')] bg-auto bg-repeat sm:gap-0 lg:bg-center">
 					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
 						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
-							<form action="/products/update/<%= product.id %>?_method=PUT" method="POST"
+							<form action="/products/update/<%= id %>?_method=PUT" method="POST"
 								class="flex flex-col justify-center gap-12" enctype="multipart/form-data">
-								<p class="text-3xl font-bold">Editar producto</p>
+								<p class="text-3xl font-bold">Editar producto <%= title %></p>
 								<div>
 									<div class="flex flex-col">
 										<label for="title" class="font-medium">Título</label>
 										<input type="text" id="title" name="title" class="p-3 bg-gray-100 text-sm"
-											placeholder="Título del producto " value="<%= product.title %>" />
+											placeholder="Título del producto " value="<%= title %>" />
 										<small class="text-danger">
 											<%= locals.errors && (errors.title && errors.title.msg) %>
 										</small>
@@ -48,7 +48,7 @@
 									<div class="flex flex-col">
 										<label for="price" class="font-medium">Precio</label>
 										<input type="number" id="price" name="price" class="p-3 bg-gray-100 text-sm"
-											placeholder="Ejemplo: 99.99" value="<%= product.price %>" />
+											placeholder="Ejemplo: 99.99" value="<%= price %>" />
 										<small class="text-danger">
 											<%= locals.errors && (errors.price && errors.price.msg) %>
 										</small>
@@ -57,7 +57,7 @@
 										<label for="discount" class="font-medium">Descuento</label>
 										<input type="number" id="discount" name="discount"
 											class="p-3 bg-gray-100 text-sm" placeholder="Descuento en porcentaje"
-											value="<%= product.discount %>" />
+											value="<%= discount %>" />
 										<small class="text-danger">
 											<%= locals.errors && (errors.discount && errors.discount.msg) %>
 										</small>
@@ -65,7 +65,7 @@
 									<div class="flex flex-col">
 										<label for="stock" class="font-medium">Stock</label>
 										<input type="number" id="stock" name="stock" class="p-3 bg-gray-100 text-sm"
-											placeholder="Cantidad disponible" value="<%= product.stock %>" />
+											placeholder="Cantidad disponible" 											value="<%= locals.old && (old.stock && old.stock ) %>" />
 										<small class="text-danger">
 											<%= locals.errors && (errors.stock && errors.stock.msg) %>
 										</small>
@@ -77,9 +77,9 @@
 										</div>
 									</div>
 									<div class="mt-2 flex flex-wrap gap-2 py-2">
-										<% for (let i=0; i < product.images.length; i++) { %>
+										<% for (let i=0; i < images.length; i++) { %>
 											<div>
-												<img src="/images/productos/<%= product.images[i] %>" alt=""
+												<img src="/images/productos/<%= images[i] %>" alt=""
 													class="w-24 h-24 object-cover" />
 											</div>
 											<% } %>
@@ -89,7 +89,7 @@
 									<label for="description">Descripción:</label>
 									<textarea id="description" name="description" rows="4" cols="50"
 										class="bg-gray-100 p-2 text-left">
-										<%= product.description %></textarea>
+										<%= description %></textarea>
 									<small class="text-danger">
 										<%= locals.errors && (errors.description && errors.description.msg) %>
 									</small>

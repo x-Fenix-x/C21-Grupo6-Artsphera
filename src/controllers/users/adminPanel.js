@@ -3,7 +3,7 @@ const priceFinal = require('../../../public/javascripts/products-function');
 
 module.exports = (req, res) => {
     const products = db.Product.findAll({
-        include: ['category'],
+        include: ['category', 'section', 'images'],
     });
     const categories = db.Category.findAll();
     const sections = db.Section.findAll({

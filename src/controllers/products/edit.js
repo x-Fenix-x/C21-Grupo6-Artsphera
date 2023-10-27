@@ -4,7 +4,11 @@ const priceFinal = require('../../../public/javascripts/products-function');
 module.exports = (req, res) => {
     const id = req.params.id;
 
-    const product = db.Product.findByPk(id);
+    const product = db.Product.findByPk(id, {
+        include: {
+            all: true,
+        },
+    });
     const categories = db.Category.findAll({
         order: ['id'],
     });
@@ -12,15 +16,19 @@ module.exports = (req, res) => {
         order: ['name'],
     });
 
-    Promise.all([categories, sections, product])
-        .then(([product, categories, sections]) => {
-            return res.render('productAdd', {
+    const products = db.Product.findAll({
+        include: ['category'],
+    });
+
+    Promise.all([product, categories, sections, products])
+        .then(([product, categories, sections, products]) => {
+            return res.render('productEdit', {
                 ...product?.dataValues,
                 categories,
                 sections,
+                products,
                 priceFinal,
             });
         })
         .catch((error) => console.log(error));
-
 };
