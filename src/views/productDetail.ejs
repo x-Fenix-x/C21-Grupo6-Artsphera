@@ -6,7 +6,7 @@
 		<main class="mainContainer">
 			<div class="mainFlexImg">
 				<div class="img-detail">
-					<img src="/images/productos/<%= product.images %>" alt="" />
+					<img src="/images/productos/<%= product.images[0].file %>" alt="" />
 				</div>
 				<div class="mainAutor">
 					<h1><%= product.title %></h1>
@@ -146,7 +146,7 @@
 						<% } %>
 						<img
 							class="producto-card__img"
-							src="/images/productos/<%= product.images %>"
+							src="/images/productos/<%= product.images[0].file %>"
 							alt="producto"
 						/>
 						<a
