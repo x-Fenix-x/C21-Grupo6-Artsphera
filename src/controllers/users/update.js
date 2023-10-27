@@ -5,7 +5,7 @@ module.exports = (req, res) => {
     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-        const { name, surname, email, password } = req.body;
+        const { name, surname, email } = req.body;
 
         db.User.update(
             {
