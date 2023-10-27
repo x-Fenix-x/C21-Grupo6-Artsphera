@@ -27,15 +27,15 @@
 			<section class="index-tematicas">
 				<h1 class="index__titulo">Explora por temáticas</h1>
 				<div class="index-tematicas__contenedor">
-					<% categories.forEach(categorie => { %>
+					<% categories.forEach(category => { %>
 					<article class="index-article">
-						<a href="/products/category/<%= categorie.name.toLowerCase() %>">
+						<a href="/products/category/<%= category.name.toLowerCase() %>">
 							<img
 								class="index-article__img"
-								src="/images/productos/<%= categorie.images %>"
+								src="/images/productos/<%= category.image %>"
 								alt="pintura"
 							/>
-							<h3 class="index-article__titulo"><%= categorie.name %></h3>
+							<h3 class="index-article__titulo"><%= category.name %></h3>
 						</a>
 					</article>
 					<% }) %>
@@ -54,7 +54,7 @@
 						<div class="producto-imagen">
 							<img
 								class="producto-card__img"
-								src="/images/productos/<%= product.images %>"
+								src="/images/productos/<%= product.images[0].file %>"
 								alt="producto"
 							/>
 							<a
@@ -77,33 +77,33 @@
 			<section>
 				<h2 class="index__titulo">Ofertas por tiempo limitado</h2>
 				<div class="oferta-container">
-					<% offers.forEach(offer => { %>
+					<% offers.forEach(product => { %>
 					<div class="producto-card">
 						<div class="imagen-oferta">
-							<img src="/images/productos/<%= offer.images %>" alt="producto" />
+							<img src="/images/productos/<%= product.images[0].file %>" alt="producto" />
 							<div class="descuento">
-								<span>-<%= offer.discount %>%</span>
+								<span>-<%= product.discount %>%</span>
 							</div>
 						</div>
 						<div class="informacion-oferta">
-							<h3 class="producto-info__titulo"><%= offer.title %></h3>
-							<p><%= offer.category %></p>
+							<h3 class="producto-info__titulo"><%= product.title %></h3>
+							<p><%= product.category %></p>
 							<p>
 								Precio original:
-								<span class="precio-original">$<%= offer.price %></span>
+								<span class="precio-original">$<%= product.price %></span>
 							</p>
 							<p>
 								Precio con descuento:
 								<span class="precio-descuento"
-									>$<%= (offer.price - (offer.price * (offer.discount /
+									>$<%= (product.price - (product.price * (product.discount /
 									100))).toLocaleString('es-AR', { minimumFractionDigits: 2,
 									maximumFractionDigits: 2 }) %></span
 								>
 							</p>
 							<p>
-								Quedan <span class="stock"><%= offer.stock %></span> en stock
+								Quedan <span class="stock"><%= product.stock %></span> en stock
 							</p>
-							<a href="/products/detail/<%= offer.id %>" class="index-ver__mas"
+							<a href="/products/detail/<%= product.id %>" class="index-ver__mas"
 								>Ver más</a
 							>
 						</div>
@@ -126,7 +126,7 @@
 							<% } %>
 							<img
 								class="producto-card__img"
-								src="/images/productos/<%= product.images %>"
+								src="/images/productos/<%= product.images[0].file %>"
 								alt="producto"
 							/>
 							<a

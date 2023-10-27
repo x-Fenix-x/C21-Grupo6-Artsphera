@@ -25,9 +25,6 @@ module.exports = {
                 type: Sequelize.TEXT,
                 allowNull: false,
             },
-            image: {
-                type: Sequelize.STRING,
-            },
             categoryId: {
                 type: Sequelize.INTEGER,
                 references: {

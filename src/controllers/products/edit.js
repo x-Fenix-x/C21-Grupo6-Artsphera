@@ -9,9 +9,15 @@ module.exports = (req, res) => {
             all: true,
         },
     });
+
+    const stock = db.Item.findOne({
+        where: { productId: id },
+    });
+
     const categories = db.Category.findAll({
         order: ['id'],
     });
+
     const sections = db.Section.findAll({
         order: ['name'],
     });
@@ -20,10 +26,11 @@ module.exports = (req, res) => {
         include: ['category'],
     });
 
-    Promise.all([product, categories, sections, products])
-        .then(([product, categories, sections, products]) => {
+    Promise.all([product, stock, categories, sections, products])
+        .then(([product, stock, categories, sections, products]) => {
             return res.render('productEdit', {
                 ...product?.dataValues,
+                stock: stock ? stock.stock : 1,
                 categories,
                 sections,
                 products,

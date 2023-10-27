@@ -1,22 +1,34 @@
 const db = require('../../database/models');
 
-module.exports = (req, res) => {
-	const products = readJSON("products.json");
-	const categories = readJSON("categories.json");
+module.exports = async (req, res) => {
+    try {
+        const categories = await db.Category.findAll({
+            order: ['id', 'name'],
+        });
 
-	let filteredProducts = products; // Mostrar todos los productos
+        let filteredProducts;
 
-	const category = req.params.category; //Categoría desde la URL
+        const category = req.params.categoryId;
 
-	if (category) {
-		// Si hay una categoría en la URL, filtra los productos por esa categoría
-		filteredProducts = products.filter(
-			(product) => product.category.toLowerCase() === category
-		);
-	}
+        if (category) {
+            filteredProducts = await db.Product.findAll({
+                where: {
+                    categoryId: category,
+                },
+                include: ['category', 'images'],
+            });
+        } else {
+            filteredProducts = await db.Product.findAll({
+                include: ['category', 'images'],
+            });
+        }
 
-	return res.render("products", {
-		products: filteredProducts,
-		categories,
-	});
+        return res.render('products', {
+            products: filteredProducts,
+            categories,
+        });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send('Error en el servidor');
+    }
 };

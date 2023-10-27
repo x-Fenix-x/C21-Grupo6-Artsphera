@@ -11,10 +11,10 @@
 				>
 					<div class="flex flex-col gap-4">
 						<h3 class="font-medium text-2xl tracking-[0.15em]">CATEGORIA</h3>
-						<% categories.forEach(categorie => { %>
+						<% categories.forEach(category => { %>
 						<div class="flex gap-3 flex-col">
-							<a href="/products/category/<%= categorie.name.toLowerCase() %>"
-								><%= categorie.name %></a
+							<a href="/products/category/<%= category.name %>"
+								><%= category.name %></a
 							>
 						</div>
 						<% }) %>

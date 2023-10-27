@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
             Product.hasMany(models.Image, {
                 as: 'images',
                 foreignKey: 'productId',
+                onDelete: 'cascade',
             });
         }
     }
@@ -31,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
             price: DataTypes.INTEGER,
             discount: DataTypes.INTEGER,
             description: DataTypes.TEXT,
-            image: DataTypes.STRING,
             categoryId: DataTypes.INTEGER,
             sectionId: DataTypes.INTEGER,
         },

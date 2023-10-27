@@ -27,7 +27,6 @@ module.exports = (req, res) => {
                     sectionId,
                     price,
                     discount,
-                    stock,
                     description: description.trim(),
                 },
                 {
@@ -70,6 +69,16 @@ module.exports = (req, res) => {
                             });
                         });
                     }
+
+                    db.Item.update(
+                        { stock: stock },
+                        {
+                            where: {
+                                productId: req.params.id,
+                            },
+                        }
+                    );
+
                     return res.redirect('/users/admin');
                 })
                 .catch((error) => console.log(error));

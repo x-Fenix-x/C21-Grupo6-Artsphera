@@ -6,12 +6,11 @@ module.exports = (req, res) => {
     const errors = validationResult(req);
 
     const products = db.Product.findAll({
-        order: ['title'],
+        include: ['category'],
     });
 
     if (errors.isEmpty()) {
-        const { title, price, discount, description, categoryId, sectionId } =
-            req.body;
+        const { title, price, discount, description, categoryId, sectionId, stock } = req.body;
 
         db.Product.create({
             title: title.trim(),
@@ -20,11 +19,16 @@ module.exports = (req, res) => {
             sectionId,
             categoryId,
             description: description.trim(),
+            stock : stock || 1,
         })
             .then((product) => {
-                if (req.files.image && req.files.length > 0) {
-                    const imageDefault =
-                        '../../../public/images/defaultImage.png';
+                db.Item.create({
+                    stock,
+                    productId: product.id,
+                });
+
+                if (req.files.image) {
+                    const imageDefault = './public/images/productos/defaultImage.png';
 
                     db.Image.create({
                         file: req.files.image[0].filename || imageDefault,
@@ -38,10 +42,10 @@ module.exports = (req, res) => {
     } else {
         req.files.image &&
             existsSync(
-                `./public/images/productos/${req.files.image[0].filename}`
+                `./public/images/productos/${req.files.image[0].file}`
             ) &&
             unlinkSync(
-                `./public/images/productos/${req.files.image[0].filename}`
+                `./public/images/productos/${req.files.image[0].file}`
             );
 
         const categories = db.Category.findAll({
