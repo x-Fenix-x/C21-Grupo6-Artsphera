@@ -1,6 +1,6 @@
 'use strict';
 
-const sectionsArray = ['Nuevo', 'Ofertas', 'Últimas unidades'];
+const sectionsArray = ['Nuevo', 'Ofertas', 'Selección Semana'];
 
 const sectionsDB = sectionsArray.map((section) => {
     return {

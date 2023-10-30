@@ -10,17 +10,12 @@ module.exports = (req, res) => {
         order: ['id'],
     });
 
-    const products = db.Product.findAll();
-
-    Promise.all([categories, product, products])
-        .then(([categories, product, products]) => {
-            const lastunits = products.filter((product) => product.stock <= 3);
-
+    Promise.all([categories, product])
+        .then(([categories, product]) => {
             return res.render('productDetail', {
                 categories,
                 priceFinal,
                 product,
-                lastunits,
             });
         })
         .catch((error) => console.log(error));

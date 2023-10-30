@@ -100,9 +100,9 @@
 									maximumFractionDigits: 2 }) %></span
 								>
 							</p>
-							<p>
+							<!-- <p>
 								Quedan <span class="stock"><%= product.stock %></span> en stock
-							</p>
+							</p> -->
 							<a href="/products/detail/<%= product.id %>" class="index-ver__mas"
 								>Ver más</a
 							>
@@ -112,11 +112,11 @@
 				</div>
 			</section>
 			<section class="index-producto">
-				<h2 class="index-producto__categoria">Ultimas unidades</h2>
+				<h2 class="index__titulo">Selección de la semana</h2>
 				<div class="producto-container">
 					<i class="fa-solid fa-chevron-left ant-boton"></i>
 					<i class="fa-solid fa-chevron-right sig-boton"></i>
-					<% lastunits.forEach(product => { %>
+					<% week.forEach(product => { %>
 					<div class="producto-card">
 						<div class="producto-imagen">
 							<% if (product.discount > 0) { %>
@@ -137,7 +137,7 @@
 						</div>
 						<div class="producto-info">
 							<h2 class="producto-info__titulo"><%= product.title %></h2>
-							<p class="producto-info__descripcion"><%= product.category %></p>
+							<p class="producto-info__descripcion"><%= product.description %></p>
 							<% if (product.discount > 0) { %>
 							<span class="precio--descuento"
 								>$<%= (product.price - (product.price * (product.discount /
@@ -149,9 +149,9 @@
 							<% } else { %>
 							<span class="precio--descuento">$<%= product.price %></span>
 							<% } %>
-							<p>
+							<!-- <p>
 								Quedan <span class="stock"><%= product.stock %></span> en stock
-							</p>
+							</p> -->
 						</div>
 					</div>
 					<% }) %>

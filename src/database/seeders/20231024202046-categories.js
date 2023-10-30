@@ -1,12 +1,12 @@
 'use strict';
 
 const categoriesArray = [
-    { name: 'Pintura', image: '1.jpg' },
-    { name: 'Escultura', image: '2.jpeg' },
-    { name: 'Fotografía', image: '3.jpg' },
-    { name: 'Dibujo', image: '4.jpg' },
-    { name: 'Ilustración', image: '5.jpg' },
-    { name: 'Collage', image: '6.jpg' },
+    { name: 'Pintura', image: './cards/card1.jpg' },
+    { name: 'Escultura', image: './cards/card2.jpeg' },
+    { name: 'Fotografía', image: './cards/card3.jpg' },
+    { name: 'Dibujo', image: './cards/card4.jpg' },
+    { name: 'Ilustración', image: './cards/card5.jpg' },
+    { name: 'Collage', image: './cards/card6.jpg' },
 ];
 
 const categoriesDB = categoriesArray.map((category) => {

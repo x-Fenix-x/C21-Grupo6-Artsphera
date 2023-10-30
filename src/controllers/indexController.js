@@ -5,32 +5,31 @@ module.exports = {
         const categories = db.Category.findAll({
             order: ['id'],
         });
-        const sections = db.Section.findAll({
-            order: ['name'],
-        });
 
         const products = db.Product.findAll({
             include: ['images'],
         });
 
-        Promise.all([categories, sections, products])
-            .then(([categories, sections, products]) => {
+        Promise.all([categories, products])
+            .then(([categories, products]) => {
                 const news = products.filter(
                     (product) => product.sectionId === 1
                 );
 
                 const offers = products.filter(
-                    (product) => product.discount >= 5
+                    (product) => product.sectionId === 2
                 );
-                const lastunits = products.filter(
-                    (product) => product.stock <= 3
+
+                const week = products.filter(
+                    (product) => product.sectionId === 3
                 );
+
                 // return res.send(news)
                 return res.render('index', {
                     news,
                     categories,
                     offers,
-                    lastunits,
+                    week,
                     products,
                 });
             })
