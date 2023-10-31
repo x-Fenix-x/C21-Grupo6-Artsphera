@@ -24,7 +24,7 @@
 							value="<%= user.name %>"
 						/>
 						<% if (locals.errors && errors.name) { %>
-						<p class="text-sm"><%= errors.name.msg %></p>
+						<p class="text-sm text-danger"><%= errors.name.msg %></p>
 						<% } %>
 					</div>
 					<div class="profile-form__div">
@@ -38,7 +38,7 @@
 							value="<%= user.surname %>"
 						/>
 						<% if (locals.errors && errors.surname) { %>
-						<p class="text-sm"><%= errors.surname.msg %></p>
+						<p class="text-sm text-danger"><%= errors.surname.msg %></p>
 						<% } %>
 					</div>
 					<div class="profile-form__div">
@@ -52,7 +52,7 @@
 							value="<%= user.email %>"
 						/>
 						<% if (locals.errors && errors.email) { %>
-						<p class="text-sm"><%= errors.email.msg %></p>
+						<p class="text-sm text-danger"><%= errors.email.msg %></p>
 						<% } %>
 					</div>
 					<div class="profile-form__div">
@@ -85,7 +85,7 @@
 							placeholder="Ingrese contraseña"
 						/>
 						<% if (locals.errors && errors.password) { %>
-						<p class="text-sm"><%= errors.password.msg %></p>
+						<p class="text-sm text-danger"><%= errors.password.msg %></p>
 						<% } %>
 					</div>
 					<div class="profile-form__div">
@@ -100,7 +100,7 @@
 							placeholder="Repita su contraseña"
 						/>
 						<% if (locals.errors && errors.password2) { %>
-						<p class="text-sm"><%= errors.password2.msg %></p>
+						<p class="text-sm text-danger"><%= errors.password2.msg %></p>
 						<% } %>
 					</div>
 					<div class="profile-form__div">
