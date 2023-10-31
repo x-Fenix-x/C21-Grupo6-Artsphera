@@ -1,15 +1,19 @@
 <% products.forEach(product => { %>
-<div class="flex flex-col items-center gap-2">
-	<a href="/products/detail/<%= product.id %>"
-		><img
-			src="/images/productos/<%= product.images %>"
-			alt=""
-			class="w-96 h-[28rem] object-cover"
-	/></a>
-	<div class="text-center">
-		<p class="text-sm"><%= product.category %></p>
-		<p class="font-bold text-2xl italic"><%= product.title %></p>
-		<p>$<%= product.price %></p>
-	</div>
-</div>
+    <div class="flex flex-col items-center gap-2">
+        <a href="/products/detail/<%= product.id %>">
+            <% if (product.images && product.images.length > 0) { %>
+                <img src="/images/productos/<%= product.images[0].file %>" alt=""
+                    class="w-full h-[28rem] object-fill" />
+            <% } else { %>
+                <img src="/images/productos/defaultImage.png" alt="Imagen no disponible"
+                    class="w-full h-[28rem] object-fill" />
+            <% } %>
+        </a>
+        <div class="text-center">
+            <p class="font-bold text-2xl italic">
+                <%= product.title %>
+            </p>
+            <p>$<%= product.price %></p>
+        </div>
+    </div>
 <% }) %>

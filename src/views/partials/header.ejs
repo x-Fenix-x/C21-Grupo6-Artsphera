@@ -21,7 +21,7 @@
 				<ul class="dropdown-menu">
 					<% categories.forEach(category => { %>
 					<li>
-						<a href="/products/category/<%= category.name.toLowerCase() %>"
+						<a href="/products/category/<%= category.name %>"
 							><%= category.name %></a
 						>
 					</li>
@@ -30,7 +30,7 @@
 			</div>
 			<form action="/products/search" method="GET" class="leftNav">
 				<i class="fa-solid fa-magnifying-glass"></i>
-				<input type="text" placeholder="Que deseas encontrar?" name="query" />
+				<input type="text" placeholder="¿Qué deseas buscar?" name="query" />
 			</form>
 		</div>
 		<div class="rightHeader">
