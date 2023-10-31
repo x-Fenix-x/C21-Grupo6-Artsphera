@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require("uuid");
+const { v4: uuidv4 } = require('uuid');
 
 const Product = function ({title, category, price, discount, stock, images, description, section}) {
     this.id = uuidv4();

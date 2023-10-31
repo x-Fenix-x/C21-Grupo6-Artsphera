@@ -14,10 +14,7 @@ const {
 const loginValidator = require('../validations/loginValidator');
 const profileValidator = require('../validations/profileValidator');
 
-const {
-    passwordValidator,
-    passwordErrors,
-} = require('../validations/passwordValidator');
+const passwordValidator = require('../validations/passwordValidator');
 
 const registerValidator = require('../validations/registerValidator');
 const userCheck = require('../middlewares/userCheck');
@@ -31,13 +28,11 @@ router
     .post('/login', loginValidator, processLogin)
     .get('/register', register)
     .post('/register', registerValidator, createRegister)
-    .get('/admin',adminCheck, adminPanel)
+    .get('/admin', adminCheck, adminPanel)
     .get('/profile/:id', userCheck, profile)
     .put('/update/:id', profileValidator, userCheck, update)
     .put(
-        '/update-password/:id',
-        passwordValidator,
-        passwordErrors,
+        '/update-password/:id', passwordValidator,
         updatePassword
     )
     .delete('/delete/:id', remove)

@@ -7,7 +7,13 @@ module.exports = (req, res) => {
         },
     })
         .then(() => {
-            return res.redirect('/');
+            if (req.body.rememberMe === 'on') {
+                res.clearCookie('artesphera');
+            }
+
+            req.session.destroy(() => {
+                return res.redirect('/');
+            });
         })
         .catch((error) => console.error(error));
 };

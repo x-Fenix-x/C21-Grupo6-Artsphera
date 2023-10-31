@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
-    if (req.cookies.artesphera) {
-        req.session.userLogin = req.cookies.artesphera;
+    if (req.cookies.del) {
+        req.session.userLogin = req.cookies.del;
     }
     next();
 };
