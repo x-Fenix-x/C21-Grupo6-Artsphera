@@ -10,7 +10,6 @@
 				</div>
 				<div class="mainAutor">
 					<h1><%= product.title %></h1>
-					<p><%= product.description %></p>
 
 					<% if (product.discount > 0) { %>
 					<div>
@@ -47,10 +46,12 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="mainCreacion">
+			<div class="mainCreacion">
 				<div class="mainSobreCreacion">
-					<h3>Sobre la creacion</h3>
-					<p>
+					<h3>Sobre la creación</h3>
+					<p><%= product.description %></p>
+
+					<!-- <p>
 						¡Homenaje a un gran artista que murió muy joven! Basquiat alcanzó el
 						éxito durante la década de 1980 como parte del Movimiento
 						Neoexpresionista. También colaboró con Andy Warhol y se convirtió en
@@ -59,10 +60,10 @@
 						Cadillac Moon a Debbie Harry por 200 $ en 1981 y los precios
 						actuales de una pintura de Basquiat superan los 20 millones de
 						dólares.
-					</p>
+					</p> -->
 				</div>
 				<div class="mainDetalleEspecificacion">
-					<h3>Detalle de especificacion</h3>
+					<!-- <h3>Detalle de especificacion</h3>
 					<div class="mainOtrosDetalles">
 						<p>Tecnica</p>
 						<p>Acrilico, Oleo en Lienzo</p>
@@ -77,9 +78,9 @@
 					<div class="mainOtrosDetalles">
 						<p>Dimensiones</p>
 						<p>120x140cm</p>
-					</div>
+					</div> -->
 				</div>
-			</div> -->
+			</div>
 			<div class="mainEnvios">
 				<div class="mainDetalleEnvios">
 					<img class="imgEnvio" src="/images/carro.png" alt="" />

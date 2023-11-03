@@ -1,7 +1,6 @@
 const db = require('../../database/models');
 const { validationResult } = require('express-validator');
 const priceFinal = require('../../../public/javascripts/products-function');
-const path = require('path');
 
 module.exports = (req, res) => {
     const errors = validationResult(req);

@@ -32,7 +32,7 @@
 
 - Colores: https://colorhunt.co/palette/1b262c0f4c753282b8bbe1fa
 
-- Tipografia: https://fonts.google.com/
+- Tipografía: https://fonts.google.com/
 
 - Logotipo: https://www.figma.com/file/1U391S0BAS97U7sSZ9E9JL/arte?type=design&node-id=16-391&t=QAW3F7wMM875YNXy-0
 

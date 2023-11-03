@@ -17,72 +17,84 @@ module.exports = (req, res) => {
             description,
         } = req.body;
 
-        db.Product.findByPk(req.params.id, {
-            include: ['images'],
-        }).then((product) => {
-            db.Product.update(
-                {
-                    title: title.trim(),
-                    categoryId,
-                    sectionId,
-                    price,
-                    discount,
-                    description: description.trim(),
-                },
-                {
-                    where: {
-                        id: req.params.id,
-                    },
-                }
-            )
-                .then(() => {
-                    if (req.files.image) {
-                        product.images.forEach((image) => {
-                            if (
-                                existsSync(
-                                    `./public/images/productos/${
-                                        product.images.find(
-                                            (image) => image.main
-                                        ).file
-                                    }`
-                                )
-                            ) {
-                                unlinkSync(
-                                    `./public/images/productos/${
-                                        product.images.find(
-                                            (image) => image.main
-                                        ).file
-                                    }`
-                                );
-                            }
-                        });
-                        db.Image.destroy({
-                            where: {
-                                productId: req.params.id,
-                                main: true,
-                            },
-                        }).then(() => {
-                            db.Image.create({
-                                file: req.files.image[0].filename,
-                                main: true,
-                                productId: req.params.id,
+        db.Product.findByPk(req.params.id)
+            .then((product) => {
+                product
+                    .update({
+                        title: title.trim(),
+                        categoryId,
+                        sectionId,
+                        price,
+                        discount,
+                        description: description.trim(),
+                    })
+                    .then(() => {
+                        if (req.file) {
+                            db.Image.findOne({
+                                where: {
+                                    productId: req.params.id,
+                                },
+                            }).then((image) => {
+                                if (image) {
+                                    image
+                                        .update({
+                                            image: req.file.filename,
+                                        })
+                                        .then(() => {
+                                            db.Item.update(
+                                                {
+                                                    stock: stock || 1,
+                                                },
+                                                {
+                                                    where: {
+                                                        productId:
+                                                            req.params.id,
+                                                    },
+                                                }
+                                            ).then(() => {
+                                                return res.redirect(
+                                                    '/users/admin'
+                                                );
+                                            });
+                                        });
+                                } else {
+                                    db.Image.create({
+                                        image: req.file.filename,
+                                        productId: req.params.id,
+                                    }).then(() => {
+                                        db.Item.update(
+                                            {
+                                                stock: stock || 1,
+                                            },
+                                            {
+                                                where: {
+                                                    productId: req.params.id,
+                                                },
+                                            }
+                                        ).then(() => {
+                                            return res.redirect('/users/admin');
+                                        });
+                                    });
+                                }
                             });
-                        });
-                    }
-
-                    db.Item.update(
-                        { stock: stock },
-                        {
-                            where: {
-                                productId: req.params.id,
-                            },
+                        } else {
+                            db.Item.update(
+                                {
+                                    stock: stock || 1,
+                                },
+                                {
+                                    where: {
+                                        productId: req.params.id,
+                                    },
+                                }
+                            ).then(() => {
+                                return res.redirect('/users/admin');
+                            });
                         }
-                    );
-
-                    return res.redirect('/users/admin');
-                })
-                .catch((error) => console.log(error));
-        });
+                    })
+                    .catch((error) => console.log(error));
+            })
+            .catch((error) => console.log(error));
     } else {
         const id = req.params.id;
 
