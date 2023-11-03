@@ -1,6 +1,7 @@
 const db = require('../../database/models');
 const { validationResult } = require('express-validator');
 const priceFinal = require('../../../public/javascripts/products-function');
+const path = require('path');
 
 module.exports = (req, res) => {
     const errors = validationResult(req);
@@ -10,7 +11,15 @@ module.exports = (req, res) => {
     });
 
     if (errors.isEmpty()) {
-        const { title, price, discount, description, categoryId, sectionId, stock } = req.body;
+        const {
+            title,
+            price,
+            discount,
+            description,
+            categoryId,
+            sectionId,
+            stock,
+        } = req.body;
 
         db.Product.create({
             title: title.trim(),
@@ -19,7 +28,7 @@ module.exports = (req, res) => {
             sectionId,
             categoryId,
             description: description.trim(),
-            stock : stock || 1,
+            stock: stock || 1,
         })
             .then((product) => {
                 db.Item.create({
@@ -27,12 +36,15 @@ module.exports = (req, res) => {
                     productId: product.id,
                 });
 
-                if (req.files.image) {
-                    const imageDefault = './public/images/productos/defaultImage.png';
-
+                if (req.file) {
                     db.Image.create({
-                        file: req.files.image[0].filename || imageDefault,
-                        main: true,
+                        image: req.file.filename,
+                        productId: product.id,
+                    });
+                } else {
+                    const imageDefault = '/defaultImage.png';
+                    db.Image.create({
+                        image: imageDefault,
                         productId: product.id,
                     });
                 }
@@ -40,14 +52,6 @@ module.exports = (req, res) => {
             })
             .catch((error) => console.log(error));
     } else {
-        req.files.image &&
-            existsSync(
-                `./public/images/productos/${req.files.image[0].file}`
-            ) &&
-            unlinkSync(
-                `./public/images/productos/${req.files.image[0].file}`
-            );
-
         const categories = db.Category.findAll({
             order: ['id'],
         });

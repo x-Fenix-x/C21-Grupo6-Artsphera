@@ -54,7 +54,7 @@
 						<div class="producto-imagen">
 							<img
 								class="producto-card__img"
-								src="/images/productos/<%= product.images[0].file %>"
+								src="/images/productos/<%= product.images[0].image %>"
 								alt="producto"
 							/>
 							<a
@@ -80,7 +80,7 @@
 					<% offers.forEach(product => { %>
 					<div class="producto-card">
 						<div class="imagen-oferta">
-							<img src="/images/productos/<%= product.images[0].file %>" alt="producto" />
+							<img src="/images/productos/<%= product.images[0].image %>" alt="producto" />
 							<div class="descuento">
 								<span>-<%= product.discount %>%</span>
 							</div>
@@ -126,7 +126,7 @@
 							<% } %>
 							<img
 								class="producto-card__img"
-								src="/images/productos/<%= product.images[0].file %>"
+								src="/images/productos/<%= product.images[0].image %>"
 								alt="producto"
 							/>
 							<a

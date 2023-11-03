@@ -11,8 +11,8 @@
 					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
 						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
 							<form action="/products/update/<%= id %>?_method=PUT" method="POST"
-								class="flex flex-col justify-center gap-12" enctype="multipart/form-data">
-								<p class="text-3xl font-bold">Editar producto <%= title %></p>
+								class="flex flex-col gap-12" enctype="multipart/form-data">
+								<p class="text-3xl font-bold">Estas editando: <%= title %></p>
 								<div>
 									<div class="flex flex-col">
 										<label for="title" class="font-medium">Título</label>
@@ -71,16 +71,16 @@
 										</small>
 									</div>
 									<div class="flex flex-col mt-2">
-										<label for="images" class="font-medium">Editar multimedia:</label>
+										<label for="image" class="font-medium">Editar multimedia:</label>
 										<div class="mb-2">
-											<input type="file" id="images" name="images" accept="image/*" />
+											<input type="file" id="image" name="image" accept="image/*" />
 										</div>
 									</div>
 									<div class="mt-2 flex flex-wrap gap-2 py-2">
 										<% for (let i=0; i < images.length; i++) { %>
 											<div>
-												<img src="/images/productos/<%= images[i] %>" alt=""
-													class="w-24 h-24 object-cover" />
+												<img src="/images/productos/<%= images[0].image %>" alt=""
+													class="w-24 h-25 object-contain" />
 											</div>
 											<% } %>
 									</div>

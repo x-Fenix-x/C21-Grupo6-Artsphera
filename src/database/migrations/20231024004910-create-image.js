@@ -9,11 +9,8 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER,
             },
-            file: {
+            image: {
                 type: Sequelize.STRING,
-            },
-            main: {
-                type: Sequelize.BOOLEAN,
             },
             productId: {
                 type: Sequelize.INTEGER,

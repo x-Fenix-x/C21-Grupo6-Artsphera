@@ -773,9 +773,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/images\/loginWallpaper\.png\'\)\]{
-  background-image: url('/images/loginWallpaper.png');
-}
+/* .bg-\[url\(\'\/images\/loginWallpaper\.png\'\)\]{
+  background-image: url('/images/loginWallpaper.jpg');
+} */
 
 .bg-auto{
   background-size: auto;
@@ -986,13 +986,6 @@ video {
   padding: 1rem;
   display: flex;
   justify-content: center;
-}
-
-.img-detail img {
-  width: 35rem;
-  height: 35rem;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .mainAutor {

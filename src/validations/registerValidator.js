@@ -1,7 +1,7 @@
 const { check, body } = require('express-validator');
 const db = require('../database/models');
 
-const registerValidator = [
+module.exports = [
     check('name')
         .isLength({
             min: 2,
@@ -53,5 +53,3 @@ const registerValidator = [
         })
         .withMessage('Las contraseñas deben coincidir'),
 ];
-
-module.exports = registerValidator;
