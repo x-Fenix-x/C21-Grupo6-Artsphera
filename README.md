@@ -14,6 +14,12 @@
 
 - Matias Sette, 32 años, Buenos aires, me apasiona la programación. Adoro a mi hija a Anna y a la bebe que viene en camino. Me gusta tocar piano cuando tengo un tiempo libre.
 
+## Correr el proyecto:
+
+- Instalar dependencias `npm i`
+- Iniciar con `npm start` o `npm run dev`
+- En el navegador ingresar a: `http://localhost:3000`
+
 ## Sitios de Referencias:
 
 - Para llevar a cabo este e-commerce tomamos como referencias las siguientes páginas:
