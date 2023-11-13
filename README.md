@@ -46,7 +46,9 @@
 
 ### [Retrospectiva SPRINT 4](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro4.MD)
 
-### [Retrospectiva SPRINT 5](https://github.com/x-Fenix-x/C21-Grupo6-Artsphera/blob/retrospectivas/retro5.MD)
+### [Retrospectiva SPRINT 5](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro5.MD)
+
+### [Retrospectiva SPRINT 6](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro6.MD)
 
 ## JIRA: https://arteshera.atlassian.net
 
