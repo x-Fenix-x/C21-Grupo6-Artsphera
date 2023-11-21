@@ -69,7 +69,6 @@
     font-weight: 500;
     color: #9ca3af;
     background-color: #f6f6f6;
-    border: none;
 }
 
 .form > button {
@@ -113,6 +112,16 @@
     align-items: center;
     gap: 0.45em;
     cursor: pointer;
+}
+
+.is-valid{
+    border-color: #0cef32;
+    color: #0cef32;
+}
+
+.is-invalid{
+    border-color: #ef0c0c;
+    color: #ef0c0c;
 }
 
 .loginLinks {

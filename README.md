@@ -1,8 +1,10 @@
-# Proyecto integrador
+# Proyecto integrador: Artesphera
 
 ## Descripción del proyecto:
 
-- Desarrollar un e-commerce basado en la venta de artes. El cliente final son aquellas personas apasionadas por el arte en general, interesadas en adquirir obras de arte originales creadas por artistas independientes y productos relacionados como pintura, escultura, fotografía, dibujo, ilustración, collage, etc.
+#### E-commerce de obras de arte.
+
+El cliente final son aquellas personas apasionadas por el arte en general, interesadas en adquirir obras de arte originales creadas por artistas independientes y productos relacionados como pintura, escultura, fotografía, dibujo, ilustración, collage, etc.
 
 ## Integrantes:
 
@@ -14,9 +16,14 @@
 
 - Matias Sette, 32 años, Buenos aires, me apasiona la programación. Adoro a mi hija a Anna y a la bebe que viene en camino. Me gusta tocar piano cuando tengo un tiempo libre.
 
-## Sitios de Referencias:
+## Correr el proyecto:
 
-- Para llevar a cabo este e-commerce tomamos como referencias las siguientes páginas:
+- Clonar repositorio.
+- Instalar dependencias `npm i`
+- Iniciar con `npm start` o `npm run dev`
+- En el navegador ingresar a: `http://localhost:3000`
+
+## Sitios de Referencias:
 
 - Ideas de home y página en general : https://www.artelista.com/
 
@@ -32,9 +39,9 @@
 
 - Colores: https://colorhunt.co/palette/1b262c0f4c753282b8bbe1fa
 
-- Tipografía: https://fonts.google.com/
-
 - Logotipo: https://www.figma.com/file/1U391S0BAS97U7sSZ9E9JL/arte?type=design&node-id=16-391&t=QAW3F7wMM875YNXy-0
+
+- Tipografía: https://fonts.google.com/
 
 ## RETROSPECTIVAS:
 
