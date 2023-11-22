@@ -23,7 +23,7 @@
 .firstHeader > a {
     display: block;
     width: 3rem;
-
+    
     @media (min-width: 1024px) {
         display: none;
     }
