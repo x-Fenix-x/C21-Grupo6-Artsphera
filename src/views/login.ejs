@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head',{title: "Artesphera | Login" }) %>
-	<link rel="stylesheet" href="/dist/output.css" />
 
 	<body>
 		<%- include('partials/header') %>
@@ -12,28 +11,29 @@
 							<h1>Iniciar Sesión</h1>
 							<p>¡Ey! Ingresa tus datos para iniciar sesión.</p>
 						</div>
-						<form action="" method="POST" class="form">
-							<input type="email" id="email" name="email"
-								placeholder="Correo electrónico" />
-							<% if (locals.errors && errors.email) { %>
-								<p class="text-sm text-danger">
-									<%= errors.email.msg %>
-								</p>
-								<% } %>
-									<input type="password" id="password" name="password" placeholder="Contraseña" />
-									<% if (locals.errors && errors.password) { %>
-										<p class="text-sm text-danger">
-											<%= errors.password.msg %>
-										</p>
-										<% } %>
-											<div class="formOptions">
-												<label for="rememberMe" class="formRemember">
-													<input type="checkbox" id="rememberMe" name="rememberMe" />
-													Recuérdame
-												</label>
-												<a href="#">¿Olvidaste la Contraseña?</a>
-											</div>
-											<button type="submit">Iniciar Sesión</button>
+						<form action="" method="POST" class="form" id="formAdd">
+							<input type="email" id="email" name="email" placeholder="Correo electrónico"
+								class="form-control <%= locals.errors && (locals.errors.email && 'is-invalid') %>" />
+							<small class="text-sm text-danger" id="msgError-email">
+								<%= locals.errors && (errors.email && errors.email.msg) %>
+							</small>
+							<input type="password" id="password" name="password" placeholder="Contraseña"
+								class="form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>" />
+							<small class="text-sm text-danger" id="msgError-password">
+								<%= locals.errors && (errors.password && errors.password.msg) %>
+							</small>
+							<div class="formOptions">
+								<label for="rememberMe" class="formRemember">
+									<input type="checkbox" id="rememberMe" name="rememberMe" />
+									Recuérdame
+								</label>
+								<a href="#">¿Olvidaste la Contraseña?</a>
+							</div>
+							<div>
+								<small class="text-danger" id="msgError-empty">
+								</small>
+							</div>
+							<button type="submit">Iniciar Sesión</button>
 						</form>
 						<p>O inicia sesión con:</p>
 						<div class="loginLinks">
@@ -58,6 +58,7 @@
 				</section>
 			</main>
 			<%- include('partials/footer') %>
+				<script src="/javascripts/login.js"></script>
 	</body>
 
 </html>

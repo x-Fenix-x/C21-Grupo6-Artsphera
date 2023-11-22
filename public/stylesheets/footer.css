@@ -40,6 +40,10 @@
     color: #000000;
 }
 
+.subInformation > h4 {
+    color: #000000;
+}
+
 .subInformation > a {
     color: #6b7280;
 }
