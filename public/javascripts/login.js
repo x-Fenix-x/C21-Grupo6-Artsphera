@@ -1,7 +1,7 @@
 const $ = (id) => document.getElementById(id);
 
 window.onload = function () {
-    $('email').addEventListener('blur', function (e) {
+    $('email').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
                 $('msgError-email').innerHTML = 'Email obligatorio';
@@ -19,7 +19,7 @@ window.onload = function () {
         }
     });
 
-    $('email').addEventListener('change', async function (e) {
+    $('email').addEventListener('change', async function () {
         try {
             const response = await fetch(
                 `/api/check-email?email=${this.value}`
@@ -35,7 +35,7 @@ window.onload = function () {
         }
     });
 
-    $('password').addEventListener('blur', function (e) {
+    $('password').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
                 $('msgError-password').innerHTML = 'Contraseña obligatoria';

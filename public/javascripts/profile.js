@@ -1,7 +1,7 @@
 const $ = (id) => document.getElementById(id);
 
 window.onload = function (e) {
-    $('name').addEventListener('blur', function (e) {
+    $('name').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
                 $('msgError-name').innerHTML = 'El nombre es obligatorio';
@@ -23,7 +23,7 @@ window.onload = function (e) {
         }
     });
 
-    $('surname').addEventListener('blur', function (e) {
+    $('surname').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
                 $('msgError-surname').innerHTML = 'El apellido es obligatorio';

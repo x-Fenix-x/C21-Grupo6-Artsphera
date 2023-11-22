@@ -12,13 +12,14 @@
 						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
 							<form action="/products/update/<%= id %>?_method=PUT" method="POST"
 								class="flex flex-col gap-12" enctype="multipart/form-data">
-								<p class="text-3xl font-bold">Estas editando: <%= title %></p>
+								<p class="text-3xl font-bold">Estas editando: <%= title %>
+								</p>
 								<div>
 									<div class="flex flex-col">
 										<label for="title" class="font-medium">Título</label>
 										<input type="text" id="title" name="title" class="p-3 bg-gray-100 text-sm"
 											placeholder="Título del producto " value="<%= title %>" />
-										<small class="text-danger">
+										<small class="text-danger" id="msgError-title">
 											<%= locals.errors && (errors.title && errors.title.msg) %>
 										</small>
 									</div>
@@ -27,8 +28,8 @@
 										<select name="categoryId" id="categoryId" class="p-3 text-sm bg-gray-100">
 											<option value="" disabled>Elige una opción</option>
 											<% categories.forEach(category=> { %>
-											<option <%=category.id===categoryId
-													&& "selected" %> value="<%= category.id %>"><%= category.name %>
+												<option <%=category.id===categoryId && "selected" %> value="<%=
+														category.id %>"><%= category.name %>
 												</option>
 												<% }) %>
 										</select>
@@ -49,7 +50,7 @@
 										<label for="price" class="font-medium">Precio</label>
 										<input type="number" id="price" name="price" class="p-3 bg-gray-100 text-sm"
 											placeholder="Ejemplo: 99.99" value="<%= price %>" />
-										<small class="text-danger">
+										<small class="text-danger" id="msgError-price">
 											<%= locals.errors && (errors.price && errors.price.msg) %>
 										</small>
 									</div>
@@ -58,15 +59,15 @@
 										<input type="number" id="discount" name="discount"
 											class="p-3 bg-gray-100 text-sm" placeholder="Descuento en porcentaje"
 											value="<%= discount %>" />
-										<small class="text-danger">
+										<small class="text-danger" id="msgError-discount">
 											<%= locals.errors && (errors.discount && errors.discount.msg) %>
 										</small>
 									</div>
 									<div class="flex flex-col">
 										<label for="stock" class="font-medium">Stock</label>
 										<input type="number" id="stock" name="stock" class="p-3 bg-gray-100 text-sm"
-											placeholder="Cantidad disponible" 											value="<%= stock %>" />
-										<small class="text-danger">
+											placeholder="Cantidad disponible" value="<%= stock %>" />
+										<small class="text-danger" id="msgError-stock">
 											<%= locals.errors && (errors.stock && errors.stock.msg) %>
 										</small>
 									</div>
@@ -90,8 +91,12 @@
 									<textarea id="description" name="description" rows="4" cols="50"
 										class="bg-gray-100 p-2 text-left">
 										<%= description %></textarea>
-									<small class="text-danger">
+									<small class="text-danger" id="msgError-description">
 										<%= locals.errors && (errors.description && errors.description.msg) %>
+									</small>
+								</div>
+								<div>
+									<small class="text-danger" id="msgError-empty">
 									</small>
 								</div>
 								<button type="submit"
@@ -104,6 +109,7 @@
 					</article>
 				</section>
 			</main>
+			<script src="/javascripts/productAddEdit.js"></script>
 	</body>
 
 </html>
