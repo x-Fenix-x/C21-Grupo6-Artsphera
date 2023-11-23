@@ -341,12 +341,13 @@
 
 .precio-original {
     text-decoration: line-through;
+    font-size: 0.9rem;
     color: #888;
 }
 
-.stock,
 .precio-descuento {
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .index-ver__mas {

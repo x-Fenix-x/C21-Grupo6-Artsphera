@@ -89,19 +89,10 @@
 							<h3 class="producto-info__titulo"><%= product.title %></h3>
 							<p><%= product.category %></p>
 							<p>
-								Precio original:
 								<span class="precio-original">$<%= product.price %></span>
 							</p>
-							<!-- <p>
-								Precio con descuento:
-								<span class="precio-descuento"
-									>$<%= (product.price - (product.price * (product.discount /
-									100))).toLocaleString('es-AR', { minimumFractionDigits: 2,
-									maximumFractionDigits: 2 }) %></span
-								>
-							</p> -->
+							
 							<p>
-								Precio con descuento:
 								<span class="precio-descuento">
 									$<%= priceFinal(product.price, product.discount) %>
 								</span>
