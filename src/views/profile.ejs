@@ -8,7 +8,8 @@
 				<h1 class="profile__title">Mis datos</h1>
 				<h2 class="profile__title">Actualiza tu información</h2>
 				<div class="profile-form">
-					<form action="/users/update/<%= user.id %>?_method=PUT" class="profile-form__form" method="POST">
+					<form action="/users/update/<%= user.id %>?_method=PUT" class="profile-form__form" method="POST"
+						id="formAdd">
 						<div class="profile-form__div">
 							<label class="profile-form__title" for="name">Nombre</label>
 							<input class="profile-form__input" type="text" id="name" name="name"
@@ -37,13 +38,17 @@
 						</div>
 						<div class="profile-form__div">
 							<label class="profile-form__title" for="email">Email</label>
-							<input class="profile-form__input" type="email" id="email" name="email"
-								placeholder="Ingrese su email" value="<%= user.email %>" />
-							<% if (locals.errors && errors.email) { %>
-								<p class="text-sm text-danger">
-									<%= errors.email.msg %>
-								</p>
-								<% } %>
+							<input
+								class="form-control profile-form__input<%= locals.errors && (locals.errors.email && 'is-invalid') %>"
+								type="email" id="email" name="email" placeholder="Ingrese su email"
+								value="<%= user.email %>" />
+							<small class="text-sm text-danger" id="msgError-email">
+								<%= locals.errors && (errors.email && errors.email.msg) %>
+							</small>
+						</div>
+						<div>
+							<small class="text-danger" id="msgError-empty">
+							</small>
 						</div>
 						<div class="profile-form__div">
 							<label for="profile-form__button" class="profile-form__button">
@@ -57,26 +62,26 @@
 				<h2 class="profile__title">Cambiar contraseña</h2>
 				<div class="profile-form">
 					<form action="/users/update-password/<%= user.id %>?_method=PUT" class="profile-form__form"
-						method="POST">
+						method="POST" id="formAdd2">
 						<div class="profile-form__div">
 							<label class="profile-form__title" for="password">Contraseña</label>
-							<input class="profile-form__input" type="password" id="password" name="password"
+							<input class="profile-form__input form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>" type="password" id="password" name="password"
 								placeholder="Ingrese contraseña" />
-							<% if (locals.errors && errors.password) { %>
-								<p class="text-sm text-danger">
-									<%= errors.password.msg %>
-								</p>
-								<% } %>
+							<small class="text-sm text-danger" id="msgError-password">
+								<%= locals.errors && (errors.password && errors.password.msg) %>
+							</small>
 						</div>
 						<div class="profile-form__div">
 							<label class="profile-form__title" for="password2">Confirmar contraseña</label>
-							<input class="profile-form__input" type="password" id="password2" name="password2"
-								placeholder="Repita su contraseña" />
-							<% if (locals.errors && errors.password2) { %>
-								<p class="text-sm text-danger">
-									<%= errors.password2.msg %>
-								</p>
-								<% } %>
+							<input class="profile-form__input form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>" type="password" id="password2" name="password2"
+								placeholder="Repita su contraseña"/>
+							<small class="text-sm text-danger" id="msgError-password2">
+								<%= locals.errors && (errors.password2 && errors.password2.msg) %>
+							</small>
+						</div>
+						<div>
+							<small class="text-danger" id="msgError-empty2">
+							</small>
 						</div>
 						<div class="profile-form__div">
 							<label for="profile-form__button-password" class="profile-form__button">
