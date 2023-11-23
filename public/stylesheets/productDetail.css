@@ -37,6 +37,20 @@
     font-size: 1.2rem;
 }
 
+.detail__precio {
+    font-size: 1rem;
+    opacity: 0.5;
+    text-decoration: line-through;
+    color: var(--colorRojo);
+    display: block;
+}
+
+.detail__discount {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--colorVerde);
+}
+
 .mainAutor button {
     background-color: #d0947a;
     padding: 0.5rem 1rem;

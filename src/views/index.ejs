@@ -92,13 +92,19 @@
 								Precio original:
 								<span class="precio-original">$<%= product.price %></span>
 							</p>
-							<p>
+							<!-- <p>
 								Precio con descuento:
 								<span class="precio-descuento"
 									>$<%= (product.price - (product.price * (product.discount /
 									100))).toLocaleString('es-AR', { minimumFractionDigits: 2,
 									maximumFractionDigits: 2 }) %></span
 								>
+							</p> -->
+							<p>
+								Precio con descuento:
+								<span class="precio-descuento">
+									$<%= priceFinal(product.price, product.discount) %>
+								</span>
 							</p>
 							<!-- <p>
 								Quedan <span class="stock"><%= product.stock %></span> en stock
@@ -139,11 +145,12 @@
 							<h2 class="producto-info__titulo"><%= product.title %></h2>
 							<p class="producto-info__descripcion"><%= product.description %></p>
 							<% if (product.discount > 0) { %>
-							<span class="precio--descuento"
-								>$<%= (product.price - (product.price * (product.discount /
-								100))).toLocaleString('es-AR', { minimumFractionDigits: 2,
-								maximumFractionDigits: 2 }) %></span
-							>
+								<p>
+									Precio con descuento:
+									<span class="precio-descuento">
+										$<%= priceFinal(product.price, product.discount) %>
+									</span>
+								</p>								
 							<span class="precio">$<%= product.price %></span>
 
 							<% } else { %>
@@ -193,6 +200,5 @@
 		<%- include('partials/footer') %>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="/javascripts/search.js"></script>
-		<script src="/javascripts/index-functions.js"></script>
 	</body>
 </html>

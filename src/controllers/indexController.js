@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const priceFinal = require("../../public/javascripts/products-function")
 
 module.exports = {
     index: (req, res) => {
@@ -31,6 +32,7 @@ module.exports = {
                     offers,
                     week,
                     products,
+                    priceFinal
                 });
             })
             .catch((error) => {
