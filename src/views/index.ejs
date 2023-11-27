@@ -75,7 +75,7 @@
 				</div>
 			</section>
 			<section>
-				<h2 class="index__titulo">Ofertas por tiempo limitado</h2>
+				<h2 class="index-producto__categoria tituloMod">Ofertas por tiempo limitado</h2>
 				<div class="oferta-container">
 					<% offers.forEach(product => { %>
 					<div class="producto-card">
@@ -109,7 +109,7 @@
 				</div>
 			</section>
 			<section class="index-producto">
-				<h2 class="index__titulo">Selección de la semana</h2>
+				<h2 class="index-producto__categoria">Selección de la semana</h2>
 				<div class="producto-container">
 					<i class="fa-solid fa-chevron-left ant-boton"></i>
 					<i class="fa-solid fa-chevron-right sig-boton"></i>
@@ -190,6 +190,7 @@
 		</main>
 		<%- include('partials/footer') %>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="/javascripts/index-functions.js"></script>
 		<script src="/javascripts/search.js"></script>
 	</body>
 </html>
