@@ -1,5 +1,12 @@
 # Proyecto integrador: Artesphera
 
+<a href="https://nodejs.org/">
+    <img src="https://img.shields.io/badge/node-v18.16.0-green.svg" alt="Node.js Version">
+</a>
+<a href="https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/graphs/commit-activity" alt="Commit Activity">
+    <img src="https://img.shields.io/github/commit-activity/y/x-fenix-x/C21-Grupo6-Artesphera/develop" alt="Commit Activity">
+</a>
+
 ## Descripción del proyecto:
 
 #### E-commerce de obras de arte.
