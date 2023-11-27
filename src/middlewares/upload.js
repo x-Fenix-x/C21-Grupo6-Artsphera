@@ -11,8 +11,24 @@ const storage = multer.diskStorage({
     },
 });
 
+const fileFilter = (req, file, cb) => {
+    if (!file.originalname.match(/\.(jpg|jpeg|png|webp)$/)) {
+        if (file.fieldname === 'image') {
+            req.fileValidatorError = {
+                ...req.fileValidatorError,
+                image: 'Valido solo jpg|jpeg|png|webp',
+            };
+        }
+
+        return cb(null, false, req.fileValidatorError);
+    }
+
+    return cb(null, true);
+};
+
 const upload = multer({
     storage,
+    fileFilter,
 });
 
 module.exports = upload;
