@@ -17,7 +17,6 @@ module.exports = (req, res) => {
             description,
             categoryId,
             sectionId,
-            stock,
         } = req.body;
 
         db.Product.create({
@@ -27,13 +26,8 @@ module.exports = (req, res) => {
             sectionId,
             categoryId,
             description: description.trim(),
-            stock: stock || 1,
         })
             .then((product) => {
-                db.Item.create({
-                    stock,
-                    productId: product.id,
-                });
 
                 if (req.file) {
                     db.Image.create({

@@ -83,11 +83,15 @@ window.onload = function () {
                 $('msgError-password').innerHTML = 'Contraseña obligatoria';
                 this.classList.add('is-invalid');
                 break;
-            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,12}$/.test(
+            case this.value.length < 4:
+                $('msgError-password').innerHTML = 'Mínimo 4 caracteres';
+                this.classList.add('is-invalid');
+                break;
+            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/.test(
                 this.value
             ):
                 $('msgError-password').innerHTML =
-                    'Debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial';
+                    'Debe tener al menos un número, una mayúscula y un carácter especial';
                 this.classList.add('is-invalid');
                 break;
             default:
