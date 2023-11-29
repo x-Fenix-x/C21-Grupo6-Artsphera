@@ -39,12 +39,19 @@ module.exports = [
         })
         .withMessage('Email registrado'),
     check('password')
+        .notEmpty()
+        .withMessage('La contraseña es obligatoria')
         .isLength({
             min: 4,
-            max: 10,
         })
-        .withMessage('Ingrese un min de 4 & max 10 caracteres'),
+        .withMessage('Ingrese un mínimo de 4 caracteres')
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/)
+        .withMessage(
+            'Recuerde ingresar al menos una mayúscula, un número y un carácter especial'
+        ),
     body('password2')
+        .notEmpty()
+        .withMessage('Es necesario repetir la contraseña')
         .custom((value, { req }) => {
             if (value !== req.body.password) {
                 return false;

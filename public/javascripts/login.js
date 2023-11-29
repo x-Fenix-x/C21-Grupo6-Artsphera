@@ -41,11 +41,9 @@ window.onload = function () {
                 $('msgError-password').innerHTML = 'Contraseña obligatoria';
                 this.classList.add('is-invalid');
                 break;
-            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,12}$/.test(
-                this.value
-            ):
+            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/.test(this.value):
                 $('msgError-password').innerHTML =
-                    'Debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial';
+                    'Recuerde ingresar al menos un número, una mayúscula y un caracter especial';
                 this.classList.add('is-invalid');
                 break;
             default:
@@ -55,7 +53,6 @@ window.onload = function () {
                 break;
         }
     });
-
 
     $('formAdd').addEventListener('submit', function (e) {
         e.preventDefault();
