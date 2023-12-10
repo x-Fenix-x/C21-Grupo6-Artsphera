@@ -30,16 +30,72 @@
 							href="/products/edit/<%= product.id %>"
 							class="fa-regular fa-pen-to-square text-gray-700"
 						></a>
-						<form
-							action="/products/delete/<%= product.id %>?_method=DELETE"
-							method="POST"
-						>
-							<button class="fa-regular fa-trash-can text-gray-700"></button>
-						</form>
+						<div>
+                            <!-- Botón Modal -->
+                            <button
+                                type="button"
+                                class="fa-regular fa-trash-can text-gray-700"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop<%= product.id %>"
+                            ></button>
+                        </div>
+                        <!-- Modal -->
+                        <div
+                            class="modal fade"
+                            id="staticBackdrop<%= product.id %>"
+                            data-bs-backdrop="static"
+                            data-bs-keyboard="false"
+                            tabindex="-1"
+                            aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true"
+                        >
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2
+                                            class="modal-title"
+                                            id="staticBackdropLabel"
+                                        >
+                                            Eliminar producto
+                                        </h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            ¿Está a punto de eliminar el
+                                            producto: "<%= product.title %>"?
+                                            ¿Desea continuar?
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form
+                                            action="/products/delete/<%= product.id %>?_method=DELETE"
+                                            method="POST"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Cancelar
+                                            </button>
+                                            <button
+                                                type="submit"
+                                                class="btn btn-primary modal-footer__btn-delete"
+                                            >
+                                                Eliminar
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				</td>
 				<% }) %>
 			</tr>
 		</tbody>
 	</table>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+				crossorigin="anonymous"></script>
 </div>

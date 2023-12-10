@@ -1290,3 +1290,24 @@ video {
 textarea#description {
     resize: none;
 }
+
+.modal-footer .btn-primary {
+    background-color: #a90303;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #961414;
+    color: #fff;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #ccc;
+    color: #000;
+    width: 45%;
+}
+
+.btn-secondary:hover {
+    background-color: #919191;
+    color: #ffffff;
+}

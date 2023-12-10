@@ -1,37 +1,89 @@
 <div class="overflow-y-auto border-l border-black text-gray-800 pl-5">
-	<table class="table-auto w-full">
-		<thead>
-			<tr class="border-b border-black">
-				<th class="py-3">#</th>
-				<th class="py-3">Categoría</th>
-				<th class="py-3">Acciones</th>
-			</tr>
-		</thead>
-		<tbody class="text-[16.5px]">
-			<% categories.forEach((category, index) => { %>
-			<tr class="border-b border-gray-400">
-				<td class="font-bold px-3"><%= index + 1%></td>
-				<td class="p-1"><%= category.name %></td>
-				<td class="p-1">
-					<div class="flex gap-2 items-center">
-						<!-- <a
-							href="/products/detail/<%= category.id %>"
-							class="fa-regular fa-eye text-gray-700"
-						></a> -->
-						<a
-							href="/products/categories/edit/<%= category.id %>"
-							class="fa-regular fa-pen-to-square text-gray-700"
-						></a>
-						<form
-							action="/products/categories/delete/<%= category.id %>?_method=DELETE"
-							method="POST"
-						>
-							<button class="fa-regular fa-trash-can text-gray-700"></button>
-						</form>
-					</div>
-				</td>
-				<% }) %>
-			</tr>
-		</tbody>
-	</table>
+    <table class="table-auto w-full">
+        <thead>
+            <tr class="border-b border-black">
+                <th class="py-3">#</th>
+                <th class="py-3">Categoría</th>
+                <th class="py-3">Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="text-[16.5px]">
+            <% categories.forEach((category, index)=> { %>
+            <tr class="border-b border-gray-400">
+                <td class="font-bold px-3"><%= index + 1%></td>
+                <td class="p-1"><%= category.name %></td>
+                <td class="p-1">
+                    <div class="flex gap-2 items-center">
+                        <a
+                            href="/products/categories/edit/<%= category.id %>"
+                            class="fa-regular fa-pen-to-square text-gray-700"
+                        ></a>
+                        <div>
+                            <!-- Botón Modal -->
+                            <button
+                                type="button"
+                                class="fa-regular fa-trash-can text-gray-700"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop<%= category.id %>"
+                            ></button>
+                        </div>
+                        <!-- Modal -->
+                        <div
+                            class="modal fade"
+                            id="staticBackdrop<%= category.id %>"
+                            data-bs-backdrop="static"
+                            data-bs-keyboard="false"
+                            tabindex="-1"
+                            aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true"
+                        >
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2
+                                            class="modal-title"
+                                            id="staticBackdropLabel"
+                                        >
+                                            Eliminar categoría
+                                        </h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            ¿Está a punto de eliminar la
+                                            categoría: "<%= category.name %>"?
+                                            ¿Desea continuar?
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form
+                                            action="/products/categories/delete/<%= category.id %>?_method=DELETE"
+                                            method="POST"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Cancelar
+                                            </button>
+                                            <button
+                                                type="submit"
+                                                class="btn btn-primary modal-footer__btn-delete"
+                                            >
+                                                Eliminar
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <% }) %>
+            </tr>
+        </tbody>
+    </table>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+	crossorigin="anonymous"></script>
 </div>
