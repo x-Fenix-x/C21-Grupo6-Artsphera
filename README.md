@@ -63,6 +63,8 @@ El cliente final son aquellas personas apasionadas por el arte en general, inter
 
 ### [Retrospectiva SPRINT 6](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro6.MD)
 
+### [Retrospectiva SPRINT 7](https://github.com/x-Fenix-x/C21-Grupo6-Artesphera/blob/retrospectivas/retro7.MD)
+
 ## JIRA: https://arteshera.atlassian.net
 
 ## TRELLO: https://trello.com/b/SbEzd56P/c21-grupo-6-artesphera

@@ -1,6 +1,6 @@
 const $ = (id) => document.getElementById(id);
 
-window.onload = function () {
+window.addEventListener('load', function() {
     $('email').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
@@ -74,4 +74,4 @@ window.onload = function () {
 
         !error && this.submit();
     });
-};
+});

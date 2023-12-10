@@ -1,70 +1,80 @@
 <header class="headerContent">
-	<div class="subHeader bg-red-700">
-		<p>
-			Hacemos envíos a todo el país. Política de devolución de 15 días. Envío
-			gratuito en pedidos superiores a $ 10000.
-		</p>
-	</div>
-	<div class="firstHeader">
-		<div class="headerMenu">
-			<button class="fa-solid fa-bars"></button>
-		</div>
-		<a href="/">
-			<img src="/images/Logo 3.svg" alt="Logo" />
-		</a>
-		<div class="leftHeader">
-			<a href="/">
-				<img src="/images/LogoExpanded.svg" alt="" />
-			</a>
-			<div class="dropdown">
-				<a href="#" class="dropdown-titulo">Disciplinas</a>
-				<ul class="dropdown-menu">
-					<% categories.forEach(category => { %>
-					<li>
-						<a href="/products/category/<%= category.name %>"
-							><%= category.name %></a
-						>
-					</li>
-					<% }) %>
-				</ul>
-			</div>
-			<form action="/products/search" method="GET" class="leftNav">
-				<i class="fa-solid fa-magnifying-glass"></i>
-				<input type="text" placeholder="¿Qué deseas buscar?" name="query" id="search"/>
-			</form>
-		</div>
-		<div class="rightHeader">
-			<% if (locals.userLogin) { %>
-			<div class="adminPanel">
-				<p class="hiAdmin">Hola, <%= userLogin.name %> !</p>
-				<% if (userLogin.role === 1) { %>
-				<a href="/users/admin" class="admin">
-					<i class="fa-solid fa-solar-panel"></i>
-				</a>
-				<% } %>
-			</div>
-			<div class="headerSearch">
-				<button class="fa-solid fa-magnifying-glass"></button>
-			</div>
-			<% if (locals.userLogin) { %>
-			<a
-				href="/users/profile/<%= locals.userLogin.id %>"
-				class="fa-sharp fa-solid fa-user"
-			></a>
-			<% }else{ %>
-			<a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
-			<% } %>
-			<a href="/carrito" class="fa-solid fa-cart-shopping"></a>
-			<a href="/users/logout" class="exit">
-				<i class="fa-solid fa-xmark"></i>
-			</a>
-			<% }else{ %>
-			<div class="headerSearch">
-				<button class="fa-solid fa-magnifying-glass"></button>
-			</div>
-			<a href="/carrito" class="fa-solid fa-cart-shopping"></a>
-			<a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
-			<% } %>
-		</div>
-	</div>
+    <div class="subHeader bg-red-700">
+        <p>
+            Hacemos envíos a todo el país. Política de devolución de 15 días.
+            Envío gratuito en pedidos superiores a $ 10000.
+        </p>
+    </div>
+    <div class="firstHeader">
+        <div class="headerMenu">
+            <button class="fa-solid fa-bars"></button>
+        </div>
+        <a href="/">
+            <img src="/images/Logo 3.svg" alt="Logo" />
+        </a>
+        <div class="leftHeader">
+            <a href="/">
+                <img src="/images/LogoExpanded.svg" alt="logo" />
+            </a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-titulo">Disciplinas</a>
+                <ul class="dropdown-menu">
+                    <% categories.forEach(category => { %>
+                    <li>
+                        <a href="/products/category/<%= category.name %>"
+                            ><%= category.name %></a
+                        >
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+            <form
+                action="/products/search"
+                method="GET"
+                class="leftNav"
+                id="formSearch"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    placeholder="¿Qué deseas buscar?"
+                    name="query"
+                    id="search"
+                />
+            </form>
+        </div>
+        <div class="rightHeader">
+            <% if (locals.userLogin) { %>
+            <div class="adminPanel">
+                <p class="hiAdmin">Hola, <%= userLogin.name %> !</p>
+                <% if (userLogin.role === 1) { %>
+                <a href="/users/admin" class="admin">
+                    <i class="fa-solid fa-solar-panel"></i>
+                </a>
+                <% } %>
+            </div>
+            <div class="headerSearch">
+                <button class="fa-solid fa-magnifying-glass"></button>
+            </div>
+            <% if (locals.userLogin) { %>
+            <a
+                href="/users/profile/<%= locals.userLogin.id %>"
+                class="fa-sharp fa-solid fa-user"
+            ></a>
+            <% }else{ %>
+            <a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
+            <% } %>
+            <a href="/carrito" class="fa-solid fa-cart-shopping"></a>
+            <a href="/users/logout" class="exit">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+            <% }else{ %>
+            <div class="headerSearch">
+                <button class="fa-solid fa-magnifying-glass"></button>
+            </div>
+            <a href="/carrito" class="fa-solid fa-cart-shopping"></a>
+            <a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
+            <% } %>
+        </div>
+    </div>
 </header>

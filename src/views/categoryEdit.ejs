@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head',{title: "Artesphera | Agregar producto" }) %>
+	<link rel="stylesheet" href="/dist/output.css" />
+
+	<body>
+		<%- include('partials/header') %>
+		<main class="min-h-screen flex flex-col">
+				<section
+					class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.jpg')] bg-auto bg-repeat sm:gap-0 lg:bg-center">
+					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
+						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
+							<form action="/products/addCategory" method="POST" class="flex flex-col gap-12"
+								enctype="multipart/form-data" id="formAdd">
+								<p class="text-3xl font-bold">Editar categoría</p>
+								<div>
+									<div class="flex flex-col">
+										<label for="title" class="font-medium">Título</label>
+										<input type="text" id="title" name="title" class="p-3 bg-gray-100 text-sm"
+											placeholder="Título del producto " value="<%= title %>" />
+										<small class="text-danger" id="msgError-title">
+											<%= locals.errors && (errors.title && errors.title.msg) %>
+										</small>
+									</div>
+								</div>
+								<div>
+									<small class="text-danger" id="msgError-empty">
+									</small>
+								</div>
+								<button type="submit"
+									class="font-bold py-4 text-[#5e4a2d] bg-[#d0ad7a] hover:bg-[#3d3220] hover:text-[#967c57] transition-all ease-in-out rounded-full">
+									Guardar Cambios
+								</button>
+							</form>
+							<%- include('partials/tableCategory') %>
+						</div>
+					</article>
+				</section>
+			</main>
+			<script src="/javascripts/productAddEdit.js"></script>
+	</body>
+
+</html>

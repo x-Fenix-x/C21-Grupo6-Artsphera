@@ -1,6 +1,6 @@
 const $ = (id) => document.getElementById(id);
 
-window.onload = function (e) {
+window.addEventListener('load', function() {
     $('name').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
@@ -156,4 +156,4 @@ window.onload = function (e) {
 
         !error && this.submit();
     });
-};
+});
