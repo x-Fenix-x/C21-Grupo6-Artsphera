@@ -16,10 +16,10 @@ module.exports = (req, res) => {
             name: name,
             image: image,
         })
-        .then(() => {
-            return res.redirect('/products/categoryAdd');
-        })
-        .catch((error) => console.log(error));
+            .then(() => {
+                return res.redirect('/products/categories/add');
+            })
+            .catch((error) => console.log(error));
     } else {
         db.Category.findAll()
             .then((categories) => {

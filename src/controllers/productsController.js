@@ -9,4 +9,7 @@ module.exports = {
     remove: require('./products/remove'),
     addCategory: require('./products/addCategory'),
     createCategory: require('./products/createCategory'),
+    editCategory: require('./products/editCategory'),
+    updateCategory: require('./products/updateCategory'),
+    removeCategory: require('./products/removeCategory'),
 };

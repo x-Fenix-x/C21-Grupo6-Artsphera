@@ -31,14 +31,14 @@
                                     <input
                                         type="text"
                                         name="name"
-										id="title"
+										id="name"
                                         class="p-3 bg-gray-100 text-sm<%= locals.errors && (errors.name && 'is-invalid') %>"
                                         placeholder="Título de la categoria"
                                         value="<%= locals.old && (old.name && old.name ) %>"
                                     />
                                     <small
                                         class="text-danger"
-                                        id="msgError-title"
+                                        id="msgError-name"
                                     >
                                         <%= locals.errors && (errors.name &&
                                         errors.name.msg) %>

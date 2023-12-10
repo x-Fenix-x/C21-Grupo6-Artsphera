@@ -10,18 +10,21 @@
 					class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.jpg')] bg-auto bg-repeat sm:gap-0 lg:bg-center">
 					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
 						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
-							<form action="/products/addCategory" method="POST" class="flex flex-col gap-12"
+							<form action="/products/categories/update/<%= category.id %>?_method=PUT" method="POST" class="flex flex-col gap-12"
 								enctype="multipart/form-data" id="formAdd">
 								<p class="text-3xl font-bold">Editar categoría</p>
 								<div>
 									<div class="flex flex-col">
-										<label for="title" class="font-medium">Título</label>
-										<input type="text" id="title" name="title" class="p-3 bg-gray-100 text-sm"
-											placeholder="Título del producto " value="<%= title %>" />
-										<small class="text-danger" id="msgError-title">
-											<%= locals.errors && (errors.title && errors.title.msg) %>
+										<label for="name" class="font-medium">Título</label>
+										<input type="text" id="name" name="name" class="p-3 bg-gray-100 text-sm"
+											placeholder="Título del producto " value="<%= category.name %>" />
+										<small class="text-danger" id="msgError-name">
 										</small>
 									</div>
+								</div>
+								<div class="flex flex-col">
+									<label for="image" class="font-medium">Subir imagen:</label>
+									<input type="file" id="image" name="image" accept="image/*" />
 								</div>
 								<div>
 									<small class="text-danger" id="msgError-empty">
