@@ -8,6 +8,8 @@ const {
     products,
     remove,
     search,
+    addCategory,
+    createCategory
 } = require('../controllers/productsController');
 
 const router = express.Router();
@@ -22,6 +24,8 @@ router
     .get('/search', search)
     .get('/detail/:id', detail)
     .get('/add', add)
+    .get('/categoryAdd', addCategory)
+    .post('/categoryAdd',upload.single('image'), createCategory)
     .post('/add', upload.single('image'), productAddValidator, create)
     .get('/edit/:id', edit)
     .put('/update/:id', upload.single('image'), productEditValidator, update)

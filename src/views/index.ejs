@@ -1,196 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
-	<%- include('partials/head',{title : "Artesphera"}) %>
+<%- include('partials/head',{title : "Artesphera" }) %>
 
 	<body class="index">
 		<%- include('partials/header') %>
-		<main class="index-main">
-			<div class="index-main__section--banner">
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide banner_img">
-							<img src="/images/banner/banner1.png" alt="banner1" />
-						</div>
-						<div class="swiper-slide banner_img">
-							<img src="/images/banner/banner2.png" alt="banner2" />
-						</div>
-						<div class="swiper-slide banner_img">
-							<img src="/images/banner/banner3.png" alt="banner3" />
-						</div>
-						<div class="swiper-slide banner_img">
-							<img src="/images/banner/banner4.png" alt="banner4" />
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-			</div>
-			<section class="index-tematicas">
-				<h1 class="index__titulo">Explora por temáticas</h1>
-				<div class="index-tematicas__contenedor">
-					<% categories.forEach(category => { %>
-					<article class="index-article">
-						<a href="/products/category/<%= category.name.toLowerCase() %>">
-							<img
-								class="index-article__img"
-								src="/images/productos/<%= category.image %>"
-								alt="pintura"
-							/>
-							<h3 class="index-article__titulo"><%= category.name %></h3>
-						</a>
-					</article>
-					<% }) %>
-				</div>
-				<a class="index-tematicas__button" href="/products/"
-					>Ver todos los productos</a
-				>
-			</section>
-			<section class="index-producto">
-				<h2 class="index-producto__categoria">Novedades</h2>
-				<i class="fa-solid fa-chevron-left ant-boton"></i>
-				<i class="fa-solid fa-chevron-right sig-boton"></i>
-				<div class="producto-container">
-					<% news.forEach(product => { %>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<img
-								class="producto-card__img"
-								src="/images/productos/<%= product.images[0].image %>"
-								alt="producto"
-							/>
-							<a
-								href="/products/detail/<%= product.id %>"
-								class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo"><%= product.title %></h2>
-							<p class="producto-info__descripcion">
-								<%= product.description %>
-							</p>
-							<span class="precio--descuento">$<%= product.price %></span>
-						</div>
-					</div>
-					<% }) %>
-				</div>
-			</section>
-			<section>
-				<h2 class="index-producto__categoria tituloMod">Ofertas por tiempo limitado</h2>
-				<div class="oferta-container">
-					<% offers.forEach(product => { %>
-					<div class="producto-card">
-						<div class="imagen-oferta">
-							<img src="/images/productos/<%= product.images[0].image %>" alt="producto" />
-							<div class="descuento">
-								<span>-<%= product.discount %>%</span>
+			<main class="index-main">
+				<div class="index-main__section--banner">
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide banner_img">
+								<img src="/images/banner/banner1.png" alt="banner1" />
+							</div>
+							<div class="swiper-slide banner_img">
+								<img src="/images/banner/banner2.png" alt="banner2" />
+							</div>
+							<div class="swiper-slide banner_img">
+								<img src="/images/banner/banner3.png" alt="banner3" />
+							</div>
+							<div class="swiper-slide banner_img">
+								<img src="/images/banner/banner4.png" alt="banner4" />
 							</div>
 						</div>
-						<div class="informacion-oferta">
-							<h3 class="producto-info__titulo"><%= product.title %></h3>
-							<p><%= product.category %></p>
-							<p>
-								<span class="precio-original">$<%= product.price %></span>
-							</p>
-							
-							<p>
-								<span class="precio-descuento">
-									$<%= priceFinal(product.price, product.discount) %>
-								</span>
-							</p>
-							<!-- <p>
-								Quedan <span class="stock"><%= product.stock %></span> en stock
-							</p> -->
-							<a href="/products/detail/<%= product.id %>" class="index-ver__mas"
-								>Ver más</a
-							>
-						</div>
+						<div class="swiper-pagination"></div>
 					</div>
-					<% }) %>
 				</div>
-			</section>
-			<section class="index-producto">
-				<h2 class="index-producto__categoria">Selección de la semana</h2>
-				<div class="producto-container">
+				<section class="index-tematicas">
+					<h1 class="index__titulo">Explora por temáticas</h1>
+					<div class="index-tematicas__contenedor">
+						<% categories.forEach(category=> { %>
+							<article class="index-article">
+								<a href="/products/category/<%= category.name.toLowerCase() %>">
+									<img class="index-article__img" src="/images/productos/<%= category.image %>"
+										alt="" />
+									<h3 class="index-article__titulo">
+										<%= category.name %>
+									</h3>
+								</a>
+							</article>
+							<% }) %>
+					</div>
+					<a class="index-tematicas__button" href="/products/">Ver todos los productos</a>
+				</section>
+				<section class="index-producto">
+					<h2 class="index-producto__categoria">Novedades</h2>
 					<i class="fa-solid fa-chevron-left ant-boton"></i>
 					<i class="fa-solid fa-chevron-right sig-boton"></i>
-					<% week.forEach(product => { %>
-					<div class="producto-card">
-						<div class="producto-imagen">
-							<% if (product.discount > 0) { %>
-							<span class="producto-card__descuento">
-								-<%= product.discount %> off
-							</span>
-							<% } %>
-							<img
-								class="producto-card__img"
-								src="/images/productos/<%= product.images[0].image %>"
-								alt="producto"
-							/>
-							<a
-								href="/products/detail/<%= product.id %>"
-								class="producto-card__boton"
-								>Ver más</a
-							>
-						</div>
-						<div class="producto-info">
-							<h2 class="producto-info__titulo"><%= product.title %></h2>
-							<p class="producto-info__descripcion"><%= product.description %></p>
-							<% if (product.discount > 0) { %>
-								<p>
-									Precio con descuento:
-									<span class="precio-descuento">
-										$<%= priceFinal(product.price, product.discount) %>
-									</span>
-								</p>								
-							<span class="precio">$<%= product.price %></span>
+					<div class="producto-container">
+						<% news.forEach(product=> { %>
+							<div class="producto-card">
+								<div class="producto-imagen">
+									<img class="producto-card__img"
+										src="/images/productos/<%= product.images[0].image %>" alt="producto" />
+									<a href="/products/detail/<%= product.id %>" class="producto-card__boton">Ver
+										más</a>
+								</div>
+								<div class="producto-info">
+									<h2 class="producto-info__titulo">
+										<%= product.title %>
+									</h2>
+									<p class="producto-info__descripcion">
+										<%= product.description %>
+									</p>
+									<span class="precio--descuento">$<%= product.price %></span>
+								</div>
+							</div>
+							<% }) %>
+					</div>
+				</section>
+				<section>
+					<h2 class="index-producto__categoria tituloMod">Ofertas por tiempo limitado</h2>
+					<div class="oferta-container">
+						<% offers.forEach(product=> { %>
+							<div class="producto-card">
+								<div class="imagen-oferta">
+									<img src="/images/productos/<%= product.images[0].image %>" alt="producto" />
+									<div class="descuento">
+										<span>-<%= product.discount %>%</span>
+									</div>
+								</div>
+								<div class="informacion-oferta">
+									<h3 class="producto-info__titulo">
+										<%= product.title %>
+									</h3>
+									<p>
+										<%= product.category %>
+									</p>
+									<p>
+										<span class="precio-original">$<%= product.price %></span>
+									</p>
 
-							<% } else { %>
-							<span class="precio--descuento">$<%= product.price %></span>
-							<% } %>
-							<!-- <p>
+									<p>
+										<span class="precio-descuento">
+											$<%= priceFinal(product.price, product.discount) %>
+										</span>
+									</p>
+									<!-- <p>
+								Quedan <span class="stock"><%= product.stock %></span> en stock
+							</p> -->
+									<a href="/products/detail/<%= product.id %>" class="index-ver__mas">Ver más</a>
+								</div>
+							</div>
+							<% }) %>
+					</div>
+				</section>
+				<section class="index-producto">
+					<h2 class="index-producto__categoria">Selección de la semana</h2>
+					<div class="producto-container">
+						<i class="fa-solid fa-chevron-left ant-boton"></i>
+						<i class="fa-solid fa-chevron-right sig-boton"></i>
+						<% week.forEach(product=> { %>
+							<div class="producto-card">
+								<div class="producto-imagen">
+									<% if (product.discount> 0) { %>
+										<span class="producto-card__descuento">
+											-<%= product.discount %> off
+										</span>
+										<% } %>
+											<img class="producto-card__img"
+												src="/images/productos/<%= product.images[0].image %>" alt="producto" />
+											<a href="/products/detail/<%= product.id %>"
+												class="producto-card__boton">Ver más</a>
+								</div>
+								<div class="producto-info">
+									<h2 class="producto-info__titulo">
+										<%= product.title %>
+									</h2>
+									<p class="producto-info__descripcion">
+										<%= product.description %>
+									</p>
+									<% if (product.discount> 0) { %>
+										<p>
+											Precio con descuento:
+											<span class="precio-descuento">
+												$<%= priceFinal(product.price, product.discount) %>
+											</span>
+										</p>
+										<span class="precio">$<%= product.price %></span>
+
+										<% } else { %>
+											<span class="precio--descuento">$<%= product.price %></span>
+											<% } %>
+												<!-- <p>
 								Quedan <span class="stock"><%= product.stock %></span> en stock 
 							</p> -->
-						</div>
-					</div>
-					<% }) %>
-				</div>
-			</section>
-			<section class="index-form">
-				<h2>Recibe las últimas novedades</h2>
-				<h3>
-					Suscribite a nuestro boletín para recibir novedades y/o cupones de
-					descuentos
-				</h3>
-				<div class="index-form-container">
-					<form>
-						<div>
-							<input
-								class="index-form-container__email"
-								type="email"
-								name="email"
-								placeholder="Ingresa tu email"
-								required
-							/>
-							<button type="submit">Suscribirse</button>
-							<div>
-								<label for="terminos">
-									<input
-										type="checkbox"
-										name="terminos"
-										id="terminos"
-										required
-									/>
-									Acepta nuestros terminos y condiciones
-								</label>
+								</div>
 							</div>
-						</div>
-					</form>
-				</div>
-			</section>
-		</main>
-		<%- include('partials/footer') %>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-		<script src="/javascripts/index-functions.js"></script>
-		<script src="/javascripts/search.js"></script>
+							<% }) %>
+					</div>
+				</section>
+				<section class="index-form">
+					<h2>Recibe las últimas novedades</h2>
+					<h3>
+						Suscribite a nuestro boletín para recibir novedades y/o cupones de
+						descuentos
+					</h3>
+					<div class="index-form-container">
+						<form>
+							<div>
+								<input class="index-form-container__email" type="email" name="email"
+									placeholder="Ingresa tu email" required />
+								<button type="submit">Suscribirse</button>
+								<div>
+									<label for="terminos">
+										<input type="checkbox" name="terminos" id="terminos" required />
+										Acepta nuestros terminos y condiciones
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+			</main>
+			<%- include('partials/footer') %>
+				<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+				<script src="/javascripts/index-functions.js"></script>
+				<script src="/javascripts/search.js"></script>
 	</body>
+
 </html>

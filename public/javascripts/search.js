@@ -1,15 +1,17 @@
 const $ = (id) => document.getElementById(id);
 
-window.onload = function () {
+window.addEventListener('load', function() {
     const search = $('search');
 
-    search.addEventListener('focus', function () {
-        if (true) {
-            this.classList.add('is-valid');
-        }
-    });
+    $('formSearch').addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    search.addEventListener('blur', function () {
-        this.classList.remove('is-valid');
+        let error = false;
+
+        if (search.value.trim() === '') {
+            error = true;
+        }
+
+        !error && this.submit();
     });
-};
+});

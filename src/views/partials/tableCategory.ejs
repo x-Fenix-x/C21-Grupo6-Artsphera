@@ -1,0 +1,37 @@
+<div class="overflow-y-auto border-l border-black text-gray-800 pl-5">
+	<table class="table-auto w-full">
+		<thead>
+			<tr class="border-b border-black">
+				<th class="py-3">#</th>
+				<th class="py-3">Categoría</th>
+				<th class="py-3">Acciones</th>
+			</tr>
+		</thead>
+		<tbody class="text-[16.5px]">
+			<% categories.forEach((category, index) => { %>
+			<tr class="border-b border-gray-400">
+				<td class="font-bold px-3"><%= index + 1%></td>
+				<td class="p-1"><%= category.name %></td>
+				<td class="p-1">
+					<div class="flex gap-2 items-center">
+						<a
+							href="/products/detail/<%= category.id %>"
+							class="fa-regular fa-eye text-gray-700"
+						></a>
+						<a
+							href="/products/edit/<%= category.id %>"
+							class="fa-regular fa-pen-to-square text-gray-700"
+						></a>
+						<form
+							action="/products/delete/<%= category.id %>?_method=DELETE"
+							method="POST"
+						>
+							<button class="fa-regular fa-trash-can text-gray-700"></button>
+						</form>
+					</div>
+				</td>
+				<% }) %>
+			</tr>
+		</tbody>
+	</table>
+</div>
