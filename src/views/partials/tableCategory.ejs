@@ -14,16 +14,16 @@
 				<td class="p-1"><%= category.name %></td>
 				<td class="p-1">
 					<div class="flex gap-2 items-center">
-						<a
+						<!-- <a
 							href="/products/detail/<%= category.id %>"
 							class="fa-regular fa-eye text-gray-700"
-						></a>
+						></a> -->
 						<a
-							href="/products/edit/<%= category.id %>"
+							href="/products/categories/edit/<%= category.id %>"
 							class="fa-regular fa-pen-to-square text-gray-700"
 						></a>
 						<form
-							action="/products/delete/<%= category.id %>?_method=DELETE"
+							action="/products/categories/delete/<%= category.id %>?_method=DELETE"
 							method="POST"
 						>
 							<button class="fa-regular fa-trash-can text-gray-700"></button>
