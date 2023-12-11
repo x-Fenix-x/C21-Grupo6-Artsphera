@@ -1,6 +1,20 @@
 const $ = (id) => document.getElementById(id);
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
+    const search = $('search');
+
+    $('formSearch').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let error = false;
+
+        if (search.value.trim() === '') {
+            error = true;
+        }
+
+        !error && this.submit();
+    });
+
     $('title').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
@@ -11,7 +25,7 @@ window.addEventListener('load', function() {
                 $('msgError-title').innerHTML = 'Solo caracteres alfabéticos';
                 this.classList.add('is-invalid');
                 break;
-            case this.value.length < 2:
+            case this.value.trim().length < 2:
                 $('msgError-title').innerHTML = 'Minimo dos caracteres';
                 this.classList.add('is-invalid');
                 break;

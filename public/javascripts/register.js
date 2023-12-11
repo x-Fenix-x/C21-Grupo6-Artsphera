@@ -1,6 +1,20 @@
 const $ = (id) => document.getElementById(id);
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
+    const search = $('search');
+
+    $('formSearch').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let error = false;
+
+        if (search.value.trim() === '') {
+            error = true;
+        }
+
+        !error && this.submit();
+    });
+
     $('name').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
@@ -11,7 +25,7 @@ window.addEventListener('load', function() {
                 $('msgError-name').innerHTML = 'Solo caracteres alfabéticos';
                 this.classList.add('is-invalid');
                 break;
-            case this.value.length < 2:
+            case this.value.trim().length < 2:
                 $('msgError-name').innerHTML = 'Minimo dos caracteres';
                 this.classList.add('is-invalid');
                 break;
@@ -22,6 +36,7 @@ window.addEventListener('load', function() {
                 break;
         }
     });
+
     $('surname').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
@@ -43,6 +58,7 @@ window.addEventListener('load', function() {
                 break;
         }
     });
+
     $('email').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
@@ -87,9 +103,7 @@ window.addEventListener('load', function() {
                 $('msgError-password').innerHTML = 'Mínimo 4 caracteres';
                 this.classList.add('is-invalid');
                 break;
-            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/.test(
-                this.value
-            ):
+            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/.test(this.value):
                 $('msgError-password').innerHTML =
                     'Debe tener al menos un número, una mayúscula y un carácter especial';
                 this.classList.add('is-invalid');
