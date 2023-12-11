@@ -23,13 +23,6 @@ module.exports = [
             max: 100,
         })
         .withMessage('El rango debe ser de 0 a 100'),
-    check('stock')
-        .notEmpty()
-        .withMessage('No puede quedar vacio')
-        .isInt({
-            gt: 0,
-        })
-        .withMessage('Debe ser positivo'),
     check('description')
         .notEmpty()
         .withMessage('No puede quedar vacia')

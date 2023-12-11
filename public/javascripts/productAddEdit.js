@@ -99,23 +99,6 @@ window.addEventListener('load', function () {
         }
     });
 
-    $('stock').addEventListener('blur', function () {
-        switch (true) {
-            case !this.value.trim():
-                $('msgError-stock').innerHTML = 'Stock requerido';
-                this.classList.add('is-invalid');
-                break;
-            case +this.value <= 0:
-                $('msgError-stock').innerHTML = 'Debe ser positivo';
-                break;
-            default:
-                $('msgError-stock').innerHTML = null;
-                this.classList.remove('is-invalid');
-                this.classList.add('is-valid');
-                break;
-        }
-    });
-
     $('description').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
