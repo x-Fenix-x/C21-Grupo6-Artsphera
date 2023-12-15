@@ -20,7 +20,7 @@ const upload = require('../middlewares/upload');
 const productAddValidator = require('../validations/productAddValidator');
 const productEditValidator = require('../validations/productEditValidator');
 
-/* Productos */
+/* Products */
 router
     .get('/', products)
     .get('/category/:category', products)

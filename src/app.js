@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const paginate = require('express-paginate');
 
 const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
@@ -36,6 +37,8 @@ app.use(
 );
 app.use(cookieCheck);
 app.use(userSessionCheck);
+
+app.use(paginate.middleware(4, 50));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
