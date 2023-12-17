@@ -3,7 +3,7 @@ const db = require('../database/models');
 const getAllProducts = async (limit, offset) => {
     try {
         const { count, rows } = await db.Product.findAndCountAll({
-            atrributes: {
+            attributes: {
                 exclude: ['createdAt', 'updatedAt', 'categoryId'],
             },
             limit,
@@ -39,7 +39,7 @@ const getProductById = async (id) => {
         }
 
         const product = await db.Product.findByPk(id, {
-            atrributes: {
+            attributes: {
                 exclude: ['createdAt', 'updatedAt', 'categoryId'],
             },
             include: [

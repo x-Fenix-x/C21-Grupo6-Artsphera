@@ -15,6 +15,24 @@ window.addEventListener('load', function () {
         !error && this.submit();
     });
 
+    document.getElementById('avatarBtn').addEventListener('click', function () {
+        document.getElementById('avatar').click();
+    });
+
+    document.getElementById('avatar').addEventListener('change', function () {
+        const fileInput = this;
+        const imagePreview = document.querySelector('.profile-picture__img');
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    });
+
     $('name').addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
@@ -127,27 +145,6 @@ window.addEventListener('load', function () {
                 this.classList.add('is-valid');
                 break;
         }
-    });
-
-    $('formAdd').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const elementsForm = $('formAdd').elements;
-        let error = false;
-
-        for (let i = 0; i < elementsForm.length - 1; i++) {
-            if (
-                !elementsForm[i].value.trim() ||
-                elementsForm[i].classList.contains('is-invalid')
-            ) {
-                elementsForm[i].classList.add('is-invalid');
-                $('msgError-empty').innerHTML =
-                    'Los campos señalados son obligatorios';
-                error = true;
-            }
-        }
-
-        !error && this.submit();
     });
 
     $('formAdd2').addEventListener('submit', function (e) {
