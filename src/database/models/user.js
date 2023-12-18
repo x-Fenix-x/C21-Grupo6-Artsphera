@@ -1,5 +1,6 @@
-'use strict';
+// En tu archivo models/User.js
 const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
     class User extends Model {
         /**
@@ -9,14 +10,26 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate(models) {
             // define association here
+
+            User.hasOne(models.Address, {
+                as: 'address',
+                foreignKey: 'userId',
+            });
+
+            User.hasMany(models.Order, {
+                as: 'orders',
+                foreignKey: 'userId',
+            });
         }
     }
+
     User.init(
         {
             name: DataTypes.STRING,
             surname: DataTypes.STRING,
             email: DataTypes.STRING,
             password: DataTypes.STRING,
+            avatar: DataTypes.STRING,
             roleId: DataTypes.INTEGER,
         },
         {
@@ -24,5 +37,6 @@ module.exports = (sequelize, DataTypes) => {
             modelName: 'User',
         }
     );
+
     return User;
 };

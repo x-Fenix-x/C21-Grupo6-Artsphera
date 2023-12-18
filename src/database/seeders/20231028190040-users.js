@@ -11,8 +11,9 @@ module.exports = {
                     surname: 'Artesphera',
                     email: 'admin@artesphera.com',
                     password:
-                        '$2a$10$t0oLDMMUDEU0cMT4SdgDZe42AP/gqaJx65VQBs4xfYQgx3FXD5muS',
+                        '$2a$10$SfBc1RudoK3PmeOOuOOSMOkm23pPOuLJwwmmE7y3BITS9RcsNMz7.',
                     roleId: 1,
+                    avatar: '1-admin.png',
                     createdAt: new Date(),
                     updatedAt: new Date(),
                 },
@@ -21,7 +22,8 @@ module.exports = {
                     surname: 'Artesphera',
                     email: 'user@artesphera.com',
                     password:
-                        '$2a$10$t0oLDMMUDEU0cMT4SdgDZe42AP/gqaJx65VQBs4xfYQgx3FXD5muS',
+                        '$2a$10$Pt3A3cvWAGYKN8sGtO37n.F/dnL57ug4CHzR.JBYUuinYHs8r1AzS',
+                    avatar: '2-user.png',
                     roleId: 2,
                     createdAt: new Date(),
                     updatedAt: new Date(),

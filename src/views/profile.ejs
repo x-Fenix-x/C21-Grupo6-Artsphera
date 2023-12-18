@@ -7,9 +7,21 @@
 			<main class="profile">
 				<h1 class="profile__title">Mis datos</h1>
 				<h2 class="profile__title">Actualiza tu información</h2>
+
 				<div class="profile-form">
 					<form action="/users/update/<%= user.id %>?_method=PUT" class="profile-form__form" method="POST"
-						id="formAdd">
+						enctype="multipart/form-data">
+						<!-- <div>
+							<div class="profile-picture" id="profile-picture">
+								<img class="profile-picture__img" src="/images/users/<%= avatar || '2-user.png'%>"
+									alt="avatar">
+								<div class="profile-picture__button">
+									<button type="button" id="avatarBtn" class="btn btn-dark">
+										<i class="fas fa-camera"></i> Cambiar foto
+									</button>
+								</div>
+							</div>
+						</div> -->
 						<div class="profile-form__div">
 							<label class="profile-form__title" for="name">Nombre</label>
 							<input class="profile-form__input" type="text" id="name" name="name"
@@ -36,15 +48,45 @@
 								</p>
 								<% } %>
 						</div>
+						<div class="profile">
+							<h2 class="profile__title">Información de Envío</h2>
+						</div>
 						<div class="profile-form__div">
-							<label class="profile-form__title" for="email">Email</label>
-							<input
-								class="form-control profile-form__input<%= locals.errors && (locals.errors.email && 'is-invalid') %>"
-								type="email" id="email" name="email" placeholder="Ingrese su email"
-								value="<%= user.email %>" />
-							<small class="text-sm text-danger" id="msgError-email">
-								<%= locals.errors && (errors.email && errors.email.msg) %>
+							<label for="province" class="profile-form__title">Provincia</label>
+							<select type="text" class="form-select__address" id="province" name="province">
+								<option value="" hidden>Seleccione...</option>
+								<% provinces.forEach(province => { %>
+									<option value="<%= province %>" <%= user.address && user.address.province === province ? 'selected' : '' %>>
+										<%= province %>
+									</option>
+								<% }); %>
+							</select>
+						</div>
+						<div class="profile-form__div">
+							<label for="city" class="profile-form__title">Ciudad</label>
+							<select type="text" class="form-select__address" id="city" name="city">
+								<option value="" hidden>Seleccione...</option>
+								<% cities.forEach(city => { %>
+									<option value="<%= city %>" <%= user.address && user.address.city === city ? 'selected' : '' %>>
+										<%= city %>
+									</option>
+								<% }); %>
+							</select>
+						</div>
+						<div class="profile-form__div">
+							<label class="profile-form__title" for="address">Dirección</label>
+							<input class="profile-form__input" type="text" id="address" name="address"
+								placeholder="Ingrese su dirección"
+								value="<%= user.address ? user.address.address : '' %>" />
+							<small class="text-danger" id="msgError-address">
+								<%= locals.errors && errors.address ? errors.address.msg : '' %>
 							</small>
+						</div>
+						<div>
+							<div class="d-flex justify-content-start">
+								<input class="form-control" type="file" id="avatar" name="avatar" hidden>
+								<label for="avatar" id="avatarLabel" class="btn btn-dark" hidden></label>
+							</div>
 						</div>
 						<div>
 							<small class="text-danger" id="msgError-empty">
@@ -65,16 +107,18 @@
 						method="POST" id="formAdd2">
 						<div class="profile-form__div">
 							<label class="profile-form__title" for="password">Contraseña</label>
-							<input class="profile-form__input form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>" type="password" id="password" name="password"
-								placeholder="Ingrese contraseña" />
+							<input
+								class="profile-form__input form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>"
+								type="password" id="password" name="password" placeholder="Ingrese contraseña" />
 							<small class="text-sm text-danger" id="msgError-password">
 								<%= locals.errors && (errors.password && errors.password.msg) %>
 							</small>
 						</div>
 						<div class="profile-form__div">
 							<label class="profile-form__title" for="password2">Confirmar contraseña</label>
-							<input class="profile-form__input form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>" type="password" id="password2" name="password2"
-								placeholder="Repita su contraseña"/>
+							<input
+								class="profile-form__input form-control <%= locals.errors && (locals.errors.password && 'is-invalid') %>"
+								type="password" id="password2" name="password2" placeholder="Repita su contraseña" />
 							<small class="text-sm text-danger" id="msgError-password2">
 								<%= locals.errors && (errors.password2 && errors.password2.msg) %>
 							</small>
@@ -138,12 +182,10 @@
 				</div>
 			</main>
 			<%- include('partials/footer') %>
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-				integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-				crossorigin="anonymous"></script>
-			<script src="/javascripts/profile.js"></script>
-			<script src="/javascripts/search.js"></script>
-
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+					integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+					crossorigin="anonymous"></script>
+				<script src="/javascripts/profile.js"></script>
 	</body>
 
 </html>

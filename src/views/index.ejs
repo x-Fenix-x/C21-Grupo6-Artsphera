@@ -94,9 +94,6 @@
 											$<%= priceFinal(product.price, product.discount) %>
 										</span>
 									</p>
-									<!-- <p>
-								Quedan <span class="stock"><%= product.stock %></span> en stock
-							</p> -->
 									<a href="/products/detail/<%= product.id %>" class="index-ver__mas">Ver más</a>
 								</div>
 							</div>
@@ -140,9 +137,6 @@
 										<% } else { %>
 											<span class="precio--descuento">$<%= product.price %></span>
 											<% } %>
-												<!-- <p>
-								Quedan <span class="stock"><%= product.stock %></span> en stock 
-							</p> -->
 								</div>
 							</div>
 							<% }) %>

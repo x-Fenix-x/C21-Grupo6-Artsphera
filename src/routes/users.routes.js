@@ -20,6 +20,7 @@ const registerValidator = require('../validations/registerValidator');
 const userCheck = require('../middlewares/userCheck');
 const adminCheck = require('../middlewares/adminCheck');
 const notUserCheck = require('../middlewares/notUserCheck');
+const uploadUser = require('../middlewares/uploadUser');
 const router = express.Router();
 
 /* Users */
@@ -30,7 +31,13 @@ router
     .post('/register', registerValidator, createRegister)
     .get('/admin', adminCheck, adminPanel)
     .get('/profile/:id', userCheck, profile)
-    .put('/update/:id', profileValidator, userCheck, update)
+    .put(
+        '/update/:id',
+        uploadUser.single('avatar'),
+        profileValidator,
+        userCheck,
+        update
+    )
     .put('/update-password/:id', passwordValidator, updatePassword)
     .delete('/delete/:id', remove)
     .get('/logout', logout);

@@ -16,9 +16,11 @@ module.exports = [
         .withMessage('Debe ingresar un apellido')
         .isAlpha('es-ES')
         .withMessage('Valido solo letras'),
-    body('email')
+    check('address')
         .notEmpty()
-        .withMessage('El email no puede quedar vacio')
-        .isEmail()
-        .withMessage('Ingrese un email valido'),
+        .withMessage('La dirección no puede quedar vacio')
+        .isLength({
+            min: 2,
+        })
+        .withMessage('Debe ingresar una dirección'),
 ];

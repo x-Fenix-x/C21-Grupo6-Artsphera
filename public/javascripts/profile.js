@@ -1,6 +1,7 @@
 const $ = (id) => document.getElementById(id);
+const apiGeo = 'https://apis.datos.gob.ar/georef/api';
 
-window.addEventListener('load', function () {
+window.addEventListener('load', async function () {
     const search = $('search');
 
     $('formSearch').addEventListener('submit', function (e) {
@@ -13,6 +14,24 @@ window.addEventListener('load', function () {
         }
 
         !error && this.submit();
+    });
+
+    document.getElementById('avatarBtn').addEventListener('click', function () {
+        document.getElementById('avatar').click();
+    });
+
+    document.getElementById('avatar').addEventListener('change', function () {
+        const fileInput = this;
+        const imagePreview = document.querySelector('.profile-picture__img');
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
     });
 
     $('name').addEventListener('blur', function () {
@@ -59,39 +78,60 @@ window.addEventListener('load', function () {
         }
     });
 
-    $('email').addEventListener('blur', function () {
-        switch (true) {
-            case !this.value.trim():
-                $('msgError-email').innerHTML = 'Email obligatorio';
-                this.classList.add('is-invalid');
-                break;
-            case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value):
-                $('msgError-email').innerHTML = 'Email invalido';
-                this.classList.add('is-invalid');
-                break;
-            default:
-                $('msgError-email').innerHTML = null;
-                this.classList.remove('is-invalid');
-                this.classList.add('is-valid');
-                break;
-        }
-    });
+    try {
+        const response = await fetch(apiGeo + '/provincias');
+        const result = await response.json();
 
-    $('email').addEventListener('change', async function () {
+        result.provincias
+            .sort((a, b) =>
+                a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0
+            )
+            .forEach(({ nombre }) => {
+                $(
+                    'province'
+                ).innerHTML += `<option value="${nombre}">${nombre}</option>`;
+            });
+    } catch (error) {
+        console.error(error);
+    }
+
+    $('province').addEventListener('change', async function (e) {
         try {
             const response = await fetch(
-                `/api/check-email?email=${this.value}`
+                `${apiGeo}/localidades?provincia=${this.value}&max=1000`
             );
             const result = await response.json();
 
-            if (result.data) {
-                $('msgError-email').innerHTML = 'Este email ya esta registrado';
-                this.classList.add('is-invalid');
-            }
+            $('city').innerHTML = null;
+
+            result.localidades
+                .sort((a, b) =>
+                    a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0
+                )
+                .forEach(({ nombre }) => {
+                    $(
+                        'city'
+                    ).innerHTML += `<option value="${nombre}">${nombre}</option>`;
+                });
         } catch (error) {
-            console.error();
+            console.error(error);
         }
     });
+
+    $('address').addEventListener('blur', function () {
+        switch (true) {
+           case !this.value.trim():
+              $('msgError-address').innerHTML = 'La dirección es obligatoria';
+              this.classList.add('is-invalid');
+              break;
+           default:
+              $('msgError-address').innerHTML = null;
+              this.classList.remove('is-invalid');
+              this.classList.add('is-valid');
+              break;
+        }
+     });
+     
 
     $('password').addEventListener('blur', function () {
         switch (true) {
@@ -127,27 +167,6 @@ window.addEventListener('load', function () {
                 this.classList.add('is-valid');
                 break;
         }
-    });
-
-    $('formAdd').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const elementsForm = $('formAdd').elements;
-        let error = false;
-
-        for (let i = 0; i < elementsForm.length - 1; i++) {
-            if (
-                !elementsForm[i].value.trim() ||
-                elementsForm[i].classList.contains('is-invalid')
-            ) {
-                elementsForm[i].classList.add('is-invalid');
-                $('msgError-empty').innerHTML =
-                    'Los campos señalados son obligatorios';
-                error = true;
-            }
-        }
-
-        !error && this.submit();
     });
 
     $('formAdd2').addEventListener('submit', function (e) {
