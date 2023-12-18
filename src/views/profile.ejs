@@ -48,14 +48,38 @@
 								</p>
 								<% } %>
 						</div>
+						<div class="profile">
+							<h2 class="profile__title">Información de Envío</h2>
+						</div>
 						<div class="profile-form__div">
-							<label class="profile-form__title" for="email">Email</label>
-							<input
-								class="form-control profile-form__input<%= locals.errors && (locals.errors.email && 'is-invalid') %>"
-								type="email" id="email" name="email" placeholder="Ingrese su email"
-								value="<%= user.email %>" />
-							<small class="text-sm text-danger" id="msgError-email">
-								<%= locals.errors && (errors.email && errors.email.msg) %>
+							<label for="province" class="profile-form__title">Provincia</label>
+							<select type="text" class="form-select__address" id="province" name="province">
+								<option value="" hidden>Seleccione...</option>
+								<% provinces.forEach(province => { %>
+									<option value="<%= province %>" <%= user.address && user.address.province === province ? 'selected' : '' %>>
+										<%= province %>
+									</option>
+								<% }); %>
+							</select>
+						</div>
+						<div class="profile-form__div">
+							<label for="city" class="profile-form__title">Ciudad</label>
+							<select type="text" class="form-select__address" id="city" name="city">
+								<option value="" hidden>Seleccione...</option>
+								<% cities.forEach(city => { %>
+									<option value="<%= city %>" <%= user.address && user.address.city === city ? 'selected' : '' %>>
+										<%= city %>
+									</option>
+								<% }); %>
+							</select>
+						</div>
+						<div class="profile-form__div">
+							<label class="profile-form__title" for="address">Dirección</label>
+							<input class="profile-form__input" type="text" id="address" name="address"
+								placeholder="Ingrese su dirección"
+								value="<%= user.address ? user.address.address : '' %>" />
+							<small class="text-danger" id="msgError-address">
+								<%= locals.errors && errors.address ? errors.address.msg : '' %>
 							</small>
 						</div>
 						<div>

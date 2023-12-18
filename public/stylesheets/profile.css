@@ -102,6 +102,11 @@
     margin-top: 25px;
 }
 
+.form-select__address {
+    width: 100%;
+    padding: 8px;
+}
+
 .profile-form__button {
     width: 100%;
     display: inline-block;

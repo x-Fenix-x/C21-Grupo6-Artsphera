@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
         const errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, surname, email } = req.body;
+            const { name, surname, address, city, province } = req.body;
             const avatar = req.file
                 ? req.file.filename
                 : req.session.userLogin.avatar;
@@ -20,18 +20,49 @@ module.exports = async (req, res) => {
 
             const oneAvatar = user.avatar;
 
+            const addressExisting = await db.Address.findOne({
+                where: {
+                    userId: req.session.userLogin.id,
+                },
+            });
+
+            if (addressExisting) {
+                await db.Address.update(
+                    {
+                        address: address.trim(),
+                        city,
+                        province,
+                    },
+                    {
+                        where: {
+                            userId: req.session.userLogin.id,
+                        },
+                    }
+                );
+            } else {
+                await db.Address.create({
+                    address: address.trim(),
+                    city,
+                    province,
+                    userId: req.session.userLogin.id,
+                });
+            }
+
             await db.User.update(
                 {
                     name: name.trim(),
                     surname: surname.trim(),
-                    email: email.trim(),
                     avatar,
                 },
-                { where: { id: req.session.userLogin.id } }
+                {
+                    where: {
+                        id: req.session.userLogin.id,
+                    },
+                }
             );
 
             req.session.userLogin.name = name;
-            res.locals.userLogin.name = name;
+            req.session.userLogin.avatar = avatar;
 
             if (req.cookies.artesphera) {
                 res.cookie('artesphera', req.session.userLogin);
@@ -54,7 +85,22 @@ module.exports = async (req, res) => {
             }
 
             const categories = await db.Category.findAll();
-            const user = await db.User.findByPk(req.session.userLogin.id);
+            
+            const user = await db.User.findByPk(req.session.userLogin.id, {
+                include: ['address'],
+            });
+    
+            const provinceResults = await db.Address.findAll({
+                attributes: ['province'],
+                group: ['province'],
+            });
+            const cityResults = await db.Address.findAll({
+                attributes: ['city'],
+                group: ['city'],
+            });
+    
+            const provinces = provinceResults.map((result) => result.province);
+            const cities = cityResults.map((result) => result.city);
 
             if (!user) {
                 throw new Error('Usuario no encontrado');
@@ -65,6 +111,8 @@ module.exports = async (req, res) => {
                 errors: errors.mapped(),
                 categories,
                 user,
+                provinces,
+                cities
             });
         }
     } catch (error) {
