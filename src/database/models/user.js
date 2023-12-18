@@ -20,6 +20,11 @@ module.exports = (sequelize, DataTypes) => {
                 as: 'orders',
                 foreignKey: 'userId',
             });
+
+            User.belongsTo(models.Role, {
+                as: 'role',
+                foreignKey: 'roleId',
+            });
         }
     }
 
@@ -35,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
         {
             sequelize,
             modelName: 'User',
+            tableName: 'Users',
         }
     );
 
