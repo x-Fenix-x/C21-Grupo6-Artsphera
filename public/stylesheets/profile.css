@@ -159,7 +159,7 @@
     margin-bottom: 20px;
 }
 
-.modal-body p {
+.modal-body__parrafo {
     padding-bottom: 30px;
     font-weight: 600;
 }

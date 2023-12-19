@@ -22,7 +22,60 @@ module.exports = (req, res) => {
                         maxAge: 1000 * 60 * 15,
                     });
 
-                return res.redirect('/');
+                db.Order.findOne({
+                    where: {
+                        userId: user.id,
+                        statusId: 1,
+                    },
+                    include: [
+                        {
+                            association: 'items',
+                            include: [
+                                {
+                                    association: 'product',
+                                    include: ['images'],
+                                },
+                            ],
+                        },
+                    ],
+                }).then((order) => {
+                    if (order) {
+                        req.session.cart = {
+                            orderId: order.id,
+                            total: order.total,
+                            products: order.items.map(
+                                ({
+                                    quantity,
+                                    product: { title, price, discount, images },
+                                }) => {
+                                    return {
+                                        title,
+                                        price,
+                                        discount,
+                                        image: images[0].image,
+                                        quantity,
+                                    };
+                                }
+                            ),
+                        };
+                        console.log(req.session.cart);
+                        return res.redirect('/');
+                    } else {
+                        db.Order.create({
+                            total: 0,
+                            userId: user.id,
+                            statusId: 1,
+                        }).then((order) => {
+                            req.session.cart = {
+                                orderId: order.id,
+                                total: order.total,
+                                products: [],
+                            };
+                            console.log(req.session.cart);
+                            return res.redirect('/');
+                        });
+                    }
+                });
             })
             .catch((error) => console.log(error));
     } else {

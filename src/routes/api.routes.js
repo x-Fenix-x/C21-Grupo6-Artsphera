@@ -8,6 +8,10 @@ const {
     listProducts,
     showProduct,
 } = require('../controllers/APIs/productsApiController');
+const {
+    getCart,
+    addItemToCart,
+} = require('../controllers/APIs/cartApiController');
 const router = express.Router();
 
 /* /Api */
@@ -16,7 +20,9 @@ const router = express.Router();
 router
     .get('/check-email', checkEmail)
     .get('/users', listUsers)
-    .get('/users/:id', showUser);
+    .get('/users/:id', showUser)
+    .get('/cart', getCart)
+    .get('/cart/item', addItemToCart);
 
 /* Products */
 router.get('/products', listProducts).get('/products/:id', showProduct);

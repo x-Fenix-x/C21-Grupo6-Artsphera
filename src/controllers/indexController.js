@@ -1,5 +1,5 @@
 const db = require('../database/models');
-const priceFinal = require("../../public/javascripts/products-function")
+const priceFinal = require('../../public/javascripts/products-function');
 
 module.exports = {
     index: (req, res) => {
@@ -32,17 +32,17 @@ module.exports = {
                     offers,
                     week,
                     products,
-                    priceFinal
+                    priceFinal,
                 });
             })
             .catch((error) => {
                 console.error(error);
             });
     },
-    carrito: (req, res) => {
+    cart: (req, res) => {
         db.Category.findAll()
             .then((categories) => {
-                return res.render('carrito', {
+                return res.render('cart', {
                     categories,
                 });
             })
