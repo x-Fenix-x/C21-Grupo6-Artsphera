@@ -10,14 +10,14 @@
 }
 
 .img-detail {
-    padding: 1rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
 }
 
 .img-detail img {
-    width: 35rem;
-    height: 35rem;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -85,8 +85,14 @@
 }
 
 .mainSobreCreacion h3 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 600;
+}
+
+.mainSobreCreacion__parrafo {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .mainDetalleEspecificacion {
@@ -139,11 +145,21 @@
 }
 
 @media (min-width: 768px) {
+    div .img-detail {
+        height: 65%;
+        width: 80%;
+    }
+
+    .img-detail img {
+        width: 60%;
+        height: 65%;
+        gap: 5rem;
+        object-fit: cover;
+    }
+
     .mainFlexImg {
         display: flex;
         justify-content: center;
-        padding: 5rem 15rem 0rem 15rem;
-        gap: 10rem;
     }
     .mainCreacion {
         display: flex;

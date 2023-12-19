@@ -27,7 +27,10 @@
 								<span class="precio--descuento">$<%= product.price %></span>
 								<% } %>
 									<p>Gastos de envio e impuestos incluidos</p>
-									<button>Añadir al carrito</button>
+									<p>
+										<button onclick="addItemToCart(1, '<%= product.id %>')">Añadir al carrito</button>
+									</p>
+									
 									<div class="mainSobre">
 										<div>
 											<i class="fa-regular fa-gem"></i>
@@ -51,7 +54,7 @@
 				<div class="mainCreacion">
 					<div class="mainSobreCreacion">
 						<h3>Sobre la creación</h3>
-						<p>
+						<p class="mainSobreCreacion__parrafo">
 							<%= product.description %>
 						</p>
 
