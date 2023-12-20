@@ -1,0 +1,24 @@
+.container404 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container404 h1 {
+    margin: 0;
+    font-size: 8rem;
+    color: #333;
+}
+
+.container404 p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.container404 a {
+    color: blue;
+}
+
+.container404 a:hover {
+    color: rgb(99, 99, 248);
+}

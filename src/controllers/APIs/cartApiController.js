@@ -28,25 +28,40 @@ const addItemToCart = async (req, res) => {
             throw error;
         }
 
-        const { quantity, order, product } = req.query;
+        const { quantity, order, product: id } = req.query;
 
         const { title, price, discount, images } = await db.Product.findByPk(
-            product,
+            id,
             {
                 include: ['images'],
             }
         );
 
-        req.session.cart.products.push({
+        let newProduct = {
+            id,
             title,
             price,
             discount,
             image: images[0].image,
-            quantity: quantity || 1,
+            quantity: +quantity || 1,
+        };
+
+        let resultSearch;
+
+        req.session.cart.products.map((product) => {
+            if (product.id === id) {
+                ++product.quantity;
+                resultSearch = true;
+            }
         });
 
+        if (!resultSearch) {
+            req.session.cart.products.push(newProduct);
+
+        }
+
         req.session.cart.total = req.session.cart.products
-            .map((product) => product.price)
+            .map((product) => product.price * product.quantity)
             .reduce((a, b) => a + b, 0);
 
         return res.status(200).json({
