@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-    <%- include('partials/head',{title: "Artesphera | 404"}) %>
-<body>
-    <%- include('partials/header') %>
-    <%- include('partials/footer') %>
-</body>
+<html lang="es">
+
+<%- include('partials/head',{title: " Artesphera | 404" }) %>
+
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <div class="container404">
+                    <h1>404</h1>
+                    <p>Oops! Parece que te has perdido.</p>
+                    <p>La página que estás buscando no existe.</p>
+                    <p>Vuelve a la <a href="/">página principal</a>.</p>
+                </div>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
 </html>

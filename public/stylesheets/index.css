@@ -206,7 +206,7 @@
     border-radius: 13px;
 }
 
-.producto-card:hover{
+.producto-card:hover {
     border: 1.8px solid transparent;
     border-color: #d20707;
 }
@@ -229,7 +229,7 @@
     border-radius: 10px 10px 0 0;
 }
 
-.producto-card_img:hover{
+.producto-card_img:hover {
     border: none;
 }
 
@@ -279,7 +279,7 @@
     background-color: #ffffff;
 }
 
-.producto-info:hover{
+.producto-info:hover {
     border: none;
 }
 
@@ -323,7 +323,7 @@
     overflow-x: auto;
 }
 
-.tituloMod{
+.tituloMod {
     color: #000000;
 }
 
@@ -358,7 +358,7 @@
     border-radius: 0 0 10px 10px;
 }
 
-.informacion-oferta:hover{
+.informacion-oferta:hover {
     border: none;
 }
 
@@ -530,4 +530,15 @@
         align-items: center;
         background-color: #f9f9f8;
     }
+}
+
+.subHeader-parrafo {
+    transform: translateX(100%);
+    transition: opacity 1s ease, transform 1s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.subHeader-parrafo.active {
+    transform: translateX(0);
 }
