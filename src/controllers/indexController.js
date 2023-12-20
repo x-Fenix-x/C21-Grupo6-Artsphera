@@ -50,15 +50,4 @@ module.exports = {
                 console.error(error);
             });
     },
-    error404: (req, res) => {
-        db.Category.findAll()
-            .then((categories) => {
-                return res.render('404', {
-                    categories,
-                });
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    },
 };
