@@ -1,11 +1,85 @@
 const $ = (id) => document.getElementById(id);
 
-document.addEventListener('DOMContentLoaded', function () {
+const apiGeo = 'https://apis.datos.gob.ar/georef/api';
+
+document.addEventListener('DOMContentLoaded', async function () {
     const parrafo = document.querySelector('.subHeader-parrafo');
 
     setTimeout(function () {
         parrafo.classList.add('active');
     }, 500);
+
+    document.getElementById('avatarBtn').addEventListener('click', function () {
+        document.getElementById('avatar').click();
+    });
+
+    document.getElementById('avatar').addEventListener('change', function () {
+        const fileInput = this;
+        const imagePreview = document.querySelector('.profile-picture__img');
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    try {
+        const response = await fetch(apiGeo + '/provincias');
+        const result = await response.json();
+
+        result.provincias
+            .sort((a, b) =>
+                a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0
+            )
+            .forEach(({ nombre }) => {
+                $(
+                    'province'
+                ).innerHTML += `<option value="${nombre}">${nombre}</option>`;
+            });
+    } catch (error) {
+        console.error(error);
+    }
+
+    $('province').addEventListener('change', async function (e) {
+        try {
+            const response = await fetch(
+                `${apiGeo}/localidades?provincia=${this.value}&max=1000`
+            );
+            const result = await response.json();
+
+            $('city').innerHTML = null;
+
+            result.localidades
+                .sort((a, b) =>
+                    a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0
+                )
+                .forEach(({ nombre }) => {
+                    $(
+                        'city'
+                    ).innerHTML += `<option value="${nombre}">${nombre}</option>`;
+                });
+        } catch (error) {
+            console.error(error);
+        }
+    });
+
+    $('address').addEventListener('blur', function () {
+        switch (true) {
+            case !this.value.trim():
+                $('msgError-address').innerHTML = 'La dirección es obligatoria';
+                this.classList.add('is-invalid');
+                break;
+            default:
+                $('msgError-address').innerHTML = null;
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+                break;
+        }
+    });
 });
 
 const addItemToCart = async (quantity, product) => {
@@ -104,7 +178,7 @@ window.addEventListener('load', async function () {
                 result = { ok: false, msg: error.message };
                 Swal.fire({
                     title: 'Error',
-                    text: "Error",
+                    text: 'Error',
                     icon: 'error',
                 });
             }

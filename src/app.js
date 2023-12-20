@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const db = require('./database/models');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
@@ -47,7 +48,16 @@ app.use('/api', apisRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-    next(createError(404));
+    res.status(404);
+    db.Category.findAll()
+        .then((categories) => {
+            return res.render('404', {
+                categories,
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+        });
 });
 
 // error handler
