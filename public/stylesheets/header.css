@@ -12,6 +12,20 @@
     width: 100%;
 }
 
+#artesphera {
+    font-size: 2em; 
+    font-weight: 700;
+    display: inline-block;
+}
+
+.fireAnimation {
+    background: linear-gradient(to right, #e20757, #ffdb58, #ffac33);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-size: 2rem;
+}
+
 .firstHeader {
     display: flex;
     padding: 1.25rem 3rem;

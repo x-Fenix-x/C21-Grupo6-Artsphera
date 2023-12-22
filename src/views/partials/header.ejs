@@ -7,14 +7,19 @@
     </div>
     <div class="firstHeader">
         <div class="headerMenu">
-            <button class="fa-solid fa-bars"></button>
+            <!-- <button class="fa-solid fa-bars"></button> -->
+            <a href="/">
+                <div id="artesphera" class="fireAnimation">ART❣</div>
+            </a>
         </div>
         <a href="/">
-            <img src="/images/Logo 3.svg" alt="Logo" />
+            <!-- <img src="/images/Logo 3.svg" alt="Logo" /> -->
+
         </a>
         <div class="leftHeader">
             <a href="/">
-                <img src="/images/LogoExpanded.svg" alt="logo" />
+                <!-- <img src="/images/LogoExpanded.svg" alt="logo" /> -->
+                <div id="artesphera" class="fireAnimation">ARTESPHERA💛</div>
             </a>
             <div class="dropdown">
                 <a href="#" class="dropdown-titulo">Disciplinas</a>
@@ -65,6 +70,31 @@
         </div>
     </div>
 </header>
+
+<script>
+    const artesphera = document.getElementById('artesphera');
+
+    const fireAnimation = anime({
+        targets: '.fireAnimation',
+        keyframes: [
+            { opacity: 0 },
+            { opacity: 1 },
+            { opacity: 0.8 },
+            { opacity: 1 }
+        ],
+        easing: 'easeInOutQuad', 
+        loop: true, 
+        duration: 2000 
+    });
+
+    artesphera.addEventListener('mouseenter', () => {
+        fireAnimation.pause();
+    });
+
+    artesphera.addEventListener('mouseleave', () => {
+        fireAnimation.play();
+    });
+</script>
 
 
 <div id="cartModal" class="modal-carrito">

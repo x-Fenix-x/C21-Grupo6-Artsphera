@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const { index, cart } = require('../controllers/indexController');
 const router = express.Router();
 

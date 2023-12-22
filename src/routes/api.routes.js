@@ -11,6 +11,7 @@ const {
 const {
     getCart,
     addItemToCart,
+    clearCart,
 } = require('../controllers/APIs/cartApiController');
 const router = express.Router();
 
@@ -22,7 +23,8 @@ router
     .get('/users', listUsers)
     .get('/users/:id', showUser)
     .get('/cart', getCart)
-    .get('/cart/item', addItemToCart);
+    .post('/cart', addItemToCart)
+    .delete('/cart/all', clearCart);
 
 /* Products */
 router.get('/products', listProducts).get('/products/:id', showProduct);

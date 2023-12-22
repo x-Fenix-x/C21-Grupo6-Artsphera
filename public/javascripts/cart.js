@@ -1,5 +1,17 @@
 const $ = (id) => document.getElementById(id);
 
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+    },
+});
+
 const apiGeo = 'https://apis.datos.gob.ar/georef/api';
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -83,25 +95,70 @@ document.addEventListener('DOMContentLoaded', async function () {
 });
 
 const addItemToCart = async (quantity, product) => {
-    let result;
-
     try {
-        const response = await fetch(
-            `/api/cart/item?quantity=${quantity}&product=${product}`
-        );
-        result = await response.json();
-        if (!result.ok) {
-            throw new Error(result.msg);
+        const response = await fetch(`/api/cart`, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            body: JSON.stringify({
+                quantity,
+                product: +product,
+            }),
+        });
+        const { ok, data, msg } = await response.json();
+        if (!ok) {
+            throw new Error(msg);
         } else {
-            console.log(result);
+            const { products, total } = data;
+            showProductInCart(products, total);
+            Toast.fire({
+                icon: 'success',
+                title: 'Producto agregado',
+            });
         }
     } catch (error) {
         await Swal.fire({
             title: 'Error',
-            text: 'Hubo un error al agregar al carrito',
+            text: error.message,
             icon: 'error',
             html: `Debes <a href="/users/login" class="sweetAlert-link">iniciar sesión</a> para agregarlo al carrito`,
         });
+    }
+};
+
+const showProductInCart = (products, total) => {
+    if ($('cart-table')) {
+        $('cart-table').innerHTML = null;
+        const cartTable = $('cart-table');
+
+        products.forEach(({ id, image, title, price, quantity, discount }) => {
+            cartTable.innerHTML += `
+                <tr>
+                    <td class="img-cell"><img src="/images/products/${image}" alt="" width=100/></td>
+                    <td>${title}</td>
+                    <td>${price - (price * discount) / 100}</td>
+                    <td>
+                        <div>
+                        <button class="btn-carrito btn-dangerCart" onclick="removeItemFromCart(${id})">
+                        <i class="fa-solid fa-minus"></i>
+                        </button>
+                            <input type="text" value="${quantity}"/>
+                            <button class="btn-carrito btn-successCart" onclick="addItemToCart(1, ${id})">
+                            <i class="fa-solid fa-plus"></i></i></button>
+                        </div>
+                    </td>
+                </tr>
+                `;
+        });
+        $('cart-table').innerHTML += `
+        <div>
+                <div class="data-total">
+                    <h5>Total: $<span id="show-total">${total}</span></h5>
+                </div>
+        </div>
+                `;
+        $('show-total').innerHTML = total;
     }
 };
 
@@ -120,17 +177,22 @@ window.addEventListener('load', async function () {
         !error && this.submit();
     });
 
-    let result;
-
     $('btn-cart') &&
         $('btn-cart').addEventListener('click', async function (e) {
             try {
-                const response = await fetch('/api/cart');
-                const { ok, data } = await response.json();
+                const response = await fetch('/api/cart', {
+                    method: 'GET',
+                });
+                const {
+                    ok,
+                    data: { products, total },
+                } = await response.json();
 
                 if (ok) {
-                    if (data.products.length) {
-                        $('cart-body').innerHTML = `
+                    const cartBody = $('cart-body');
+
+                    if (products.length) {
+                        cartBody.innerHTML = `
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -143,44 +205,49 @@ window.addEventListener('load', async function () {
                                 <tbody id="cart-table">
                                   
                                 </tbody>
-                                <div>
-                                    <div class="data-total style="width:20px">
-                                        <h5>Total: ${data.total}</h5> 
-                                    </div>
-                                 </div>
+                                
                             </table>`;
-                        data.products.forEach(
-                            ({ image, title, price, quantity }) => {
-                                $('cart-table').innerHTML += `
-                                  <tr>
-                                    <td class="img-cell"><img src="/images/products/${image}" alt="" width=100/></td>
-                                    <td>${title}</td>
-                                    <td>${price * quantity}</td>
-                                    <td>
-                                        <div>
-                                            <button class="btn-carrito btn-dangerCart"><i class="fa-solid fa-minus"></i></button>
-                                            <input type="text" value=" ${quantity}" style="width:20px"/>
-                                            <button class="btn-carrito btn-successCart"><i class="fa-solid fa-plus"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  `;
-                            }
-                        );
+                        $('cart-table').innerHTML = null;
+                        showProductInCart(products, total);
                     } else {
-                        $('cart-body').innerHTML =
-                            '<p>No hay productos agregados al carrito</p>';
+                        cartBody.innerHTML =
+                            '<p class="alert">No hay productos agregados al carrito</p>';
                     }
                 }
-                console.log(result);
             } catch (error) {
                 console.error(error);
-                result = { ok: false, msg: error.message };
                 Swal.fire({
                     title: 'Error',
-                    text: 'Error',
+                    text: error.message,
                     icon: 'error',
                 });
             }
         });
+
+    const emptyCartBtn = $('emptyCartBtn');
+    if (emptyCartBtn) {
+        emptyCartBtn.addEventListener('click', async function () {
+            try {
+                const response = await fetch('/api/cart/all', {
+                    method: 'DELETE',
+                });
+                const { ok, data } = await response.json();
+
+                if (ok) {
+                    showProductInCart(data.products, data.total);
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Carrito vaciado',
+                    });
+                }
+            } catch (error) {
+                console.error(error);
+                Swal.fire({
+                    title: 'Error',
+                    text: error.message,
+                    icon: 'error',
+                });
+            }
+        });
+    }
 });
