@@ -12,11 +12,11 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-    if (!file.originalname.match(/\.(jpg|jpeg|png|webp)$/)) {
+    if (!file.originalname.match(/\.(jpg|jpeg|png|webp|gif)$/)) {
         if (file.fieldname === 'avatar') {
             req.fileValidatorError = {
                 ...req.fileValidatorError,
-                image: 'Valido solo jpg|jpeg|png|webp',
+                image: 'Valido solo jpg|jpeg|png|webp|gif',
             };
         }
 

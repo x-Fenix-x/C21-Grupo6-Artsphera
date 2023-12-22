@@ -7,7 +7,13 @@ module.exports = (req, res) => {
         },
     })
         .then(() => {
-            return res.redirect('/users/admin');
+            res.json({ success: true });
         })
-        .catch((error) => console.error(error));
+        .catch((error) => {
+            console.error(error);
+            res.json({
+                success: false,
+                error: 'Error al eliminar el producto',
+            });
+        });
 };
