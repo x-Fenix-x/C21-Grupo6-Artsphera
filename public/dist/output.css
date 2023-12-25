@@ -1321,3 +1321,9 @@ textarea#description {
     color: #ffffff;
     border-color: #d9534f;
 }
+
+.paginator{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}

@@ -39,7 +39,7 @@ app.use(
 app.use(cookieCheck);
 app.use(userSessionCheck);
 
-app.use(paginate.middleware(4, 50));
+app.use(paginate.middleware(9, 50));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
