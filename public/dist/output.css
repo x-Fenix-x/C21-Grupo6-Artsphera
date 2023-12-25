@@ -1325,5 +1325,6 @@ textarea#description {
 .paginator{
     display: flex;
     justify-content: center;
+    margin-top: 15px;
     margin-bottom: 60px;
 }
