@@ -1,31 +1,31 @@
 const db = require('../../database/models');
+const paginate = require('express-paginate');
 
 module.exports = async (req, res) => {
     try {
+        const { count, rows } = await db.Product.findAndCountAll({
+            limit: req.query.limit,
+            offset: req.skip,
+            include: ['category', 'images'],
+        });
+
+        const pagesCount = Math.ceil(count / req.query.limit);
+
         const categories = await db.Category.findAll({
             order: ['id', 'name'],
         });
 
-        let filteredProducts;
-
-        const category = req.params.categoryId;
-
-        if (category) {
-            filteredProducts = await db.Product.findAll({
-                where: {
-                    categoryId: category,
-                },
-                include: ['category', 'images'],
-            });
-        } else {
-            filteredProducts = await db.Product.findAll({
-                include: ['category', 'images'],
-            });
-        }
-
         return res.render('products', {
-            products: filteredProducts,
+            products: rows,
             categories,
+            pages: paginate.getArrayPages(req)(
+                pagesCount,
+                pagesCount,
+                req.query.page
+            ),
+            paginate,
+            pagesCount,
+            currentPage: req.query.page,
         });
     } catch (error) {
         console.error(error);
