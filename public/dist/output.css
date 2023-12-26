@@ -16,7 +16,7 @@
     /* 1 */
     border-width: 0;
     /* 2 */
-    border-style: solid;
+    /* border-style: solid; */
     /* 2 */
     border-color: #e5e7eb;
     /* 2 */
@@ -120,10 +120,10 @@ a {
 Add the correct font weight in Edge and Safari.
 */
 
-b,
+/* b,
 strong {
     font-weight: bolder;
-}
+} */
 
 /*
 1. Use the user's configured `mono` font family by default.
@@ -233,7 +233,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-    -webkit-appearance: button;
+    /* -webkit-appearance: button; */
     /* 1 */
     /* background-color: transparent; */
     /* 2 */
