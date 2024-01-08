@@ -29,45 +29,6 @@ const getAllProducts = async (limit, offset) => {
     }
 };
 
-const getProductById = async (id) => {
-    try {
-        if (!id || isNaN(id)) {
-            throw {
-                status: 400,
-                message: 'ID inexistente o corrupto',
-            };
-        }
-
-        const product = await db.Product.findByPk(id, {
-            attributes: {
-                exclude: ['createdAt', 'updatedAt', 'categoryId'],
-            },
-            include: [
-                {
-                    association: 'category',
-                    attributes: ['name', 'image'],
-                },
-            ],
-        });
-
-        if (!product) {
-            throw {
-                status: 404,
-                message: 'Producto no encontrado',
-            };
-        }
-
-        return product;
-    } catch (error) {
-        console.log(error);
-        throw {
-            status: error.status || 500,
-            message: error.message || 'Error en el servicio de productos',
-        };
-    }
-};
-
 module.exports = {
     getAllProducts,
-    getProductById,
 };

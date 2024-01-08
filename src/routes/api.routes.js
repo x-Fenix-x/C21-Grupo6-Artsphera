@@ -6,13 +6,17 @@ const {
 } = require('../controllers/APIs/userApiController');
 const {
     listProducts,
-    showProduct,
+    totalProductInDb,
 } = require('../controllers/APIs/productsApiController');
 const {
     getCart,
     addItemToCart,
     clearCart,
 } = require('../controllers/APIs/cartApiController');
+const {
+    getAllCategory,
+} = require('../controllers/APIs/categoriesApiController');
+
 const router = express.Router();
 
 /* /Api */
@@ -27,8 +31,11 @@ router
     .delete('/cart/all', clearCart);
 
 /* Products */
-router.get('/products', listProducts).get('/products/:id', showProduct);
+router
+    .get('/products', listProducts)
+    .get('/products/count', totalProductInDb);
 
 /* Categoríes  */
+router.get('/categories', getAllCategory);
 
 module.exports = router;

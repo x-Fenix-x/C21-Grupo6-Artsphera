@@ -1,8 +1,8 @@
 const paginate = require('express-paginate');
 const {
     getAllProducts,
-    getProductById,
 } = require('../../services/products.services');
+const db = require('../../database/models');
 
 module.exports = {
     listProducts: async (req, res) => {
@@ -82,6 +82,23 @@ module.exports = {
             });
         } catch (error) {
             console.log(error);
+            return res.status(error.status || 500).json({
+                ok: false,
+                status: error.status || 500,
+                error: error.message || 'Error en el servidor',
+            });
+        }
+    },
+
+    totalProductInDb: async (req, res) => {
+        try {
+            const total = await db.Product.count();
+            
+            return res.status(200).json({
+                ok: true,
+                data: total,
+            });
+        } catch (error) {
             return res.status(error.status || 500).json({
                 ok: false,
                 status: error.status || 500,
