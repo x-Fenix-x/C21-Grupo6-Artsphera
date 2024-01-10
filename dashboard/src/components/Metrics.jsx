@@ -8,7 +8,7 @@ export const Metrics = ({ totalProducts }) => {
             color: 'primary',
             title: 'Obras de Arte a la venta',
             value: totalProducts,
-            icon: 'fa-cart',
+            icon: 'fa-cart-shopping',
         },
         {
             id: crypto.randomUUID(),

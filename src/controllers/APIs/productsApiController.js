@@ -1,11 +1,9 @@
 const paginate = require('express-paginate');
-const {
-    getAllProducts,
-} = require('../../services/products.services');
+const { getAllProducts } = require('../../services/products.services');
 const db = require('../../database/models');
 
 module.exports = {
-    listProducts: async (req, res) => {
+    getAllProducts: async (req, res) => {
         try {
             const { total, products } = await getAllProducts(
                 req.query.limit,
@@ -93,7 +91,7 @@ module.exports = {
     totalProductInDb: async (req, res) => {
         try {
             const total = await db.Product.count();
-            
+
             return res.status(200).json({
                 ok: true,
                 data: total,
@@ -103,6 +101,40 @@ module.exports = {
                 ok: false,
                 status: error.status || 500,
                 error: error.message || 'Error en el servidor',
+            });
+        }
+    },
+    createProduct: async (req, res) => {
+        try {
+            const {
+                title,
+                price,
+                discount,
+                categoryId,
+                sectionId,
+                description,
+            } = req.body;
+
+            const newProduct = await db.Product.create({
+                title: title?.trim(),
+                price,
+                discount: discount || 0,
+                categoryId,
+                sectionId,
+                description: description?.trim(),
+            });
+
+            return res.status(200).json({
+                ok: true,
+                data: newProduct,
+                msg: 'Producto agregado con éxito',
+            });
+        } catch (error) {
+            return res.status(error.status || 500).json({
+                ok: false,
+                status: error.status || 500,
+                msg: error.message || 'Error en el servidor',
+                data: null,
             });
         }
     },

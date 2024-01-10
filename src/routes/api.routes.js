@@ -5,8 +5,9 @@ const {
     showUser,
 } = require('../controllers/APIs/userApiController');
 const {
-    listProducts,
+    getAllProducts,
     totalProductInDb,
+    createProduct,
 } = require('../controllers/APIs/productsApiController');
 const {
     getCart,
@@ -14,7 +15,9 @@ const {
     clearCart,
 } = require('../controllers/APIs/cartApiController');
 const {
-    getAllCategory,
+    getCategoriesWithProducts,
+    getCategories,
+    getSections,
 } = require('../controllers/APIs/categoriesApiController');
 
 const router = express.Router();
@@ -32,10 +35,16 @@ router
 
 /* Products */
 router
-    .get('/products', listProducts)
-    .get('/products/count', totalProductInDb);
+    .get('/products', getAllProducts)
+    .get('/products/count', totalProductInDb)
+    .post('/products/', createProduct);
 
 /* Categoríes  */
-router.get('/categories', getAllCategory);
+router
+    .get('/categories', getCategories)
+    .get('/categories/products', getCategoriesWithProducts);
+
+/* sections  */
+router.get('/sections', getSections);
 
 module.exports = router;
