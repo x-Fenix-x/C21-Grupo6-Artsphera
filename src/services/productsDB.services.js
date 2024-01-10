@@ -7,3 +7,11 @@ export const totalProductInDb = async () => {
         console.log(error);
     }
 };
+
+export const getAllProducts = async () => {
+    try {
+        return await UseFetch('products/count');
+    } catch (error) {
+        console.log(error);
+    }
+};

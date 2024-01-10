@@ -1,6 +1,6 @@
 import { UseFetch } from '../../dashboard/src/hooks/UseFetch';
 
-export const getAllCategory = async () => {
+export const getCategoriesWithProducts = async () => {
     try {
         return UseFetch('categories');
     } catch (error) {

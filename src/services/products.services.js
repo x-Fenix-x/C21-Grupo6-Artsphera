@@ -4,7 +4,7 @@ const getAllProducts = async (limit, offset) => {
     try {
         const { count, rows } = await db.Product.findAndCountAll({
             attributes: {
-                exclude: ['createdAt', 'updatedAt', 'categoryId'],
+                exclude: ['createdAt', 'updatedAt', 'categoryId', 'sectionId'],
             },
             limit,
             offset,
@@ -12,6 +12,12 @@ const getAllProducts = async (limit, offset) => {
                 {
                     association: 'category',
                     attributes: ['name', 'image'],
+                },
+                {
+                    association: 'section',
+                    attributes: {
+                        exclude: ['createdAt', 'updatedAt'],
+                    },
                 },
             ],
         });
