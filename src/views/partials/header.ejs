@@ -1,0 +1,127 @@
+<header class="headerContent">
+    <div class="subHeader">
+        <p class="subHeader-parrafo">
+            Hacemos envíos a todo el país. Política de devolución de 15 días.
+            Envío gratuito en pedidos superiores a $ 15000.
+        </p>
+    </div>
+    <div class="firstHeader">
+        <div class="headerMenu">
+            <!-- <button class="fa-solid fa-bars"></button> -->
+            <a href="/">
+                <div id="artesphera" class="fireAnimation">ART❣</div>
+            </a>
+        </div>
+        <a href="/">
+            <!-- <img src="/images/Logo 3.svg" alt="Logo" /> -->
+
+        </a>
+        <div class="leftHeader">
+            <a href="/">
+                <!-- <img src="/images/LogoExpanded.svg" alt="logo" /> -->
+                <div id="artesphera" class="fireAnimation">ARTESPHERA</div>
+            </a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-titulo">Disciplinas</a>
+                <ul class="dropdown-menu">
+                    <% categories.forEach(category=> { %>
+                        <li>
+                            <a href="/products/category/<%= category.name %>">
+                                <%= category.name %>
+                            </a>
+                        </li>
+                        <% }) %>
+                </ul>
+            </div>
+            <form action="/products/search" method="GET" class="leftNav" id="formSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="¿Qué deseas buscar?" name="query" id="search" />
+            </form>
+        </div>
+        <div class="rightHeader">
+            <% if (locals.userLogin) { %>
+                <div class="adminPanel">
+                    <p class="hiAdmin">Hola, <%= userLogin.name %> !</p>
+                    <% if (userLogin.role===1) { %>
+                        <a href="/users/admin" class="admin">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </a>
+                        <% } %>
+                </div>
+                <div class="headerSearch">
+                    <button class="fa-solid fa-magnifying-glass"></button>
+                </div>
+                <% if (locals.userLogin) { %>
+                    <a href="/users/profile/<%= locals.userLogin.id %>" class="fa-sharp fa-solid fa-user"></a>
+                    <% }else{ %>
+                        <a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
+                        <% } %>
+                            <a href="#" id="btn-cart" class="fa-solid fa-cart-shopping"></a>
+                            <a href="/users/logout" class="exit">
+                                <i class="fa-solid fa-xmark"></i>
+                            </a>
+                            <% }else{ %>
+                                <div class="headerSearch">
+                                    <button class="fa-solid fa-magnifying-glass"></button>
+                                </div>
+                                <!-- <a href="#" id="btn-cart" class="fa-solid fa-cart-shopping"></a> -->
+                                <a href="/users/login" class="fa-sharp fa-solid fa-user"></a>
+                                <% } %>
+        </div>
+    </div>
+</header>
+
+<script>
+    const artesphera = document.getElementById('artesphera');
+
+    const fireAnimation = anime({
+        targets: '.fireAnimation',
+        keyframes: [
+            { opacity: 0 },
+            { opacity: 1 },
+            { opacity: 0.8 },
+            { opacity: 1 }
+        ],
+        easing: 'easeInOutQuad', 
+        loop: true, 
+        duration: 2000 
+    });
+
+    artesphera.addEventListener('mouseenter', () => {
+        fireAnimation.pause();
+    });
+
+    artesphera.addEventListener('mouseleave', () => {
+        fireAnimation.play();
+    });
+</script>
+
+
+<div id="cartModal" class="modal-carrito">
+    <div class="modal-content__carrito">
+        <span class="close">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <div class="modal-body">
+            <div id="cart-body">
+
+            </div>
+        </div>
+        <div class="btn-container">
+            <button id="emptyCartBtn" class="cartBtn btn-danger">Vaciar Carrito</button>
+            <button id="checkoutBtn" class="cartBtn btn-success">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.querySelector(".fa-cart-shopping").addEventListener("click", function () {
+        document.getElementById("cartModal").style.display = "block";
+    });
+
+    document.querySelector(".close").addEventListener("click", function () {
+        document.getElementById("cartModal").style.display = "none";
+    });
+</script>
+
+<script src="/javascripts/cart.js"></script>

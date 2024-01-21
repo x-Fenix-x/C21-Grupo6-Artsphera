@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partials/head',{title: "Artesphera | Admin panel"}) %>
+	<link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="/dist/bootstrap.css">
+
+	<body>
+		<%- include('partials/header') %>
+		<main class="min-h-screen flex flex-col">
+			<section
+				class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.png')] bg-auto bg-repeat sm:gap-0 lg:bg-center"
+			>
+				<article
+					class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base"
+				>
+					<div
+						class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12"
+					>
+						<div class="flex flex-col gap-12 relative">
+							<p class="text-3xl font-bold">¡Bienvenido a la Administración!</p>
+							<a
+								href="/products/add"
+								class="p-3 text-gray-50 transition-all ease-in-out bg-black font-medium"
+							>
+								Nuevo producto</a
+							>
+							<a
+								href="/products/categories/add"
+								class="p-3 text-gray-50 transition-all ease-in-out bg-black font-medium"
+							>
+								Categoría : Ver / Agregar / Editar / Eliminar</a
+							>
+						</div>
+						<%- include('partials/table') %>
+					</div>
+				</article>
+			</section>
+		</main>
+		<script src="/javascripts/search.js"></script>
+	</body>
+</html>

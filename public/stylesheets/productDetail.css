@@ -1,0 +1,174 @@
+.index {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main */
+.mainContainer {
+    margin: 0 15px;
+}
+
+.img-detail {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.img-detail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mainAutor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mainAutor h1 {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.mainAutor .mainPrecio {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.detail__precio {
+    font-size: 1rem;
+    opacity: 0.5;
+    text-decoration: line-through;
+    color: var(--colorRojo);
+    display: block;
+}
+
+.detail__discount {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--colorVerde);
+}
+
+.mainAutor button {
+    background-color: #d0947a;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.mainAutor .mainSobre {
+    background-color: #f9f7f7;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.mainSobre div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.mainSobreCreacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.mainSobreCreacion h3 {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+.mainSobreCreacion__parrafo {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.mainDetalleEspecificacion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.mainDetalleEspecificacion h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mainDetalleEspecificacion .mainOtrosDetalles {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.mainEnvios {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    padding: 1.2rem;
+    margin: 1rem 0;
+}
+
+.mainDetalleEnvios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.imgEnvio {
+    width: 80px;
+}
+
+.mainDetalleEnvios h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.mainCarrousel {
+    background-color: #050505;
+}
+
+@media (min-width: 768px) {
+    div .img-detail {
+        height: 65%;
+        width: 80%;
+    }
+
+    .img-detail img {
+        width: 60%;
+        height: 65%;
+        gap: 5rem;
+        object-fit: cover;
+    }
+
+    .mainFlexImg {
+        display: flex;
+        justify-content: center;
+    }
+    .mainCreacion {
+        display: flex;
+        gap: 2rem;
+    }
+    .mainSobreCreacion {
+        width: 70%;
+    }
+    .mainEnvios {
+        flex-direction: row;
+    }
+}

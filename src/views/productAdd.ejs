@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head',{title: "Artesphera | Agregar producto" }) %>
+	<link rel="stylesheet" href="/dist/output.css" />
+
+	<body>
+		<%- include('partials/header') %>
+		<main class="min-h-screen flex flex-col">
+				<section
+					class="flex-1 flex flex-col items-center justify-center gap-60 bg-[url('/images/loginWallpaper.jpg')] bg-auto bg-repeat sm:gap-0 lg:bg-center">
+					<article class="flex flex-col w-full bg-white sm:max-w-6xl p-8 text-base">
+						<div class="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[77.5vh] min-h-screen gap-12">
+							<form action="" method="POST" class="flex flex-col gap-12"
+								enctype="multipart/form-data" id="formAdd">
+								<p class="text-3xl font-bold">Agregar producto</p>
+								<div>
+									<div class="flex flex-col">
+										<label for="title" class="font-medium">Título</label>
+										<input type="text" id="title" name="title"
+											class="p-3 bg-gray-100 text-sm<%= locals.errors && (errors.title && 'is-invalid') %>"
+											placeholder="Título del producto "
+											value="<%= locals.old && (old.title && old.title ) %>" />
+										<small class="text-danger" id="msgError-title">
+											<%= locals.errors && (errors.title && errors.title.msg) %>
+										</small>
+									</div>
+									<div class="flex flex-col">
+										<label for="categoryId" class="font-medium">Categoría</label>
+										<select name="categoryId" id="categoryId" class="p-3 text-sm bg-gray-100">
+											<option value="" disabled selected>Elige una opción</option>
+											<% categories.forEach(category=> { %>
+												<option value="<%= category.id %>" <%=locals.old &&
+													(locals.old.categoryId===category.id && 'selected' ) %>>
+													<%= category.name %>
+												</option>
+												<% }) %>
+										</select>
+										<small class="text-danger" id="msgError-categoryId">
+											<%= locals.errors && (errors.categoryId && errors.categoryId.msg) %>
+										</small>
+									</div>
+									<div class="flex flex-col">
+										<label for="sectionId" class="font-medium">Sección</label>
+										<select name="sectionId" id="sectionId" class="p-3 text-sm bg-gray-100">
+											<option value="" disabled selected>Elige una opción</option>
+											<% sections.forEach(section=> { %>
+												<option value="<%= section.id %>" <%=locals.old &&
+													(locals.old.sectionId===section.id && 'selected' ) %>>
+													<%= section.name %>
+												</option>
+												<% }) %>
+										</select>
+										<small class="text-danger" id="msgError-sectionId">
+											<%= locals.errors && (errors.sectionId && errors.sectionId.msg) %>
+										</small>
+									</div>
+									<div class="flex flex-col">
+										<label for="price" class="font-medium">Precio</label>
+										<input type="number" id="price" name="price" class="p-3 bg-gray-100 text-sm"
+											placeholder="Ejemplo: 99.99"
+											value="<%= locals.old && (old.price && old.price ) %>" />
+										<small class="text-danger" id="msgError-price">
+											<%= locals.errors && (errors.price && errors.price.msg) %>
+										</small>
+									</div>
+									<div class="flex flex-col">
+										<label for="discount" class="font-medium">Descuento</label>
+										<input type="number" id="discount" name="discount"
+											class="p-3 bg-gray-100 text-sm" placeholder="Descuento en porcentaje" 
+											value="<%= locals.old && (old.discount && old.discount ) %>"/>
+										<small class="text-danger" id="msgError-discount">
+											<%= locals.errors && (errors.discount && errors.discount.msg) %>
+										</small>
+									</div>
+									<div class="flex flex-col">
+										<label for="image" class="font-medium">Subir imagen:</label>
+										<input type="file" id="image" name="image" accept="image/*" />
+									</div>
+									<div class="flex flex-col">
+										<label for="description">Descripción:</label>
+										<textarea id="description" name="description" rows="4" cols="50"
+											class="bg-gray-100 p-2 text-left"><%= locals.old && (old.description && old.description ) %></textarea>
+										<small class="text-danger" id="msgError-description">
+											<%= locals.errors && (errors.description && errors.description.msg) %>
+										</small>
+									</div>
+								</div>
+								<div>
+									<small class="text-danger" id="msgError-empty">
+									</small>
+								</div>
+								<button type="submit"
+									class="font-bold py-4 text-[#5e4a2d] bg-[#d0ad7a] hover:bg-[#3d3220] hover:text-[#967c57] transition-all ease-in-out rounded-full">
+									Guardar Cambios
+								</button>
+							</form>
+							<%- include('partials/table') %>
+						</div>
+					</article>
+				</section>
+			</main>
+			<script src="/javascripts/productAddEdit.js"></script>
+	</body>
+
+</html>
