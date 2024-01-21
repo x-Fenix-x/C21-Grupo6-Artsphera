@@ -14,7 +14,7 @@ El cliente final son aquellas personas apasionadas por el arte en general, inter
 
 ## Integrantes:
 
-- R. Vallejos, amante de la informática, literatura e interesado en aprender Desarrollo Web.
+- R. Vallejos, amante de la informática, desarrollo web y la literatura 💘
 
 - Lucas Pausin, 23 años, La matanza, Buenos aires
 
